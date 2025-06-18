@@ -33,7 +33,7 @@
                 <table class="details-table">
                     <tr>
                         <td><i class='bx bx-group'></i> Pendaftaran Peserta</td>
-                        <td>01 Agustus - 31 Agustus 2024</td>
+                        <td>01 Agustus - 31 Agustus 2025</td>
                     </tr>
                     <tr>
                         <td><i class='bx bx-calendar-event'></i> Babak Penyisihan</td>
