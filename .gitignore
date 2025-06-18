@@ -1,8 +1,8 @@
 # Abaikan folder sementara dan sensitif
-writable/cache/
-writable/logs/
-writable/session/
-writable/debugbar/
+techporia23-main/writable/cache/
+techporia23-main/writable/logs/
+techporia23-main/writable/session/
+techporia23-main/writable/debugbar/
 
 *.session
 
