@@ -16,7 +16,7 @@
                 <img src="/assets/images/competition-logo/competitive.webp" alt="Competitive Programming" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>Mobile Legend</h1>
+                <h1>Mobile Legends</h1>
                 <div class="paragraphs">
                     <p>
                         Kompetisi Mobile Legends dengan tema "Strategy, Teamwork, and Precision Play" merupakan salah satu cabang perlombaan yang paling dinantikan dalam event Technology Euphoria, 
