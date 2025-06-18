@@ -1,0 +1,726 @@
+CRITICAL - 2024-06-06 20:09:37 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:10:44 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:17:27 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:22:39 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:26:15 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:29:34 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:51:37 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:56:45 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 20:59:13 --> Undefined property: Config\Routing::$translateURIDashes
+in SYSTEMPATH\Router\RouteCollection.php on line 295.
+ 1 SYSTEMPATH\Router\RouteCollection.php(295): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Routing::$translateURIDashes', 'D:\\Desktop\\techporia23-main\\vendor\\codeigniter4\\framework\\system\\Router\\RouteCollection.php', 295)
+ 2 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), Object(Config\Routing))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 5 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 7 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 8 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 21:00:30 --> Undefined property: Config\Routing::$override404
+in SYSTEMPATH\Router\RouteCollection.php on line 296.
+ 1 SYSTEMPATH\Router\RouteCollection.php(296): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Routing::$override404', 'D:\\Desktop\\techporia23-main\\vendor\\codeigniter4\\framework\\system\\Router\\RouteCollection.php', 296)
+ 2 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), Object(Config\Routing))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 5 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 7 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 8 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 21:02:09 --> Undefined property: Config\Routing::$override404
+in SYSTEMPATH\Router\RouteCollection.php on line 296.
+ 1 SYSTEMPATH\Router\RouteCollection.php(296): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Routing::$override404', 'D:\\Desktop\\techporia23-main\\vendor\\codeigniter4\\framework\\system\\Router\\RouteCollection.php', 296)
+ 2 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), Object(Config\Routing))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 5 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 7 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 8 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 21:03:02 --> Undefined property: Config\Routing::$autoRoute
+in SYSTEMPATH\Router\RouteCollection.php on line 297.
+ 1 SYSTEMPATH\Router\RouteCollection.php(297): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Routing::$autoRoute', 'D:\\Desktop\\techporia23-main\\vendor\\codeigniter4\\framework\\system\\Router\\RouteCollection.php', 297)
+ 2 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), Object(Config\Routing))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 5 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 7 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 8 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-06 21:04:32 --> Undefined property: Config\Routing::$routeFiles
+in SYSTEMPATH\Router\RouteCollection.php on line 298.
+ 1 SYSTEMPATH\Router\RouteCollection.php(298): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Routing::$routeFiles', 'D:\\Desktop\\techporia23-main\\vendor\\codeigniter4\\framework\\system\\Router\\RouteCollection.php', 298)
+ 2 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), Object(Config\Routing))
+ 3 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 4 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 5 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 7 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 8 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+ERROR - 2024-06-06 21:07:26 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'techpodb_23' in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'techpodb_23', 3306, '', 0)
+#1 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(764): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Desktop\techporia23-main\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'techpodb_23' in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(764): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\Desktop\techporia23-main\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2024-06-06 21:21:52 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\Desktop\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:27:28 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\Desktop\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:27:29 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\Desktop\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:27:30 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\Desktop\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:27:31 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\Desktop\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:31:27 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(228): include('D:\\Desktop\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:34:17 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('seminar/daftar', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:34:27 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:37:32 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:41:20 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:41:23 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:41:23 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:45:25 --> Call to undefined function setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:45:27 --> Call to undefined function setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:45:31 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:45:50 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 420.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 2 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:47:08 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 420.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 2 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:47:09 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 420.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 2 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:47:11 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 420.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 2 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:47:20 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:48:27 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 420.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 2 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-06 21:50:38 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 686.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(704): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:51:26 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:51:45 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 21:54:18 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('aewa', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('aewa', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'aewa', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 21:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 21:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:00:13 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('LUkadoncic77', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('LUkadoncic77', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'LUkadoncic77', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:03:15 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('LUkadoncic77', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('LUkadoncic77', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'LUkadoncic77', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:03:23 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:04:48 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:05:05 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 21.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:05:44 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Authentication\Passwords\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 27.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:10:18 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:12:13 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('1', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('1', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', '1', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:14:04 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:15:19 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Authentication\Passwords\UserInterface, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:15:29 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')
+INFO - 2024-06-06 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-06 22:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-06 22:21:47 --> Myth\Auth\Authentication\Passwords\PasswordValidator::check(): Argument #2 ($user) must be of type ?Myth\Auth\Entities\User, CodeIgniter\Shield\Entities\User given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php on line 55
+in VENDORPATH\myth\auth\src\Authentication\Passwords\PasswordValidator.php on line 26.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Passwords\ValidationRules.php(55): Myth\Auth\Authentication\Passwords\PasswordValidator->check('a', Object(CodeIgniter\Shield\Entities\User))
+ 2 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Shield\Authentication\Passwords\ValidationRules->strong_password('a', '', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'Auth.password', 'a', [...], [...])
+ 4 SYSTEMPATH\Controller.php(167): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 VENDORPATH\codeigniter4\shield\src\Controllers\RegisterController.php(100): CodeIgniter\Controller->validateData([...], [...], [], null)
+ 6 SYSTEMPATH\CodeIgniter.php(942): CodeIgniter\Shield\Controllers\RegisterController->registerAction()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Desktop\\techporia23-main\\public\\index.php')

@@ -1,0 +1,54 @@
+CRITICAL - 2024-07-30 01:14:05 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\detail_tim.php on line 40.
+ 1 APPPATH\Views\admin\detail_tim.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Techporia-main-2024\\techporia23-main\\app\\Views\\admin\\detail_tim.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Techporia-main-2024\\techporia23-main\\app\\Views\\admin\\detail_tim.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/detail_tim', [], true)
+ 5 APPPATH\Controllers\AdminController.php(184): view('admin/detail_tim', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->detailTim('50bcc1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-07-30 01:14:24 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\detail_tim.php on line 40.
+ 1 APPPATH\Views\admin\detail_tim.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Techporia-main-2024\\techporia23-main\\app\\Views\\admin\\detail_tim.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\Techporia-main-2024\\techporia23-main\\app\\Views\\admin\\detail_tim.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/detail_tim', [], true)
+ 5 APPPATH\Controllers\AdminController.php(184): view('admin/detail_tim', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AdminController->detailTim('6fc651')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-07-30 01:23:31 --> Invalid file: "kompetisi/networking-competition.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/networking-competition.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/networking-competition', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/networking-competition', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('networking-competition')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-07-30 01:23:35 --> Invalid file: "kompetisi/networking-competition.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/networking-competition.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/networking-competition', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/networking-competition', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('networking-competition')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-07-30 01:23:37 --> Invalid file: "kompetisi/networking-competition.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/networking-competition.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/networking-competition', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/networking-competition', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('networking-competition')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Techporia-main-2024\\techporia23-main\\public\\index.php')

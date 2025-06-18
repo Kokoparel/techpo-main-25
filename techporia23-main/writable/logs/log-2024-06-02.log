@@ -1,0 +1,27 @@
+CRITICAL - 2024-06-02 21:08:28 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-02 21:11:18 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-06-02 21:14:39 --> CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in D:\Desktop\techporia23-main\vendor\codeigniter4\framework\system\Config\Services.php on line 618
+in SYSTEMPATH\Router\RouteCollection.php on line 285.
+ 1 SYSTEMPATH\Config\Services.php(618): CodeIgniter\Router\RouteCollection->__construct(Object(CodeIgniter\Autoloader\FileLocator), Object(Config\Modules), null)
+ 2 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes(false)
+ 3 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('routes', [...])
+ 4 SYSTEMPATH\Config\Services.php(615): CodeIgniter\Config\BaseService::getSharedInstance('routes')
+ 5 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Config\BaseService::__callStatic('routes', [])
+ 7 ROOTPATH\spark(98): CodeIgniter\CLI\Console->run()

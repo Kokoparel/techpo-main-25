@@ -1,0 +1,392 @@
+ERROR - 2024-06-08 14:08:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'techpodb_23', 3306, '', 0)
+#1 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\BEM KM Fasilkom Unsri 2024\techporia23-main\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2024-06-08 14:15:53 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 14:33:40 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 14:34:03 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 14:39:15 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 14:40:17 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 14:40:47 --> Call to undefined function auth()
+in APPPATH\Views\layout\header.php on line 47.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('layout/header', null, true)
+ 4 APPPATH\Views\layout\master_layout.php(17): CodeIgniter\View\View->include('layout/header')
+ 5 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\techporia23-main\\app\\Views\\layout\\master_layout.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/master_layout', [], true)
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('main', [], true)
+ 9 APPPATH\Controllers\MainController.php(16): view('main')
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+ERROR - 2024-06-08 15:06:13 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1863): fsockopen('tls://smtp.gmai...', 465, NULL, NULL, 60)
+#2 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php(78): CodeIgniter\Email\Email->send(false)
+#6 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+#7 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+#8 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+#9 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+#10 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\techporia23-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2024-06-08 15:06:13 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-06-08 15:06:13 --> 
+CRITICAL - 2024-06-08 15:06:13 --> Cannot send email for user: agunghidayahputra@gmail.com
+Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Sat, 8 Jun 2024 15:06:13 +0700
+From: &quot;Technology Euphoria&quot; &lt;admin@technologyeuphoria.web.id&gt;
+Return-Path: &lt;admin@technologyeuphoria.web.id&gt;
+To: agunghidayahputra@gmail.com
+Subject: =?UTF-8?Q?Your=20activation=20code?=
+Reply-To: &lt;admin@technologyeuphoria.web.id&gt;
+User-Agent: CodeIgniter
+X-Sender: admin@technologyeuphoria.web.id
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;666410f5079c57.76538981@technologyeuphoria.web.id&gt;
+Mime-Version: 1.0
+
+</pre>
+in VENDORPATH\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php on line 79.
+ 1 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+ 2 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+ 3 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+ERROR - 2024-06-08 15:06:31 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1863): fsockopen('tls://smtp.gmai...', 465, NULL, NULL, 60)
+#2 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php(78): CodeIgniter\Email\Email->send(false)
+#6 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+#7 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+#8 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+#9 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+#10 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\techporia23-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2024-06-08 15:06:31 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-06-08 15:06:31 --> 
+CRITICAL - 2024-06-08 15:06:31 --> Cannot send email for user: agunghidayahputra@gmail.com
+Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Sat, 8 Jun 2024 15:06:30 +0700
+From: &quot;Technology Euphoria&quot; &lt;admin@technologyeuphoria.web.id&gt;
+Return-Path: &lt;admin@technologyeuphoria.web.id&gt;
+To: agunghidayahputra@gmail.com
+Subject: =?UTF-8?Q?Your=20activation=20code?=
+Reply-To: &lt;admin@technologyeuphoria.web.id&gt;
+User-Agent: CodeIgniter
+X-Sender: admin@technologyeuphoria.web.id
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6664110669d150.15069958@technologyeuphoria.web.id&gt;
+Mime-Version: 1.0
+
+</pre>
+in VENDORPATH\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php on line 79.
+ 1 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+ 2 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+ 3 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+ERROR - 2024-06-08 15:06:33 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1863): fsockopen('tls://smtp.gmai...', 465, NULL, NULL, 60)
+#2 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php(78): CodeIgniter\Email\Email->send(false)
+#6 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+#7 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+#8 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+#9 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+#10 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\techporia23-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2024-06-08 15:06:33 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-06-08 15:06:33 --> 
+CRITICAL - 2024-06-08 15:06:33 --> Cannot send email for user: agunghidayahputra@gmail.com
+Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Sat, 8 Jun 2024 15:06:32 +0700
+From: &quot;Technology Euphoria&quot; &lt;admin@technologyeuphoria.web.id&gt;
+Return-Path: &lt;admin@technologyeuphoria.web.id&gt;
+To: agunghidayahputra@gmail.com
+Subject: =?UTF-8?Q?Your=20activation=20code?=
+Reply-To: &lt;admin@technologyeuphoria.web.id&gt;
+User-Agent: CodeIgniter
+X-Sender: admin@technologyeuphoria.web.id
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;66641108eb8d95.92208677@technologyeuphoria.web.id&gt;
+Mime-Version: 1.0
+
+</pre>
+in VENDORPATH\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php on line 79.
+ 1 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+ 2 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+ 3 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+ERROR - 2024-06-08 15:06:41 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1863): fsockopen('tls://smtp.gmai...', 465, NULL, NULL, 60)
+#2 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php(78): CodeIgniter\Email\Email->send(false)
+#6 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+#7 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+#8 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+#9 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+#10 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\techporia23-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2024-06-08 15:06:41 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-06-08 15:06:41 --> 
+CRITICAL - 2024-06-08 15:06:41 --> Cannot send email for user: agunghidayahputra@gmail.com
+Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Sat, 8 Jun 2024 15:06:40 +0700
+From: &quot;Technology Euphoria&quot; &lt;admin@technologyeuphoria.web.id&gt;
+Return-Path: &lt;admin@technologyeuphoria.web.id&gt;
+To: agunghidayahputra@gmail.com
+Subject: =?UTF-8?Q?Your=20activation=20code?=
+Reply-To: &lt;admin@technologyeuphoria.web.id&gt;
+User-Agent: CodeIgniter
+X-Sender: admin@technologyeuphoria.web.id
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;66641110e69116.31965698@technologyeuphoria.web.id&gt;
+Mime-Version: 1.0
+
+</pre>
+in VENDORPATH\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php on line 79.
+ 1 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+ 2 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+ 3 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+ERROR - 2024-06-08 15:07:47 --> mysqli_sql_exception: Duplicate entry '1' for key 'PRIMARY' in C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ko...', 0)
+#1 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ko...')
+#2 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ko...')
+#3 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ko...', NULL, false)
+#4 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\techporia23-main\app\Database\Seeds\KompetisiSeeder.php(19): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Database\Seeder.php(146): App\Database\Seeds\KompetisiSeeder->run()
+#7 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\techporia23-main\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-06-08 15:14:30 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed in C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1863)
+#1 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1863): fsockopen('tls://smtp.gmai...', 465, NULL, NULL, 60)
+#2 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1782): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1667): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Email\Email.php(1565): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php(78): CodeIgniter\Email\Email->send(false)
+#6 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+#7 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+#8 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+#9 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+#10 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\techporia23-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\techporia23-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2024-06-08 15:14:30 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-06-08 15:14:30 --> 
+CRITICAL - 2024-06-08 15:14:30 --> Cannot send email for user: agunghidayahputra@gmail.com
+Unable to send email using SMTP. Your server might not be configured to send mail using this method.<br><pre>Date: Sat, 8 Jun 2024 15:14:29 +0700
+From: &quot;Technology Euphoria&quot; &lt;admin@technologyeuphoria.web.id&gt;
+Return-Path: &lt;admin@technologyeuphoria.web.id&gt;
+To: agunghidayahputra@gmail.com
+Subject: =?UTF-8?Q?Your=20activation=20code?=
+Reply-To: &lt;admin@technologyeuphoria.web.id&gt;
+User-Agent: CodeIgniter
+X-Sender: admin@technologyeuphoria.web.id
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;666412e5ae3717.35427291@technologyeuphoria.web.id&gt;
+Mime-Version: 1.0
+
+</pre>
+in VENDORPATH\codeigniter4\shield\src\Authentication\Actions\EmailActivator.php on line 79.
+ 1 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(62): CodeIgniter\Shield\Authentication\Actions\EmailActivator->show()
+ 2 VENDORPATH\codeigniter4\shield\src\Controllers\ActionController.php(50): CodeIgniter\Shield\Controllers\ActionController->show()
+ 3 SYSTEMPATH\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\ActionController->_remap('show')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\ActionController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 20:10:48 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('profile/daftar-lomba', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 20:17:55 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Auth.php(191): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 VENDORPATH\codeigniter4\shield\src\Filters\AbstractAuthFilter.php(40): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+ 6 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Shield\Filters\AbstractAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), [...])
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('admin/dashboard', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 20:23:49 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('seminar/daftar', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')
+CRITICAL - 2024-06-08 20:24:02 --> Call to undefined function CodeIgniter\Shield\Authentication\Authenticators\setting()
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 685.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(703): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+ 2 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(390): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+ 3 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(374): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+ 4 VENDORPATH\codeigniter4\shield\src\Filters\SessionAuth.php(54): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+ 5 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Shield\Filters\SessionAuth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 6 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('seminar/daftar', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\techporia23-main\\public\\index.php')

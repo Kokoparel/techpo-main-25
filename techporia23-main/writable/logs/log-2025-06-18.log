@@ -1,0 +1,40 @@
+CRITICAL - 2025-06-18 19:45:11 --> Invalid file: "kompetisi/networking-competition.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/networking-competition.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/networking-competition', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/networking-competition', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('networking-competition')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\FARREL\\Downloads\\Techporia-main-2024\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2025-06-18 19:45:16 --> Invalid file: "kompetisi/networking-competition.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/networking-competition.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/networking-competition', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/networking-competition', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('networking-competition')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\FARREL\\Downloads\\Techporia-main-2024\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2025-06-18 19:45:22 --> Invalid file: "kompetisi/networking-competition.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/networking-competition.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/networking-competition', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/networking-competition', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('networking-competition')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\FARREL\\Downloads\\Techporia-main-2024\\Techporia-main-2024\\techporia23-main\\public\\index.php')
+CRITICAL - 2025-06-18 19:53:33 --> Invalid file: "kompetisi/mobile-legend.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kompetisi/mobile-legend.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kompetisi/mobile-legend', [], true)
+ 3 APPPATH\Controllers\MainController.php(78): view('kompetisi/mobile-legend', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\MainController->kompetisi('mobile-legend')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\FARREL\\Downloads\\Techporia-main-2024\\Techporia-main-2024\\techporia23-main\\public\\index.php')
