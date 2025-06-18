@@ -1,0 +1,10 @@
+# Abaikan folder sementara dan sensitif
+writable/cache/
+writable/logs/
+writable/session/
+writable/debugbar/
+
+*.session
+
+# Abaikan semua file dengan nama mirip file session
+*sess*

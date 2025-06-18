@@ -144,8 +144,8 @@
     </div> -->
 
     <div class="section onscroll" id="kilas-balik">
-        <h1>KILAS BALIK TECHNOLOGY EUPHORIA 2023</h1>
-        <p>Dalam Technology Euphoria ini, terdapat beberapa lomba yang diadakan seperti dibawah ini</p>
+        <h1>KILAS BALIK SINERGI FEST 2025 </h1>
+        <p>Dalam Sinergi Fest ini, terdapat beberapa lomba yang diadakan seperti dibawah ini</p>
         <a href="<?= base_url('sejarah'); ?>" class="btn btn-fancy">Selengkapnya</a>
         <div class="kilas-balik-grid">
             <div class="grid-child onscroll">
