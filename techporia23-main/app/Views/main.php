@@ -10,7 +10,7 @@
         <div class="hero-bg">
         </div>
         <div class="hero onscroll">
-            <h3>FASILKOM UNSRI</h3>
+            <h3>FASILKOM </h3>
             <h1>Sinergi Fest 2025</h1>
             <div id="theme-text"></div>
             <div class="container-5" style="margin-top: 3rem;">
