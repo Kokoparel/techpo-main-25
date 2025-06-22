@@ -6,12 +6,12 @@
 <?= $this->section('content'); ?>
 
 <div class="main">
-    <div class="section light" style="padding: 3rem 0;">
+    <!-- <div class="section light" style="padding: 3rem 0;">
         <div class="comingsoon">
             <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
             <h1>Coming Soon</h1>
-        </div>
-        <!-- <div class="detail-horizontal">
+        </div> -->
+        <div class="detail-horizontal">
             <div class="image">
                 <img src="/assets/images/seminar.webp" alt="Seminar Nasional" />
             </div>
@@ -73,7 +73,7 @@
                     <a href="<?= base_url('seminar/daftar'); ?>" class="btn btn-secondary">Daftar Seminar</a>
                 <?php endif; ?>
             </div>
-        </div> -->
+        </div>
     </div>
 </div>
 

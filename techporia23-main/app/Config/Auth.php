@@ -91,6 +91,7 @@ class Auth extends ShieldAuth
         'login'       => '/',
         'logout'      => '/',
         'force_reset' => '/',
+        'group_denied' => '/',
     ];
 
     /**

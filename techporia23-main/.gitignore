@@ -1,0 +1,54 @@
+#--------------------------------------------------------------------
+# CodeIgniter 4 .gitignore Template
+#--------------------------------------------------------------------
+
+# Environment files - PENTING!
+.env
+.env.local
+.env.production
+
+# Writable folder contents
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+
+# Keep folder structure
+!writable/cache/.gitkeep
+!writable/debugbar/.gitkeep
+!writable/logs/.gitkeep
+!writable/session/.gitkeep
+!writable/uploads/.gitkeep
+
+# Composer
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node modules (jika pakai npm)
+node_modules/
+
+# Build files
+public/build/
+
+# Backup files
+*.bak
+*.tmp
+*~
+
+# Log files
+*.log
