@@ -29,14 +29,11 @@
                 <label for="kompetisi">Cabang Kompetisi</label>
                 <div class="select-dropdown">
                     <select name="kompetisi" id="kompetisi">
-                    <option value="1">Competitive Programming</option>
-                                <option value="2">Web Development</option>
-                                <option value="3">UI/UX Design</option>
-                                <option value="4">Essay</option>
-                                <option value="5">Business Plan</option>
-                                <option value="6">Painting </option>
-                                <option value="7">Dance competition</option>
-                                <option value="8">Band/acoustic </option>
+                            <option value="1">Competitive Programming</option>
+                            <option value="2">Web Development</option>
+                            <option value="3">UI/UX Design</option>
+                            <option value="5">Business Plan</option>
+                            <option value="9">Mobile Legends</option>
                     </select>
                 </div>
             </div>

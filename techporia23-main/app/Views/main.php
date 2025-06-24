@@ -50,6 +50,7 @@
                         <a href="<?= base_url('kompetisi/business-plan'); ?>" class="btn btn-secondary">Selengkapnya</a>
                     </div>
                 </div>
+                
                 <div class="grid-child onscroll-r" style="--delay: 1;">
                     <img src="<?= base_url('assets/images/competition-logo/essay.webp'); ?>" alt="Network Competition" class="logo-kompetisi-lg" />
                     <div class="competition-detail">
@@ -57,6 +58,7 @@
                         <a href="<?= base_url('kompetisi/networking-competition'); ?>" class="btn btn-secondary">Selengkapnya</a>
                     </div>
                 </div>
+                
                 <div class="grid-child onscroll-r" style="--delay: 2;">
                     <img src="<?= base_url('assets/images/competition-logo/ui-ux.webp'); ?>" alt="UI/UX Design" class="logo-kompetisi-lg" />
                     <div class="competition-detail">
