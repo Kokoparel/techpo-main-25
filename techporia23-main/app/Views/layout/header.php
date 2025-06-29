@@ -10,6 +10,26 @@
                 <li><a class="nav-link" href="<?php echo base_url('#about'); ?>">About</a></li>
                 <li><a class="nav-link" href="<?php echo base_url('seminar'); ?>">Seminar</a></li>
                 <li>
+                    <button class="nav-link nav-dropdown" data-dropdown="event-nav" aria-haspopup="true"
+                        aria-expanded="false" aria-label="event">
+                        Event
+                        <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="event-nav" class="nav-box" style="padding-right: 2rem;">
+                        <ul>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('event/talkshow'); ?>">Talkshow</a>
+                            </li>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('event/workshop'); ?>">Workshop</a>
+                            </li>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('event/bloodlink'); ?>">Bloodlink</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
                     <button class="nav-link nav-dropdown" data-dropdown="competition-nav" aria-haspopup="true"
                         aria-expanded="false" aria-label="competition">
                         Competition

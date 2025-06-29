@@ -109,13 +109,13 @@
         </div>
     </div>
 
-    <!-- <div class="section light" id="seminar">
+    <div class="section light" id="seminar">
         <div class="section-seminar">
             <div class="item center onscroll-r">
-                <h1>SEMINAR NASIONAL</h1>
-                <h1>TECHNOLOGY EUPHORIA 2023</h1>
+                <h1>TALSKHOW NASIONAL</h1>
+                <h1>SINERGI FEST 2025</h1>
                 <div class="item-detail">
-                    <p>Technology Euphoria 2023 kembali mengadakan Seminar dan Talkshow nasional dengan tema
+                    <p>Sinergi Fest 2025 mengadakan Talkshow nasional dengan tema
                         “Expressing, Educating, and Inspiring change through Digital Creative in the Era of 5.0” yang
                         akan dilaksanakan pada:</p>
                     <table class="details-table">
@@ -143,47 +143,47 @@
                 <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
             </div>
         </div>
-    </div> -->
+    </div> 
 
     <div class="section onscroll" id="kilas-balik">
-        <h1>KILAS BALIK SINERGI FEST 2025 </h1>
+        <h1>KILAS TECHPORIA 2024 </h1>
         <p>Dalam Sinergi Fest ini, terdapat beberapa lomba yang diadakan seperti dibawah ini</p>
         <a href="<?= base_url('sejarah'); ?>" class="btn btn-fancy">Selengkapnya</a>
         <div class="kilas-balik-grid">
             <div class="grid-child onscroll">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho23-1.jpg'); ?>" alt="kilas balik" />
+                <img src="<?= base_url('assets-old/sejarah-image/techpho24-1.jpg'); ?>" alt="kilas balik" />
                 <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2023</a>
+                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
                 </div>
             </div>
             <div class="grid-child onscroll" style="--delay: 1;">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho23-2.jpg'); ?>" alt="kilas balik" />
+                <img src="<?= base_url('assets-old/sejarah-image/techpho24-2.jpg'); ?>" alt="kilas balik" />
                 <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2023</a>
+                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
                 </div>
             </div>
             <div class="grid-child onscroll">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho23-3.jpg'); ?>" alt="kilas balik" />
+                <img src="<?= base_url('assets-old/sejarah-image/techpho24-3.jpg'); ?>" alt="kilas balik" />
                 <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2023</a>
+                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
                 </div>
             </div>
             <div class="grid-child onscroll" style="--delay: 1;">
                 <img src="<?= base_url('assets-old/sejarah-image/techpho23-7.jpg'); ?>" alt="kilas balik" />
                 <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2023</a>
+                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
                 </div>
             </div>
             <div class="grid-child onscroll">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho23-5.jpg'); ?>" alt="kilas balik" />
+                <img src="<?= base_url('assets-old/sejarah-image/techpho24-5.jpg'); ?>" alt="kilas balik" />
                 <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2023</a>
+                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
                 </div>
             </div>
             <div class="grid-child onscroll" style="--delay: 1;">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho23-6.jpg'); ?>" alt="kilas balik" />
+                <img src="<?= base_url('assets-old/sejarah-image/techpho24-6.jpg'); ?>" alt="kilas balik" />
                 <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2023</a>
+                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
                 </div>
             </div>
         </div>
