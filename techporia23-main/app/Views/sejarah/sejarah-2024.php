@@ -8,9 +8,8 @@
 			<div id="sejarah-header"
 				style="background-image: url(<?= base_url('assets-old/images/background2.jpeg') ?>)">
 				<div id="tittle-anim1" class="Smallmont" style=""><span><span
-							style="display:block; margin-bottom: 10px;font-size: 30px;">SEJARAH</span>Technology
-						Euphoria 2023</span></div>
-				<div id="tittle-anim2" class="Smallmont" style="">Technology Euphoria 2023 memiliki tema "Expressing, Educating, and Inspiring Change through Digital Creative in the Era of 5.0".
+							style="display:block; margin-bottom: 10px;font-size: 30px;">SEJARAH</span>Techphoria 2024</span></div>
+				<div id="tittle-anim2" class="Smallmont" style="">Techphoria 2024 memiliki tema "Expressing, Educating, and Inspiring Change through Digital Creative in the Era of 5.0".
 				</div>
 			</div>
 		</div>
@@ -28,10 +27,10 @@
 						</div>
 						<div class="card-body-transparent" style="background-color: #030057;">
 							<div class="Smallmont" id="logoku">
-								Logo <br>Techphoria 2023
+								Logo <br>Techphoria 2024
 							</div>
 							<div id="logopng" style="width:200px; height: 200px;">
-								<img src="<?= base_url() ?>assets-old/images/logos/23.png" id="logopng"
+								<img src="<?= base_url() ?>assets-old/images/logos/24.png" id="logopng"
 									style="width:200px; height: 200px;" alt="">
 							</div>
 							<div class="ucuy">
@@ -60,7 +59,7 @@
 										</tr>
 										<tr>
 											<td>5</td>
-											<td>Networking Competition </td>
+											<td>Essay </td>
 										</tr>
 									</tbody>
 								</table>
@@ -72,7 +71,7 @@
 					<div id="info-right">
 						<div class="Smallmont"
 							style="font-weight: 700; font-size: 20px;line-height: 1.7; margin-bottom: 30px; text-align: center; color: white">
-							Penyelenggaraan <br>Techphoria 2023
+							Penyelenggaraan <br>Techphoria 2024
 						</div>
 						<div class="Smallmont" id="hayongapain">
 							Techphoria merupakan serangkaian acara IT tahunan dengan fokus utama kompetisi tingkat
@@ -80,7 +79,7 @@
 							kesadaran tentang peranan IT serta meningkatkan nilai keilmuan dan komprehensif di bidang
 							ilmu teknologi informasi komputer, ajang ini sendiri diprakarsai oleh Mahasiswa Fakultas
 							Ilmu Komputer Universitas Sriwijaya.
-							<span style="display: block;margin-top: 15px">Technology Euphoria 2023 memiliki event khusus
+							<span style="display: block;margin-top: 15px">Technology Euphoria 2024 memiliki event khusus
 								yaitu Fexo dan Seminar</span>
 						</div>
 
@@ -92,13 +91,13 @@
 
 	<div id="highlights">
 		<div class="Mediummont" style="text-align: center;font-weight: 700; font-size: 30px;padding-top: 100px">
-			Techphoria 2023 Highlights
+			Techphoria 2024 Highlights
 		</div>
 
 		<div class="pomar">
 			<div class="owl-carousel owl-theme">
 				<?php for ($i = 1; $i < 8; $i++) { ?>
-					<div class="item"> <img src="<?= base_url('assets-old/sejarah-image/techpho23-' . $i . '.jpg') ?>"
+					<div class="item"> <img src="<?= base_url('assets-old/sejarah-image/techpho24-' . $i . '.jpg') ?>"
 							style="width: 270px" class="highlight-foto" alt=""></div>
 				<?php } ?>
 			</div>
@@ -283,7 +282,7 @@
 		style="background-image: url(<?= base_url('assets-old/images/background2.jpeg') ?>); color: white;background-repeat:no-repeat;background-size:cover;">
 		<div class="page-margin">
 			<div class="Mediummont" style="font-size:30px; font-weight: 700;text-align: center">
-				Daftar pemenang Techphoria 2023
+				Daftar pemenang Techphoria 2024
 			</div>
 
 			<div>
@@ -300,7 +299,7 @@
 										Juara
 									</div>
 									<div class="cell">
-										Nama Peserta
+										Nama Tim
 									</div>
 									<div class="cell">
 										Utusan
@@ -312,12 +311,10 @@
 										I
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Sultan Hafizh Alexander</span>
-										<span class="marbot">Ramadhan Oktovivian Muhammad</span>
-										<span class="marbot">Aldian Prawira</span>
+										<span class="marbot">Event Manager</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Telkom
+										Universitas Sriwijaya
 									</div>
 								</div>
 
@@ -326,9 +323,7 @@
 										2
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Nyimas Silvia</span>
-										<span class="marbot">Rugaiyah Balqis</span>
-										<span class="marbot">Muhammad Fauzan</span>
+										<span class="marbot">Triomacan</span>
 									</div>
 									<div class="cell" data-title="Utusan">
 										Universitas Sriwijaya
@@ -340,11 +335,10 @@
 										3
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Salman adinata roseno</span>
-										<span class="marbot">Fernanda Muhammad Totti</span>
+										<span class="marbot">Sudah Saatnya Skripsi</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Gadjah Mada
+										Universitas Sriwijaya
 									</div>
 								</div>
 							</div>
@@ -367,7 +361,7 @@
 										Juara
 									</div>
 									<div class="cell">
-										Nama Peserta
+										Nama Tim
 									</div>
 									<div class="cell">
 										Utusan
@@ -379,9 +373,7 @@
 										I
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Francis Alexander</span>
-										<span class="marbot">Tyrone Matthew Phanghegar</span>
-										<span class="marbot">Felix Antonius Suharjo</span>
+										<span class="marbot">Vunny</span>
 									</div>
 									<div class="cell" data-title="Utusan">
 										Universitas Bina Nusantara
@@ -393,12 +385,10 @@
 										2
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">I Gede Arya Raditya Parameswara</span>
-										<span class="marbot">Benedict Presley</span>
-										<span class="marbot">Mochammad Fariz Rifqi Rizqulloh</span>
+										<span class="marbot">Nama Tim Mau Apa Ya Lupa</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Institut Teknologi Bandung
+										Universitas Bina Nusantara
 									</div>
 								</div>
 
@@ -407,12 +397,10 @@
 										3
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Luigi Emiliandra</span>
-										<span class="marbot">Marvin Alvianus Rainhard</span>
-										<span class="marbot">Christivan Komah</span>
+										<span class="marbot">Never Gonna Give You Up</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										SMA Ignatius Global School
+										Universitas Bina Nusantara
 									</div>
 								</div>
 							</div>
@@ -435,7 +423,7 @@
 										Juara
 									</div>
 									<div class="cell">
-										Nama Peserta
+										Nama Tim
 									</div>
 									<div class="cell">
 										Utusan
@@ -447,12 +435,10 @@
 										I
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Muhammad Fakhri Rizqullah</span>
-										<span class="marbot">Naura Tri Raihana</span>
-										<span class="marbot">Muhammad Farrel Al-Wafi Frizzy</span>
+										<span class="marbot">Twintin</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Sriwijaya
+										Institut Teknologi Bandung
 									</div>
 								</div>
 
@@ -461,12 +447,10 @@
 										2
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Ramadhan Oktovivian Muhammad</span>
-										<span class="marbot">Aldian Prawira</span>
-										<span class="marbot">Sultan Hafizh Alexander</span>
+										<span class="marbot">GATAW</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Telkom
+										Universitas Sriwijaya
 									</div>
 								</div>
 
@@ -475,12 +459,10 @@
 										3
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Kesid Dewa Wicaksana</span>
-										<span class="marbot">Anda Bagas Aprianto</span>
-										<span class="marbot">Yohana Beatrice Nainggolan</span>
+										<span class="marbot">Deux</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Brawijaya
+										Universitas Sriwijaya
 									</div>
 								</div>
 							</div>
@@ -492,7 +474,7 @@
 			<div>
 				<div class="Mediummont"
 					style="font-size:25px; font-weight: 700;text-align: center;margin-top: 70px;margin-bottom: 10px">
-					<span class="header-win">Network Competition</span>
+					<span class="header-win">Essay</span>
 				</div>
 				<div class="limiter">
 					<div class="container-table100">
@@ -503,7 +485,7 @@
 										Juara
 									</div>
 									<div class="cell">
-										Nama Peserta
+										Nama Tim
 									</div>
 									<div class="cell">
 										Utusan
@@ -515,13 +497,10 @@
 										I
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Bayu Fedra A</span>
-										<span class="marbot">Muhammad Wahyu Syafi'uddin</span>
-										<span class="marbot">Clarisca Audyta Permata</span>
-
+										<span class="marbot">Powerpuff Girls</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Muhammadiyah Surakarta
+										Universitas Sriwijaya
 									</div>
 								</div>
 
@@ -530,11 +509,10 @@
 										2
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Emiliano Jossie</span>
-										<span class="marbot">Takumi Kozaki</span>
+										<span class="marbot">Askara</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Gunadarma
+										Universitas Telkom
 									</div>
 								</div>
 
@@ -543,12 +521,10 @@
 										3
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Christopher Ralin Anggoman</span>
-										<span class="marbot">Herlambang Rafli Wicaksono</span>
-										<span class="marbot">Fikri Muhammad Abdillah</span>
+										<span class="marbot">Topi Hitam</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Politeknik Negeri Malang
+										Universitas Multi Data Palembang
 									</div>
 								</div>
 							</div>
@@ -571,7 +547,7 @@
 										Juara
 									</div>
 									<div class="cell">
-										Nama Peserta
+										Nama Tim
 									</div>
 									<div class="cell">
 										Utusan
@@ -583,13 +559,10 @@
 										I
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Putu Agus Dharma Kusuma</span>
-										<span class="marbot">I Putu Gede Mahardika Adi Putra</span>
-										<span class="marbot">Anak Agung Ngurah Mahadana Apta Gotra</span>
-
+										<span class="marbot">Eng Eng</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Udayana
+										Universitas Sriwijaya
 									</div>
 								</div>
 
@@ -598,11 +571,10 @@
 										2
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">Ifa aprillianto</span>
-										<span class="marbot">Sarwan Hamid</span>
+										<span class="marbot">Manggala</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Institut Teknologi Telkom Purwokerto
+										Universitas Sriwijaya
 									</div>
 								</div>
 
@@ -611,12 +583,10 @@
 										3
 									</div>
 									<div class="cell" data-title="Nama Peserta">
-										<span class="marbot">M. Naufal Fawwaz Haryono</span>
-										<span class="marbot">Hanif Robby Rodhiya</span>
-										<span class="marbot">Nauval Fahreza Attamimi</span>
+										<span class="marbot">Apa Adanya</span>
 									</div>
 									<div class="cell" data-title="Utusan">
-										Universitas Brawijaya
+										Universitas Sriwijaya
 									</div>
 								</div>
 							</div>
