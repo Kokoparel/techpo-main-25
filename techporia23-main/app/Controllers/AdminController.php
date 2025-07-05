@@ -296,6 +296,30 @@ class AdminController extends BaseController
         return $this->response->download(WRITEPATH . $userData['kpm'], null);
     }
 
+//     public function berkasUser($username)
+// {
+//     $userDataModel = new UserDataModel();
+//     $userData = $userDataModel->find($username);
+    
+//     // Cek apakah user ditemukan
+//     if (!$userData) {
+//         throw new \CodeIgniter\Exceptions\PageNotFoundException("User dengan username '$username' tidak ditemukan");
+//     }
+    
+//     // Cek apakah field kpm exists dan tidak kosong
+//     if (empty($userData['kpm'])) {
+//         throw new \CodeIgniter\Exceptions\PageNotFoundException("File KPM untuk user '$username' tidak ditemukan");
+//     }
+    
+//     // Cek apakah file fisik ada
+//     $filePath = WRITEPATH . $userData['kpm'];
+//     if (!file_exists($filePath)) {
+//         throw new \CodeIgniter\Exceptions\PageNotFoundException("File KPM tidak ditemukan di server");
+//     }
+    
+//     return $this->response->download($filePath, null);
+// }
+
     public function terimaBerkas($id = null)
     {
         $dataTimModel = new DataTimModel();

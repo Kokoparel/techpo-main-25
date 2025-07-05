@@ -8,7 +8,7 @@
 <div class="main">
     <div class="container top">
         <div class="submission-flex">
-            <?php if ($data['id_kompetisi'] == 5): ?>
+            <?php if ($data['id_kompetisi'] == 1): ?>
 
                 <img src="<?= base_url('assets/images/competition-logo/business.webp'); ?>" alt="Business Plan"
                     class="logo-kompetisi-lg" />
@@ -35,6 +35,10 @@
                     <input type="submit" value="submit" name="confirm" class="btn btn-submit" />
                     <?= form_close(); ?>
                 </div>
+            
+            
+
+            
 
             <?php elseif ($data['id_kompetisi'] == 3): ?>
 
