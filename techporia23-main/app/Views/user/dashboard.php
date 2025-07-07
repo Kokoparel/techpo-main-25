@@ -6,7 +6,7 @@
 <?= $this->section('content'); ?>
 
 <div class="main">
-    <!-- <div class="container top" id="notifikasi">
+    <div class="container top" id="notifikasi">
         <h1>Notifikasi</h1>
         <?php if ($notifikasi == null): ?>
             <p style="margin-top: 1rem;">
@@ -72,7 +72,7 @@
                 </tbody>
             </table>
         <?php endif; ?>
-    </div> -->
+    </div> 
 
     <div class="container" id="tim">
         <div class="container-4">

@@ -43,7 +43,7 @@
         </div>
         <div id="gabung" class="tab-content">
             <p>Gabung dengan tim yang sudah dibuat ketua kamu dengan memasukkan ID tim</p>
-            <?= form_open('dashboard/join-tim'); ?>
+            <?= form_open('profile/join-tim'); ?>
             <div class="input-wrapper">
                 <label for="kode_tim">Kode unik tim</label>
                 <input type="text" name="kode_tim" id="kode_tim" placeholder="Kode unik tim" required>
