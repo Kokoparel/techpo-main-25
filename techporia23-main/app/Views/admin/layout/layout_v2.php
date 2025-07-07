@@ -34,7 +34,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text mx-3">Technology Euphoria</div>
+                <div class="sidebar-brand-text mx-3">SINERGI FEST</div>
             </a>
 
             <!-- Divider -->
@@ -83,9 +83,7 @@
                         <a class="collapse-item" href="<?= base_url('admin/lomba/4'); ?>">Essay</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/3'); ?>">UI/UX Design</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/2'); ?>">Web Development</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/8'); ?>">Band / Acoustic</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/6'); ?>">Painting</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/7'); ?>">Dance Creation</a>
+                        <a class="collapse-item" href="<?= base_url('admin/lomba/9'); ?>">Mobile Legends</a>
                     </div>
                 </div>
             </li>
