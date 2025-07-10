@@ -32,6 +32,13 @@ $routes->set404Override();
 $routes->get('/', 'MainController::index');
 $routes->get('kompetisi/(:segment)', 'MainController::kompetisi/$1');
 
+$routes->get('workshop', 'MainController::workshop');
+$routes->get('workshop/daftar', 'MainController::daftarWorkshop');
+$routes->get('workshop/tiket', 'WorkshopController::tiket');
+$routes->get('workshop/tiket/download', 'WorkshopController::downloadTiket');
+$routes->get('payment/workshop', 'PaymentController::workshop');
+$routes->post('payment/workshop', 'PaymentController::workshop');
+
 $routes->get('seminar', 'MainController::seminar');
 $routes->get('seminar/daftar', 'MainController::daftarSeminar');
 $routes->get('seminar/tiket', 'SeminarController::tiket');
