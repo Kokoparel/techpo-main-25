@@ -181,8 +181,8 @@
         fileInput.forEach(function(input) {
             input.addEventListener('change', function(e) {
                 var fileSize = this.files[0].size / 1024 / 1024; // size in MB
-                if (fileSize > 5) {
-                    alert("File size exceeds 5 MB");
+                if (fileSize > 15) { // Ubah dari 5 menjadi 15
+                    alert("File size exceeds 15 MB"); // Ubah pesan juga
                     this.value = ''; // Clear the file input
                 }
             });

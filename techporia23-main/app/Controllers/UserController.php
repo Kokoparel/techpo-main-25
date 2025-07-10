@@ -320,13 +320,13 @@ class UserController extends BaseController
         }
 
         $proposal = $this->request->getFile('proposal');
-        if ($proposal->getSize() > 5 * 1024 * 1024) { // Check if file is larger than 5 MB
-            $session = Services::session();
-            $session->setFlashdata('alert', 'File size exceeds 5 MB');
-            $session->setFlashdata('alertTitle', 'Error');
-            $session->setFlashdata('alertType', 'error');
-            return redirect()->back()->withInput();
-        }
+        if ($proposal->getSize() > 15 * 1024 * 1024) { // Check if file is larger than 15 MB
+        $session = Services::session();
+        $session->setFlashdata('alert', 'File size exceeds 15 MB'); // Ubah pesan juga
+        $session->setFlashdata('alertTitle', 'Error');
+        $session->setFlashdata('alertType', 'error');
+        return redirect()->back()->withInput();
+    }
 
         $berkasModel = new BerkasModel();
         $dataProposal = $berkasModel->where('tim_id', $this->request->getPost('tim_id'))
