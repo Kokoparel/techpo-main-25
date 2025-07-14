@@ -56,9 +56,9 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Pendaftar Essay</div>
+                            Pendaftar Mobile Legends</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?= $essay ?>
+                            <?= $ml ?>
                         </div>
                     </div>
                     <div class="col-auto">
@@ -108,68 +108,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-2 col-md-12 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Pendaftar Band / Acoustic</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?= $band ?>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-2 col-md-12 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Pendaftar Painting</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?= $painting ?>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Earnings (Monthly) Card Example 
-    <div class="col-xl-2 col-md-12 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Pendaftar Dance Creation</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?= $dance ?>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    
 </div>
 
 <div class="card shadow mb-4">

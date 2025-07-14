@@ -125,6 +125,7 @@ class AdminController extends BaseController
             $band = $dataTimModel->where('id_kompetisi', 8)->countAllResults();
             $painting = $dataTimModel->where('id_kompetisi', 6)->countAllResults();
             $dance = $dataTimModel->where('id_kompetisi', 7)->countAllResults();
+            $ml = $dataTimModel->where('id_kompetisi', 9)->countAllResults();
 
             return view('admin/data_lomba_all', [
                 'dataTim' => $dataTim,
@@ -135,7 +136,8 @@ class AdminController extends BaseController
                 'web' => $web,
                 'band' => $band,
                 'painting' => $painting,
-                'dance' => $dance
+                'dance' => $dance,
+                'ml' => $ml,
             ]);
         }
 

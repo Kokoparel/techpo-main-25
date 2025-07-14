@@ -35,6 +35,8 @@ class UserController extends BaseController
             ->findAll();
 
         $anggotaTimModel = new AnggotaTimModel();
+        $db = \Config\Database::connect();
+
         $tim = $anggotaTimModel
             ->select('data_tim.tim_id, nama_tim, kompetisi.id_kompetisi, nama_kompetisi, status, role, transaction_status')
             ->join('data_tim', 'data_tim.tim_id=anggota_tim.tim_id', 'left')
@@ -44,6 +46,16 @@ class UserController extends BaseController
             ->where('anggota', auth()->user()->username)->findAll();
 
         foreach ($tim as $key => $value) {
+
+            if ($value['id_kompetisi'] == 9) {
+                $ml_anggota = [
+                    'ketua' => $db->table('data_tim_ml_anggota')->where(['tim_id' => $value['tim_id'], 'posisi' => 'ketua'])->get()->getRowArray(),
+                    'anggota' => $db->table('data_tim_ml_anggota')->where(['tim_id' => $value['tim_id'], 'posisi' => 'anggota'])->get()->getResultArray(),
+                    'cadangan' => $db->table('data_tim_ml_anggota')->where(['tim_id' => $value['tim_id'], 'posisi' => 'cadangan'])->get()->getRowArray(),
+                ];
+                error_log('DEBUG ML ANGGOTA: ' . json_encode($ml_anggota));
+                $tim[$key]['ml_anggota'] = $ml_anggota;
+            }
 
             $tim[$key]['ketua'] = $anggotaTimModel
                 ->select('nama, nim, universitas')
@@ -173,6 +185,44 @@ class UserController extends BaseController
         ];
         $dataTimModel->insert($data);
 
+        if ($this->request->getPost('kompetisi') == '9') {
+            $db = \Config\Database::connect();
+            $userDataModel = new UserDataModel();
+            $userData = $userDataModel->find(auth()->user()->username);
+
+            // Simpan ketua tim (nama dari akun)
+            $ml_member = $this->request->getPost('ml_member');
+            $db->table('data_tim_ml_anggota')->insert([
+                'tim_id' => $data['tim_id'],
+                'nama' => $userData['nama'], // nama dari akun
+                'nickname' => $ml_member[1]['nickname'],
+                'ml_id' => $ml_member[1]['id'],
+                'posisi' => 'ketua'
+            ]);
+            // Simpan anggota 2-5
+            for ($i = 2; $i <= 5; $i++) {
+                $member = $ml_member[$i];
+                $db->table('data_tim_ml_anggota')->insert([
+                    'tim_id' => $data['tim_id'],
+                    'nama' => $member['nama'],
+                    'nickname' => $member['nickname'],
+                    'ml_id' => $member['id'],
+                    'posisi' => 'anggota'
+                ]);
+            }
+            // Simpan cadangan jika diisi
+            $ml_cadangan = $this->request->getPost('ml_cadangan');
+            if (!empty($ml_cadangan['nama']) && !empty($ml_cadangan['nickname']) && !empty($ml_cadangan['id'])) {
+                $db->table('data_tim_ml_anggota')->insert([
+                    'tim_id' => $data['tim_id'],
+                    'nama' => $ml_cadangan['nama'],
+                    'nickname' => $ml_cadangan['nickname'],
+                    'ml_id' => $ml_cadangan['id'],
+                    'posisi' => 'cadangan'
+                ]);
+            }
+        }
+
         $anggotaTimModel = new AnggotaTimModel();
         $anggota = [
             'tim_id' => $data['tim_id'],
@@ -209,7 +259,7 @@ class UserController extends BaseController
         }
 
         $checkJumlah = $anggotaTimModel->where('tim_id', $dataTim['tim_id'])->findAll();
-        if (count($checkJumlah) >= 3) {
+        if (count($checkJumlah) >= 5) {
             $session->setFlashdata('alert', 'Tim sudah penuh');
             $session->setFlashdata('alertTitle', 'Error');
             $session->setFlashdata('alertType', 'error');
@@ -226,6 +276,23 @@ class UserController extends BaseController
         ];
 
         $notifikasiModel->insert($data);
+
+        if ($dataTim['id_kompetisi'] == 9) {
+            $userDataModel = new UserDataModel();
+            $userData = $userDataModel->find(auth()->user()->username);
+
+            $ml_nickname = $this->request->getPost('ml_nickname_join');
+            $ml_id = $this->request->getPost('ml_id_join');
+            $db = \Config\Database::connect();
+            $db->table('data_tim_ml_anggota')->insert([
+                'tim_id' => $dataTim['tim_id'],
+                'nama' => $userData['nama'],
+                'nickname' => $ml_nickname,
+                'ml_id' => $ml_id,
+                'posisi' => 'anggota'
+            ]);
+        }
+
         $session->setFlashdata('success', 'Permintaan bergabung berhasil dikirimkan');
 
         return redirect()->to('/profile');

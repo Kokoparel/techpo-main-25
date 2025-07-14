@@ -33,8 +33,13 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
+<<<<<<< HEAD
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-text mx-3">SINERGI FEST</div>
+=======
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href=" <?= base_url('admin/dashboard'); ?>">
+                <div class="sidebar-brand-text mx-3">Sinergi Fest</div>
+>>>>>>> df3526b0065fc98ec157f2ebab01f1446a46c751
             </a>
 
             <!-- Divider -->
@@ -80,7 +85,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('admin/lomba/5'); ?>">Business Plan</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/1'); ?>">Competitive Programming</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/4'); ?>">Essay</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/3'); ?>">UI/UX Design</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/2'); ?>">Web Development</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/9'); ?>">Mobile Legends</a>
@@ -201,7 +205,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Technology Euphoria 2023</span>
+                        <span>Copyright &copy; Sinergi Fest 2025</span>
                     </div>
                 </div>
             </footer>
