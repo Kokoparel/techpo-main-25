@@ -39,19 +39,19 @@ $routes->get('workshop/tiket/download', 'WorkshopController::downloadTiket');
 $routes->get('payment/workshop', 'PaymentController::workshop');
 $routes->post('payment/workshop', 'PaymentController::workshop');
 
-$routes->get('seminar', 'MainController::seminar');
-$routes->get('seminar/daftar', 'MainController::daftarSeminar');
-$routes->get('seminar/tiket', 'SeminarController::tiket');
-$routes->get('seminar/tiket/download', 'SeminarController::downloadTiket');
-$routes->get('payment/seminar', 'PaymentController::seminar');
-$routes->post('payment/seminar', 'PaymentController::seminar');
+$routes->get('talkshow', 'MainController::seminar');
+$routes->get('talkshow/daftar', 'MainController::daftarSeminar');
+$routes->get('talkshow/tiket', 'SeminarController::tiket');
+$routes->get('talkshow/tiket/download', 'SeminarController::downloadTiket');
+$routes->get('payment/talkshow', 'PaymentController::seminar');
+$routes->post('payment/talkshow', 'PaymentController::seminar');
+$routes->get('payment/cancel/talkshow/(:segment)', 'PaymentController::cancelSeminar/$1');
 
 $routes->get('transaction/handler', 'NotificationController::handleTransactionStatus');
 $routes->get('sejarah', 'MainController::kilasBalik');
 $routes->get('sejarah/(:segment)', 'MainController::sejarah/$1');
 
 $routes->get('kompetisi/payment/(:segment)', 'PaymentController::lomba/$1');
-$routes->get('payment/cancel/seminar/(:segment)', 'PaymentController::cancelSeminar/$1');
 $routes->get('payment/cancel/lomba/(:segment)', 'PaymentController::cancelLomba/$1');
 $routes->get('/payment/finish', 'PaymentController::finishPayment');
 $routes->get('/payment/error', 'PaymentController::errorPayment');

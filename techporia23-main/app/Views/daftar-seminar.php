@@ -1,12 +1,12 @@
 <?= $this->extend('layout/master_layout'); ?>
 
-<?= $this->section('title'); ?>Daftar Seminar | Technology Euphoria<?= $this->endSection(); ?>
+<?= $this->section('title'); ?>Daftar Talkshow | Technology Euphoria<?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
 
 <div class="main">
     <div class="container-form">
-        <h1>Daftar Seminar</h1>
+        <h1>Daftar Talkshow</h1>
         <?= validation_list_errors(); ?>
         <?= form_open('payment/seminar'); ?>
         <div class="input-wrapper">

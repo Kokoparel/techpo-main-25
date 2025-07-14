@@ -17,7 +17,7 @@
                     <div id="event-nav" class="nav-box" style="padding-right: 2rem;">
                         <ul>
                             <li>
-                                <a class="nav-data-link" href="<?= base_url('seminar'); ?>">Talkshow</a>
+                                <a class="nav-data-link" href="<?= base_url('talkshow'); ?>">Talkshow</a>
                             </li>
                             <li>
                                 <a class="nav-data-link" href="<?= base_url('workshop'); ?>">Workshop</a>

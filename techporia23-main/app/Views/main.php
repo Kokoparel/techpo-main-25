@@ -137,13 +137,53 @@
                         </tr>
                     </table>
                 </div>
-                <a href="<?= base_url('seminar'); ?>" class="btn btn-fancy">Selengkapnya</a>
+                <a href="<?= base_url('talkshow'); ?>" class="btn btn-fancy">Selengkapnya</a>
             </div>
             <div class="item onscroll-r" style="--delay: 1;">
                 <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
             </div>
         </div>
     </div> 
+
+    <div class="section light" id="seminar">
+        <div class="section-seminar">
+            <!-- Gambar ke kiri -->
+            <div class="item onscroll-r" style="--delay: 1;">
+                <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
+            </div>
+
+            <!-- Teks ke kanan -->
+            <div class="item center onscroll-r">
+                <h1>WORKSHOP NASIONAL</h1>
+                <h1>SINERGI FEST 2025</h1>
+                <div class="item-detail">
+                    <p>Sinergi Fest 2025 juga mengadakan Workshop nasional dengan tema
+                        “Expressing, Educating, and Inspiring change through Digital Creative in the Era of 5.0” yang
+                        akan dilaksanakan pada:</p>
+                    <table class="details-table">
+                        <tr>
+                            <td><i class='bx bx-calendar-alt'></i> Tanggal Pelaksanaan</td>
+                            <td>Sabtu, 21 Oktober 2023</td>
+                        </tr>
+                        <tr>
+                            <td><i class='bx bx-map'></i> Tempat Pelaksanaan</td>
+                            <td>FASILKOM Universitas Sriwijaya</td>
+                        </tr>
+                        <tr>
+                            <td><i class='bx bx-user-voice'></i> Pembicara</td>
+                            <td>Leonardo Edwin (Content Creator)</td>
+                        </tr>
+                        <tr>
+                            <td><i class='bx bx-user-voice'></i> Pembicara</td>
+                            <td>Angga Fauzan (CEO MySkill)</td>
+                        </tr>
+                    </table>
+                </div>
+                <a href="<?= base_url('workshop'); ?>" class="btn btn-fancy">Selengkapnya</a>
+            </div>
+        </div>
+    </div>
+
 
     <div class="section onscroll" id="kilas-balik">
         <h1>KILAS TECHPORIA 2024 </h1>
@@ -189,7 +229,7 @@
         </div>
     </div>
 
-    <!--\ <div class="section light" id="sponsors">
+    <div class="section light" id="sponsors">
         <div class="section-ms">
             <h1 class="onscroll-r">SPONSORS</h1>
             <div class="ms">
@@ -201,9 +241,9 @@
                 ?>
             </div>
         </div>
-    </div> -->
+    </div> 
 
-    <!-- <div class="section" id="media-partners">
+    <div class="section" id="media-partners">
         <div class="section-ms">
             <h1 class="onscroll-r">MEDIA PARTNERS</h1>
             <div class="ms">
@@ -215,7 +255,7 @@
                 ?>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>
 
 <?= $this->endSection(); ?>

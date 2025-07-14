@@ -1,6 +1,6 @@
 <?= $this->extend('layout/master_layout'); ?>
 
-<?= $this->section('title'); ?>Seminar | Technology Euphoria
+<?= $this->section('title'); ?>Talkshow | Technology Euphoria
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
@@ -18,7 +18,7 @@
                 <img src="/assets/images/seminar.webp" alt="Seminar Nasional" />
             </div>
             <div class="keterangan">
-                <h1>SEMINAR NASIONAL</h1>
+                <h1>TALKSHOW NASIONAL</h1>
                 <h1>TECHNOLOGY EUPHORIA 2023</h1>
                 <div class="paragraphs">
                     <p>Dengan tema: “Expressing, Educating, and Inspiring change through Digital Creative in the Era of
@@ -68,11 +68,11 @@
                     </ol>
                 </div>
                 <?php if ($isOrdered) : ?>
-                    <a href="<?= base_url('seminar/tiket'); ?>" class="btn btn-secondary">Lihat Invoice</a>
+                    <a href="<?= base_url('talkshow/tiket'); ?>" class="btn btn-secondary">Lihat Invoice</a>
                     <a href="https://chat.whatsapp.com/FrwMn2xKnQsFqb6GYk9c89" target="_blank"
                         class="btn btn-secondary" style="margin-left: 2rem;">Join Grup WhatsApp</a>
                 <?php else : ?>
-                    <a href="<?= base_url('seminar/daftar'); ?>" class="btn btn-secondary">Daftar Seminar</a>
+                    <a href="<?= base_url('talkshow/daftar'); ?>" class="btn btn-secondary">Daftar Talkshow</a>
                 <?php endif; ?>
             </div>
         </div> 

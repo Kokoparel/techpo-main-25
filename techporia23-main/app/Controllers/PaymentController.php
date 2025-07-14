@@ -32,7 +32,7 @@ class PaymentController extends BaseController
         if ($dataSeminar == null) {
 
             if (!$this->request->is('post')) {
-                return redirect()->to('seminar/daftar');
+                return redirect()->to('talkshow/daftar');
             }
 
             $validation = Services::validation();
@@ -60,7 +60,7 @@ class PaymentController extends BaseController
                     $session->setFlashdata('alertTitle', 'Kuota VIP Penuh');
                     $session->setFlashdata('alertType', 'info');
 
-                    return redirect()->to('seminar/daftar');
+                    return redirect()->to('talkshow/daftar');
                 }
             }
 
@@ -119,7 +119,7 @@ class PaymentController extends BaseController
         }
 
         if ($transaction['transaction_status'] == 'settlement' || $transaction['transaction_status'] == 'capture') {
-            return redirect()->to('seminar/tiket');
+            return redirect()->to('talkshow/tiket');
         }
 
         if ($transaction['transaction_status'] == 'expire' || strtotime($transaction['expiry_time']) < time()) {
@@ -128,7 +128,7 @@ class PaymentController extends BaseController
             $session->setFlashdata('alert', 'Pembayaran anda telah kadaluwarsa, silahkan lakukakan pendaftaran ulang');
             $session->setFlashdata('alertTitle', 'Pembayaran kadaluwarsa');
             $session->setFlashdata('alertType', 'error');
-            return redirect()->to('seminar/daftar');
+            return redirect()->to('talkshow/daftar');
         }
 
         $item = [
@@ -182,7 +182,7 @@ class PaymentController extends BaseController
         $session->setFlashdata('alertTitle', 'Pembayaran dibatalkan');
         $session->setFlashdata('alertType', 'info');
 
-        return redirect()->to('/seminar');
+        return redirect()->to('/talkshow');
     }
 
    public function workshop()

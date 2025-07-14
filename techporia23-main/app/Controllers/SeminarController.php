@@ -19,14 +19,14 @@ class SeminarController extends BaseController
             $dataSeminar = $dataSeminarModel->where('username', auth()->user()->username)->first();
 
             if ($dataSeminar == null) {
-                return redirect()->to('seminar/daftar');
+                return redirect()->to('talkshow/daftar');
             }
 
             $transactionsModel = new TransactionsModel();
             $transaction = $transactionsModel->find($dataSeminar['order_id']);
 
             if ($transaction == null || ($transaction['transaction_status'] != 'settlement' && $transaction['transaction_status'] != 'capture')) {
-                return redirect()->to('payment/seminar');
+                return redirect()->to('payment/talkshow');
             }
 
             $tiketData = [
@@ -68,7 +68,7 @@ class SeminarController extends BaseController
         $tiket = $tiketModel->where('username', auth()->user()->username)->first();
 
         if ($tiket == null) {
-            return redirect()->to('seminar/tiket');
+            return redirect()->to('talkshow/tiket');
         }
 
         Utils::generatePdf($tiket['ticket'], true);
