@@ -52,3 +52,5 @@ public/build/
 
 # Log files
 *.log
+
+/public/null/
