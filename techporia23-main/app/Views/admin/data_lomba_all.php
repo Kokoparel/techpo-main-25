@@ -56,9 +56,9 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Pendaftar Essay</div>
+                            Pendaftar Mobile Legends</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?= $essay ?>
+                            <?= $ml ?>
                         </div>
                     </div>
                     <div class="col-auto">

@@ -55,7 +55,7 @@
                             </li>
                             <li>
                                 <a class="nav-data-link"
-                                href="<?= base_url('kompetisi/mobile-legend'); ?>">Mobile Legend</a>
+                                href="<?= base_url('kompetisi/mobile-legend'); ?>">Mobile Legends</a>
                             </li>
                             <!-- <li>
                                 <a class="nav-data-link"

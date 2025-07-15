@@ -64,7 +64,7 @@
                     <?= form_close(); ?>
                 </div>
             
-            <?php elseif ($data['id_kompetisi'] == 2): ?>
+            <?php elseif ($data['id_kompetisi'] == 1): ?>
 
                 <img src="<?= base_url('assets/images/competition-logo/webdev.webp'); ?>" alt="Web Development"
                     class="logo-kompetisi-lg" />
@@ -100,6 +100,8 @@
                         <?= form_close(); ?>
                     </div>
                     <?php elseif ($data['id_kompetisi'] == 4): ?> <!-- Check if it's the Essay competition -->
+
+                        
 
 <img src="<?= base_url('assets/images/competition-logo/essay.webp'); ?>" alt="Essay Competition"
     class="logo-kompetisi-lg" />

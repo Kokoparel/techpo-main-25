@@ -13,7 +13,7 @@
             </div>
             <div class="keterangan">
                 <h1>WORKSHOP</h1>
-                <h1>TECHNOLOGY EUPHORIA 2023</h1>
+                <h1>SINERGI FEST 2025</h1>
                 <div class="paragraphs">
                     <p>Workshop eksklusif Technology Euphoria adalah ruang edukatif untuk mengasah keterampilan praktikal dalam dunia digital & teknologi. Diperuntukkan bagi mahasiswa, pelajar, dan masyarakat umum yang ingin menambah wawasan secara langsung dari para praktisi.</p>
                     <p>Acara ini diselenggarakan oleh Fakultas Ilmu Komputer Universitas Sriwijaya sebagai bagian dari rangkaian Technology Euphoria 2023 yang bertujuan untuk membentuk SDM unggul melalui pemahaman dan praktek teknologi terkini.</p>

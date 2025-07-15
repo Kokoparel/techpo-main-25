@@ -82,7 +82,7 @@
 </div>
 
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="<?= getenv('CLIENT_KEY') ?>"></script>
-<script type="text/javascript">
+ <script type="text/javascript">
     window.snap.embed('<?= $snap_token; ?>', {
         embedId: 'snap-container',
         onClose: function () {

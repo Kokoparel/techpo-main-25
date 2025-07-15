@@ -33,8 +33,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text mx-3">SINERGI FEST</div>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href=" <?= base_url('admin/dashboard'); ?>">
+                <div class="sidebar-brand-text mx-3">Sinergi Fest</div>
             </a>
 
             <!-- Divider -->
@@ -201,7 +201,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Technology Euphoria 2023</span>
+                        <span>Copyright &copy; Sinergi Fest 2025</span>
                     </div>
                 </div>
             </footer>
