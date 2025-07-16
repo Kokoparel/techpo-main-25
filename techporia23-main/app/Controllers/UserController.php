@@ -480,17 +480,24 @@ class UserController extends BaseController
     public function ubahPassword()
     {
         $newPassword = $this->request->getPost('password');
-        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-
         $db = \Config\Database::connect();
-        $query = $db->table('auth_identities');
-        $query->set('secret2', $hashedPassword)
+        $query = $db->table('auth_identities')->where('user_id', auth()->user()->id)->get()->getRowArray();
+
+        // Validasi password baru tidak boleh sama dengan password lama
+        if (password_verify($newPassword, $query['secret2'])) {
+            $session = Services::session();
+            $session->setFlashdata('error', 'Password baru tidak boleh sama dengan password lama');
+            return redirect()->back();
+        }
+
+        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+        $db->table('auth_identities')
+            ->set('secret2', $hashedPassword)
             ->where('user_id', auth()->user()->id)
             ->update();
 
         $session = Services::session();
         $session->setFlashdata('success', 'Password berhasil diubah');
-
         return redirect()->to('/profile');
     }
 

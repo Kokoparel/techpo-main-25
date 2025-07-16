@@ -8,10 +8,6 @@
             <ul class="menu">
                 <li><a class="nav-link" href="<?php echo base_url(); ?>">Home</a></li>
                 <li><a class="nav-link" href="<?php echo base_url('#about'); ?>">About</a></li>
-<<<<<<< HEAD
-=======
-                <li><a class="nav-link" href="<?php echo base_url('#seminar'); ?>">Seminar</a></li>
->>>>>>> df3526b0065fc98ec157f2ebab01f1446a46c751
                 <li>
                     <button class="nav-link nav-dropdown" data-dropdown="event-nav" aria-haspopup="true"
                         aria-expanded="false" aria-label="event">

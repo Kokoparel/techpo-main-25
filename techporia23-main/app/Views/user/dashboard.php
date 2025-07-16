@@ -219,6 +219,13 @@
     </div>
 
     <div class="container bottom">
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+        <?php endif; ?>
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+        <?php endif; ?>
+        
         <h1>Pengaturan Akun</h1>
         <?= form_open('profile/ubah-password'); ?>
         <div class="input-wrapper-horizontal">
