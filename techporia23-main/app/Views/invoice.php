@@ -88,7 +88,7 @@
 
         <p style="font-size: 0.9rem; padding: 0 1rem; text-align: justify; margin-bottom: 2rem;">Tiket anda telah kami
             kirimkan ke email anda, jika anda belum menerimanya anda bisa mendownload tiketnya <a
-                href="<?= base_url('seminar/tiket/download'); ?>" style="color: #97fb57">disini</a>.</p>
+                href="<?= base_url('workshop/tiket/download'); ?>" style="color: #97fb57">disini</a>.</p>
     </div>
 </div>
 
