@@ -46,7 +46,7 @@ class MainController extends BaseController
         $order = $dataSeminarModel->where('username', auth()->user()->username)->first();
 
         if ($order != null) {
-            return redirect()->to('payment/seminar');
+            return redirect()->to('payment/talkshow');
         }
 
         return view('daftar-seminar');
@@ -86,8 +86,6 @@ class MainController extends BaseController
 
         return view('daftar-workshop');
     }
-
-
 
     public function kompetisi($kompetisi)
     {

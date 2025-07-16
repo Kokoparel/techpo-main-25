@@ -8,7 +8,7 @@
     <div class="container-form">
         <h1>Daftar Talkshow</h1>
         <?= validation_list_errors(); ?>
-        <?= form_open('payment/seminar'); ?>
+        <?= form_open('payment/talkshow'); ?>
         <div class="input-wrapper">
             <label for="nama">Nama Lengkap</label>
             <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" />

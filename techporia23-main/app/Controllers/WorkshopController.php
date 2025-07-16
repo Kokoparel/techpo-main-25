@@ -54,7 +54,7 @@ class WorkshopController extends BaseController
             'total' => 'Rp. ' . number_format($transaction['gross_amount'], 0, ',', '.'),
         ];
 
-        return view('invoice', [
+        return view('invoice_workshop', [
             'data' => $dataWorkshop,
             'transaction' => $transaction,
             'item' => $item,
