@@ -33,13 +33,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-<<<<<<< HEAD
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text mx-3">SINERGI FEST</div>
-=======
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href=" <?= base_url('admin/dashboard'); ?>">
                 <div class="sidebar-brand-text mx-3">Sinergi Fest</div>
->>>>>>> df3526b0065fc98ec157f2ebab01f1446a46c751
             </a>
 
             <!-- Divider -->
