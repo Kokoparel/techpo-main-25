@@ -11,6 +11,8 @@
                 <?= $this->include('submission/business_plan'); ?>
             <?php elseif ($data['id_kompetisi'] == 9): ?>
                 <?= $this->include('submission/mobile_legends'); ?>
+            <?php elseif ($data['id_kompetisi'] == 1): ?>
+                <?= $this->include('submission/competitive_programming'); ?>
             <?php elseif ($data['id_kompetisi'] == 3): ?>
                 <?= $this->include('submission/uiux'); ?>
             <?php elseif ($data['id_kompetisi'] == 2): ?>
