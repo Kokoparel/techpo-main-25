@@ -186,16 +186,16 @@ class PaymentController extends BaseController
     }
 
    public function workshop()
-{
-    $dataWorkshopModel = new \App\Models\DataWorkshopModel();
-    $transactionsModel = new \App\Models\TransactionsModel();
+    {
+        $dataWorkshopModel = new \App\Models\DataWorkshopModel();
+        $transactionsModel = new \App\Models\TransactionsModel();
 
-    $dataWorkshop = $dataWorkshopModel->find(auth()->user()->username);
+        $dataWorkshop = $dataWorkshopModel->find(auth()->user()->username);
 
-    if ($dataWorkshop == null) {
-        if (!$this->request->is('post')) {
-            return redirect()->to('workshop/daftar');
-        }
+        if ($dataWorkshop == null) {
+            if (!$this->request->is('post')) {
+                return redirect()->to('workshop/daftar');
+            }
 
         $validation = Services::validation();
         $validation->setRuleGroup('daftarWorkshop');
@@ -250,7 +250,7 @@ class PaymentController extends BaseController
             'transaction_status' => 'not_start',
         ]);
 
-        // Baru simpan data workshop setelah transaksi dibuat
+        // Baru simpen data workshop abis transaksi dibuat
         $dataWorkshopModel->insert($dataWorkshop);
         }
 
@@ -490,14 +490,11 @@ class PaymentController extends BaseController
         $session = Services::session();
 
         $orderId = $this->request->getVar('order_id');
-        $dataSeminarModel = new DataSeminarModel();
-        $dataSeminar = $dataSeminarModel->where('order_id', $orderId)->first();
 
         if ($this->request->getVar('status_code') == 201) {
             $session->setFlashdata('alert', 'Pembayaran anda belum selesai, silahkan selesaikan terlebih dahulu');
             $session->setFlashdata('alertTitle', 'Pembayaran tertunda');
             $session->setFlashdata('alertType', 'warning');
-
             return redirect()->back();
         }
 
@@ -505,12 +502,24 @@ class PaymentController extends BaseController
         $session->setFlashdata('alertTitle', 'Pembayaran Berhasil');
         $session->setFlashdata('alertType', 'success');
 
+        // Cek apakah ini untuk talkshow
+        $dataSeminarModel = new DataSeminarModel();
+        $dataSeminar = $dataSeminarModel->where('order_id', $orderId)->first();
         if ($dataSeminar) {
-            return redirect()->to('seminar/tiket');
+            return redirect()->to('talkshow/tiket');
         }
 
+        // Cek apakah ini untuk workshop
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel->where('order_id', $orderId)->first();
+        if ($dataWorkshop) {
+            return redirect()->to('workshop/tiket');
+        }
+
+        // Jika tidak diketahui, redirect ke profile
         return redirect()->to('/profile');
     }
+
 
     public function errorPayment()
     {
@@ -527,15 +536,27 @@ class PaymentController extends BaseController
         }
 
         $order_id = $this->request->getVar('order_id');
+
+        // Cek apakah order_id milik talkshow
         $dataSeminarModel = new DataSeminarModel();
         $dataSeminar = $dataSeminarModel->where('order_id', $order_id)->first();
         if ($dataSeminar) {
             $dataSeminarModel->where('order_id', $order_id)->delete();
-            return redirect()->to('seminar');
+            return redirect()->to('talkshow');
         }
 
-        return redirect()->to('/');
+        // Cek apakah order_id milik workshop
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel->where('order_id', $order_id)->first();
+        if ($dataWorkshop) {
+            $dataWorkshopModel->where('order_id', $order_id)->delete();
+            return redirect()->to('workshop');
+        }
+
+        // Jika bukan keduanya, redirect ke dashboard
+        return redirect()->to('/profile');
     }
+
 
     function splitName($name)
     {
