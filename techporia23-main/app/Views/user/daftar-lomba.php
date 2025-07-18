@@ -37,47 +37,48 @@
                     </select>
                 </div>
             </div>
-            <div id="ml-fields" style="display:none;">
+           <div id="ml-fields" style="display:none;">
                 <div class="input-wrapper">
                     <label>Ketua Tim - Nickname</label>
-                    <input type="text" name="ml_member[1][nickname]" placeholder="Nickname Ketua Tim" required>
+                    <input type="text" name="ml_member[1][nickname]" id="ml_ketua_nickname" placeholder="Nickname Ketua Tim">
                 </div>
                 <div class="input-wrapper">
                     <label>Ketua Tim - ID</label>
-                    <input type="text" name="ml_member[1][id]" placeholder="ID Ketua Tim" required>
+                    <input type="text" name="ml_member[1][id]" id="ml_ketua_id" placeholder="ID Ketua Tim">
                 </div>
                 <?php for ($i = 2; $i <= 5; $i++): ?>
                     <div class="input-wrapper">
                     <label>Anggota <?= $i ?> - Nama</label>
-                    <input type="text" name="ml_member[<?= $i ?>][nama]" placeholder="Nama Anggota <?= $i ?>" required>
+                    <input type="text" name="ml_member[<?= $i ?>][nama]" id="ml_anggota_<?= $i ?>_nama" placeholder="Nama Anggota <?= $i ?>">
                 </div>
                 <div class="input-wrapper">
                     <label>Anggota <?= $i ?> - Nickname</label>
-                    <input type="text" name="ml_member[<?= $i ?>][nickname]" placeholder="Nickname Anggota <?= $i ?>" required>
+                    <input type="text" name="ml_member[<?= $i ?>][nickname]" id="ml_anggota_<?= $i ?>_nickname" placeholder="Nickname Anggota <?= $i ?>">
                 </div>
                 <div class="input-wrapper">
                     <label>Anggota <?= $i ?> - ID</label>
-                    <input type="text" name="ml_member[<?= $i ?>][id]" placeholder="ID Anggota <?= $i ?>" required>
+                    <input type="text" name="ml_member[<?= $i ?>][id]" id="ml_anggota_<?= $i ?>_id" placeholder="ID Anggota <?= $i ?>">
                 </div>
                 <?php endfor; ?>
                 <!-- Cadangan -->
                 <div class="input-wrapper">
                     <label>Cadangan - Nama</label>
-                    <input type="text" name="ml_cadangan[nama]" placeholder="Nama Cadangan">
+                    <input type="text" name="ml_cadangan[nama]" id="ml_cadangan_nama" placeholder="Nama Cadangan">
                 </div>
                 <div class="input-wrapper">
                     <label>Cadangan - Nickname</label>
-                    <input type="text" name="ml_cadangan[nickname]" placeholder="Nickname Cadangan">
+                    <input type="text" name="ml_cadangan[nickname]" id="ml_cadangan_nickname" placeholder="Nickname Cadangan">
                 </div>
                 <div class="input-wrapper">
                     <label>Cadangan - ID</label>
-                    <input type="text" name="ml_cadangan[id]" placeholder="ID Cadangan">
+                    <input type="text" name="ml_cadangan[id]" id="ml_cadangan_id" placeholder="ID Cadangan">
                 </div>
             </div>
             <input type="submit" value="Daftar" class="btn btn-submit" />
             <p>*NB: Pembuat tim otomatis menjadi ketua tim</p>
             <?= form_close(); ?>
         </div>
+
         <div id="gabung" class="tab-content">
             <p>Gabung dengan tim yang sudah dibuat ketua kamu dengan memasukkan ID tim</p>
             <?= form_open('profile/join-tim'); ?>
@@ -111,29 +112,61 @@
             <?= form_close(); ?>
         </div>
 
-    <script>
-    function toggleMLFields() {
+<script>
+function toggleMLFields() {
     var kompetisi = document.getElementById('kompetisi').value;
     var mlFields = document.getElementById('ml-fields');
+    
     if (kompetisi == '9') {
         mlFields.style.display = 'block';
+        // Set required untuk field ML
+        document.getElementById('ml_ketua_nickname').required = true;
+        document.getElementById('ml_ketua_id').required = true;
+        
+        // Set required untuk anggota 2-5
+        for (let i = 2; i <= 5; i++) {
+            document.getElementById('ml_anggota_' + i + '_nama').required = true;
+            document.getElementById('ml_anggota_' + i + '_nickname').required = true;
+            document.getElementById('ml_anggota_' + i + '_id').required = true;
+        }
     } else {
         mlFields.style.display = 'none';
+        // Remove required untuk field ML
+        document.getElementById('ml_ketua_nickname').required = false;
+        document.getElementById('ml_ketua_id').required = false;
+        
+        // Remove required untuk anggota 2-5
+        for (let i = 2; i <= 5; i++) {
+            document.getElementById('ml_anggota_' + i + '_nama').required = false;
+            document.getElementById('ml_anggota_' + i + '_nickname').required = false;
+            document.getElementById('ml_anggota_' + i + '_id').required = false;
+        }
     }
 }
+
 function toggleMLJoinFields() {
     var kompetisiGabung = document.getElementById('kompetisi_gabung').value;
     var mlJoinFields = document.getElementById('ml-join-fields');
+    
     if (kompetisiGabung == '9') {
         mlJoinFields.style.display = 'block';
+        // Set required untuk join ML fields
+        document.getElementById('ml_nickname_join').required = true;
+        document.getElementById('ml_id_join').required = true;
     } else {
         mlJoinFields.style.display = 'none';
+        // Remove required untuk join ML fields
+        document.getElementById('ml_nickname_join').required = false;
+        document.getElementById('ml_id_join').required = false;
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     toggleMLFields();
     toggleMLJoinFields();
 });
+
+document.getElementById('kompetisi').addEventListener('change', toggleMLFields);
 document.getElementById('kompetisi_gabung').addEventListener('change', toggleMLJoinFields);
 </script>
 
