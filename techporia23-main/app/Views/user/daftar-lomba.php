@@ -113,29 +113,61 @@
         </div>
 
 <script>
+function setRequired(el, yes) {
+  if (yes) {
+    el.setAttribute('required', 'required');
+    el.removeAttribute('disabled');
+  } else {
+    el.removeAttribute('required');
+    el.setAttribute('disabled', 'disabled');
+  }
+}
+
 function toggleMLFields() {
-    var kompetisi = document.getElementById('kompetisi').value;
-    var mlFields = document.getElementById('ml-fields');
-    if (kompetisi == '9') {
-        mlFields.style.display = 'block';
-    } else {
-        mlFields.style.display = 'none';
-    }
+  const kompetisi = document.getElementById('kompetisi').value;
+  const mlFields = document.getElementById('ml-fields');
+  const inputs = mlFields.querySelectorAll('input');
+
+  if (kompetisi === '9') { // Mobile Legends
+    mlFields.style.display = 'block';
+    inputs.forEach((inp) => {
+      // cadangan boleh kosong: cek name mengandung 'ml_cadangan'
+      if (inp.name.startsWith('ml_cadangan')) {
+        inp.removeAttribute('required');
+        inp.removeAttribute('disabled');
+      } else {
+        setRequired(inp, true);
+      }
+    });
+  } else {
+    mlFields.style.display = 'none';
+    inputs.forEach((inp) => setRequired(inp, false));
+  }
 }
+
 function toggleMLJoinFields() {
-    var kompetisiGabung = document.getElementById('kompetisi_gabung').value;
-    var mlJoinFields = document.getElementById('ml-join-fields');
-    if (kompetisiGabung == '9') {
-        mlJoinFields.style.display = 'block';
-    } else {
-        mlJoinFields.style.display = 'none';
-    }
+  const kompetisiGabung = document.getElementById('kompetisi_gabung').value;
+  const mlJoinFields = document.getElementById('ml-join-fields');
+  const nick = document.getElementById('ml_nickname_join');
+  const mlid = document.getElementById('ml_id_join');
+
+  if (kompetisiGabung === '9') {
+    mlJoinFields.style.display = 'block';
+    setRequired(nick, true);
+    setRequired(mlid, true);
+  } else {
+    mlJoinFields.style.display = 'none';
+    setRequired(nick, false);
+    setRequired(mlid, false);
+  }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
-    toggleMLFields();
-    toggleMLJoinFields();
+  toggleMLFields();
+  toggleMLJoinFields();
+  document.getElementById('kompetisi').addEventListener('change', toggleMLFields);
+  document.getElementById('kompetisi_gabung').addEventListener('change', toggleMLJoinFields);
 });
-document.getElementById('kompetisi_gabung').addEventListener('change', toggleMLJoinFields);
 </script>
 
 <?= $this->endSection(); ?>
