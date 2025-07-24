@@ -1,8 +1,8 @@
 <header>
     <div class="header-wrapper">
         <a class="header-logo" href="<?php echo base_url(); ?>">
-            <img src="<?php echo base_url(); ?>/assets/images/logo24.webp" alt="Technology Euphoria">
-            <span>Sinergi Fest </span>
+            <img src="<?php echo base_url(); ?>/assets/images/sinergifest.png" alt="Technology Euphoria">
+            <span>SINERGI FEST </span>
         </a>
         <nav>
             <ul class="menu">
@@ -72,7 +72,7 @@
                         </ul>
         
                 </li>
-                <li><a class="nav-link" href="<?php echo base_url('#kilas-balik'); ?>">Kilas Balik</a></li>
+                <!-- <li><a class="nav-link" href="<?php echo base_url('#kilas-balik'); ?>">Kilas Balik</a></li> -->
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
             <div class="right-corner">

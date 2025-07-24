@@ -11,10 +11,10 @@
         </div>
         <div class="hero onscroll">
             <h3>FASILKOM </h3>
-            <h1>Sinergi Fest 2025</h1>
+            <h1>SINERGI FEST 2025</h1>
             <div id="theme-text"></div>
             <div class="container-5" style="margin-top: 3rem;">
-                <a href="<?= base_url('#about'); ?>" class="btn btn-fancy">EXPLORE</a>
+                <a href="<?= base_url('#about'); ?>" class="btn btn-fancy">START</a>
                 <!-- <a href="<?= base_url('register'); ?>" class="btn btn-outline-fancy">JOIN US</a> -->
             </div>
         </div>
@@ -184,7 +184,7 @@
         </div>
     </div>
 
-
+    <!--
     <div class="section onscroll" id="kilas-balik">
         <h1>KILAS TECHPORIA 2024 </h1>
         <p>Dalam Sinergi Fest ini, terdapat beberapa lomba yang diadakan seperti dibawah ini</p>
@@ -228,6 +228,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <div class="section light" id="sponsors">
         <div class="section-ms">

@@ -1,7 +1,7 @@
 <footer id="contact">
     <div class="footer-detail">
         <div class="item onscroll-r">
-        <img src="<?php echo base_url(); ?>/assets/images/logo24.webp" alt="Technology Euphoria">
+        <img src="<?php echo base_url(); ?>/assets/images/sinergifest.png" alt="Technology Euphoria">
         </div>
         <div class="item onscroll-r" style="--delay: 1;">
             <h1>Address</h1>
