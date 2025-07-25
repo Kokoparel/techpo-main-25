@@ -154,14 +154,35 @@ class AdminController extends BaseController
     }
 
     public function detailTim($id = null)
-    {
-        $dataTimModel = new DataTimModel();
-        $dataTim = $dataTimModel
-            ->select('data_tim.tim_id, nama_tim, nama_kompetisi, kompetisi.id_kompetisi, status, transactions.order_id, transaction_status, transaction_time, payment_type')
-            ->join('kompetisi', 'kompetisi.id_kompetisi=data_tim.id_kompetisi', 'left')
-            ->join('transactions', 'transactions.order_id=data_tim.order_id', 'left')
-            ->find($id);
+{
+    $dataTimModel = new DataTimModel();
+    $dataTim = $dataTimModel
+        ->select('data_tim.tim_id, nama_tim, nama_kompetisi, kompetisi.id_kompetisi, status, transactions.order_id, transaction_status, transaction_time, payment_type')
+        ->join('kompetisi', 'kompetisi.id_kompetisi=data_tim.id_kompetisi', 'left')
+        ->join('transactions', 'transactions.order_id=data_tim.order_id', 'left')
+        ->find($id);
 
+    // Jika tim Mobile Legends (id_kompetisi = 9)
+    if ($dataTim['id_kompetisi'] == 9) {
+        // Query data anggota ML dari tabel data_tim_ml_anggota
+        $db = \Config\Database::connect();
+        $dataTim['anggota_ml'] = $db->query("
+            SELECT * FROM data_tim_ml_anggota 
+            WHERE tim_id = ? 
+            ORDER BY FIELD(posisi, 'ketua', 'anggota', 'cadangan'), id
+        ", [$id])->getResultArray();
+        
+        // Tetap ambil data ketua dari tabel biasa untuk informasi lengkap
+        $anggotaTimModel = new AnggotaTimModel();
+        $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+            ->join('user_data', 'user_data.username=anggota_tim.anggota')
+            ->join('users', 'users.username=anggota_tim.anggota')
+            ->join('auth_identities', 'users.id=auth_identities.user_id')
+            ->where('tim_id', $id)
+            ->where('role', 'ketua')
+            ->first();
+    } else {
+        // Untuk kompetisi selain ML, gunakan query biasa
         $anggotaTimModel = new AnggotaTimModel();
         $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
             ->join('user_data', 'user_data.username=anggota_tim.anggota')
@@ -178,17 +199,18 @@ class AdminController extends BaseController
             ->where('tim_id', $id)
             ->where('role', 'anggota')
             ->findAll();
-
-        $berkasModel = new BerkasModel();
-        $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
-        $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
-
-        return view('admin/detail_tim', [
-            'data' => $dataTim,
-            'berkasProposal' => $berkasProposal,
-            'berkasSourceCode' => $berkasSourceCode,
-        ]);
     }
+
+    $berkasModel = new BerkasModel();
+    $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
+    $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
+
+    return view('admin/detail_tim', [
+        'data' => $dataTim,
+        'berkasProposal' => $berkasProposal,
+        'berkasSourceCode' => $berkasSourceCode,
+    ]);
+}
 
     public function addSeminar()
     {
