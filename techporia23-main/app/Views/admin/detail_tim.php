@@ -68,101 +68,39 @@
                 </div>
             </div>
         </div>
-        <div class="card shadow mb-4">
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Data Ketua</h6>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Nama</th>
-                            <td>
-                                <?= $data['ketua']['nama']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Email</th>
-                            <td>
-                                <?= $data['ketua']['secret']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Nomor Telepon</th>
-                            <td>
-                                <?= $data['ketua']['kontak']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>NIM</th>
-                            <td>
-                                <?= $data['ketua']['nim']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Asal Universitas</th>
-                            <td>
-                                <?= $data['ketua']['universitas']; ?>
-                            </td>
-                        </tr>
-                    </table>
 
-                    <div class="d-flex justify-content-end">
-                        <a href="<?= base_url('admin/user/' . $data['ketua']['username']); ?>"
-                            class="btn btn-primary btn-icon-split">
-                            <span class="icon text-white-50">
-                                <i class="fas fa-download"></i>
-                            </span>
-                            <span class="text">Download Berkas</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <?php foreach ($data['anggota'] as $key => $anggota): ?>
+        <?php if ($data['id_kompetisi'] == 9): // Khusus untuk Mobile Legends ?>
+            <!-- Data Ketua Tim ML -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Data Anggota
-                        <?= $key + 1; ?>
-                    </h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Data Ketua Tim</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <tr>
                                 <th>Nama</th>
-                                <td>
-                                    <?= $anggota['nama']; ?>
-                                </td>
+                                <td><?= $data['ketua']['nama']; ?></td>
                             </tr>
                             <tr>
                                 <th>Email</th>
-                                <td>
-                                    <?= $anggota['secret']; ?>
-                                </td>
+                                <td><?= $data['ketua']['secret']; ?></td>
                             </tr>
                             <tr>
                                 <th>Nomor Telepon</th>
-                                <td>
-                                    <?= $anggota['kontak']; ?>
-                                </td>
+                                <td><?= $data['ketua']['kontak']; ?></td>
                             </tr>
                             <tr>
                                 <th>NIM</th>
-                                <td>
-                                    <?= $anggota['nim']; ?>
-                                </td>
+                                <td><?= $data['ketua']['nim']; ?></td>
                             </tr>
                             <tr>
                                 <th>Asal Universitas</th>
-                                <td>
-                                    <?= $anggota['universitas']; ?>
-                                </td>
+                                <td><?= $data['ketua']['universitas']; ?></td>
                             </tr>
                         </table>
                         <div class="d-flex justify-content-end">
-                            <a href="<?= base_url('admin/user/' . $anggota['username']); ?>"
+                            <a href="<?= base_url('admin/user/' . $data['ketua']['username']); ?>"
                                 class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-download"></i>
@@ -173,7 +111,217 @@
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+
+            <!-- Data Anggota Tim ML -->
+            <?php if (isset($data['anggota_ml']) && !empty($data['anggota_ml'])): ?>
+                <?php 
+                $ketua_ml = array_filter($data['anggota_ml'], function($member) {
+                    return $member['posisi'] == 'ketua';
+                });
+                $anggota_ml = array_filter($data['anggota_ml'], function($member) {
+                    return $member['posisi'] == 'anggota';
+                });
+                $cadangan_ml = array_filter($data['anggota_ml'], function($member) {
+                    return $member['posisi'] == 'cadangan';
+                });
+                ?>
+
+                <!-- Ketua ML -->
+                <?php if (!empty($ketua_ml)): ?>
+                    <?php foreach ($ketua_ml as $ketua): ?>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    <i class="fas fa-crown text-warning mr-2"></i>Ketua Tim ML
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>Nama</th>
+                                            <td><?= $ketua['nama']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nickname</th>
+                                            <td><strong><?= $ketua['nickname']; ?></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mobile Legends ID</th>
+                                            <td><code><?= $ketua['ml_id']; ?></code></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <!-- Anggota ML -->
+                <?php if (!empty($anggota_ml)): ?>
+                    <?php $no_anggota = 1; ?>
+                    <?php foreach ($anggota_ml as $anggota): ?>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    <i class="fas fa-user text-success mr-2"></i>Anggota <?= $no_anggota; ?>
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>Nama</th>
+                                            <td><?= $anggota['nama']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nickname</th>
+                                            <td><strong><?= $anggota['nickname']; ?></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mobile Legends ID</th>
+                                            <td><code><?= $anggota['ml_id']; ?></code></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <?php $no_anggota++; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <!-- Cadangan ML -->
+                <?php if (!empty($cadangan_ml)): ?>
+                    <?php $no_cadangan = 1; ?>
+                    <?php foreach ($cadangan_ml as $cadangan): ?>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    <i class="fas fa-user-plus text-info mr-2"></i>Cadangan <?= $no_cadangan; ?>
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>Nama</th>
+                                            <td><?= $cadangan['nama']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nickname</th>
+                                            <td><strong><?= $cadangan['nickname']; ?></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mobile Legends ID</th>
+                                            <td><code><?= $cadangan['ml_id']; ?></code></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <?php $no_cadangan++; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            <?php else: ?>
+                <div class="card shadow mb-4">
+                    <div class="card-body text-center">
+                        <div class="text-muted">
+                            <i class="fas fa-exclamation-circle fa-2x mb-3"></i>
+                            <p>Belum ada data anggota tim Mobile Legends</p>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+        <?php else: // Untuk kompetisi selain ML ?>
+            <!-- Data Ketua (untuk non-ML) -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Data Ketua</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Nama</th>
+                                <td><?= $data['ketua']['nama']; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td><?= $data['ketua']['secret']; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Telepon</th>
+                                <td><?= $data['ketua']['kontak']; ?></td>
+                            </tr>
+                            <tr>
+                                <th>NIM</th>
+                                <td><?= $data['ketua']['nim']; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Asal Universitas</th>
+                                <td><?= $data['ketua']['universitas']; ?></td>
+                            </tr>
+                        </table>
+                        <div class="d-flex justify-content-end">
+                            <a href="<?= base_url('admin/user/' . $data['ketua']['username']); ?>"
+                                class="btn btn-primary btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Download Berkas</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Anggota (untuk non-ML) -->
+            <?php if (isset($data['anggota']) && !empty($data['anggota'])): ?>
+                <?php foreach ($data['anggota'] as $key => $anggota): ?>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Data Anggota <?= $key + 1; ?></h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Nama</th>
+                                        <td><?= $anggota['nama']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td><?= $anggota['secret']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nomor Telepon</th>
+                                        <td><?= $anggota['kontak']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>NIM</th>
+                                        <td><?= $anggota['nim']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Asal Universitas</th>
+                                        <td><?= $anggota['universitas']; ?></td>
+                                    </tr>
+                                </table>
+                                <div class="d-flex justify-content-end">
+                                    <a href="<?= base_url('admin/user/' . $anggota['username']); ?>"
+                                        class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-download"></i>
+                                        </span>
+                                        <span class="text">Download Berkas</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        <?php endif; ?>
     </div>
 
     <div class="col-xl-4 col-lg-5">
@@ -206,7 +354,8 @@
                 </div>
             </div>
         </div>
-        <?php if ($data['id_kompetisi'] != 1): ?>
+        
+        <?php if ($data['id_kompetisi'] != 1 && $data['id_kompetisi'] != 9): // Proposal hanya untuk kompetisi tertentu ?>
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -269,9 +418,6 @@
             <?php endif; ?>
         <?php endif; ?>
     </div>
-
 </div>
-
-
 
 <?= $this->endSection() ?>

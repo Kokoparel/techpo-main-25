@@ -36,7 +36,6 @@ class UserController extends BaseController
 
         $anggotaTimModel = new AnggotaTimModel();
         $db = \Config\Database::connect();
-
         $tim = $anggotaTimModel
             ->select('data_tim.tim_id, nama_tim, kompetisi.id_kompetisi, nama_kompetisi, status, role, transaction_status')
             ->join('data_tim', 'data_tim.tim_id=anggota_tim.tim_id', 'left')
@@ -47,7 +46,7 @@ class UserController extends BaseController
 
         foreach ($tim as $key => $value) {
 
-            if ($value['id_kompetisi'] == 9) {
+             if ($value['id_kompetisi'] == 9) {
                 $ml_anggota = [
                     'ketua' => $db->table('data_tim_ml_anggota')->where(['tim_id' => $value['tim_id'], 'posisi' => 'ketua'])->get()->getRowArray(),
                     'anggota' => $db->table('data_tim_ml_anggota')->where(['tim_id' => $value['tim_id'], 'posisi' => 'anggota'])->get()->getResultArray(),
@@ -292,7 +291,7 @@ class UserController extends BaseController
                 'posisi' => 'anggota'
             ]);
         }
-
+        
         $session->setFlashdata('success', 'Permintaan bergabung berhasil dikirimkan');
 
         return redirect()->to('/profile');
@@ -480,24 +479,17 @@ class UserController extends BaseController
     public function ubahPassword()
     {
         $newPassword = $this->request->getPost('password');
-        $db = \Config\Database::connect();
-        $query = $db->table('auth_identities')->where('user_id', auth()->user()->id)->get()->getRowArray();
-
-        // Validasi password baru tidak boleh sama dengan password lama
-        if (password_verify($newPassword, $query['secret2'])) {
-            $session = Services::session();
-            $session->setFlashdata('error', 'Password baru tidak boleh sama dengan password lama');
-            return redirect()->back();
-        }
-
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-        $db->table('auth_identities')
-            ->set('secret2', $hashedPassword)
+
+        $db = \Config\Database::connect();
+        $query = $db->table('auth_identities');
+        $query->set('secret2', $hashedPassword)
             ->where('user_id', auth()->user()->id)
             ->update();
 
         $session = Services::session();
         $session->setFlashdata('success', 'Password berhasil diubah');
+
         return redirect()->to('/profile');
     }
 

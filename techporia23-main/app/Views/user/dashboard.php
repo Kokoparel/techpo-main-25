@@ -161,10 +161,9 @@
                                                 <label>Ketua Tim</label>
                                                 <span>
                                                     <?= $t['ketua']['nama'] ?><span>
-                                                    <?php if ($t['id_kompetisi'] == 9 && isset($t['ml_anggota']['ketua'])): ?>
-                                                        <span>(Nickname: <?= $t['ml_anggota']['ketua']['nickname'] ?? '-' ?>, ID: <?= $t['ml_anggota']['ketua']['ml_id'] ?? '-' ?>)</span>
+                                                    <?php if ($t['id_kompetisi'] == 9): ?>
+                                                    <span>(Nickname: <?= $t['ml_anggota']['ketua']['nickname'] ?>, ID: <?= $t['ml_anggota']['ketua']['ml_id'] ?>)</span>
                                                     <?php endif; ?>
-
                                             </div>
                                             <?php if ($t['anggota']): ?>
                                                 <?php foreach ($t['anggota'] as $anggota): ?>
@@ -184,6 +183,29 @@
                                                             Nama: <?= $anggota['nama'] ?? '-' ?>,
                                                             Nickname: <?= $anggota['nickname'] ?? '-' ?>,
                                                             ID: <?= $anggota['ml_id'] ?? '-' ?>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                <?php else: ?>
+                                                    <div class="detail">
+                                                        <label>Anggota</label>
+                                                        Tidak ada anggota
+                                                    </div>
+                                                <?php endif; ?>
+                                                <div class="detail">
+                                                    <label>Cadangan</label>
+                                                    Nama: <?= $t['ml_anggota']['cadangan']['nama'] ?? '-' ?>,
+                                                    Nickname: <?= $t['ml_anggota']['cadangan']['nickname'] ?? '-' ?>,
+                                                    ID: <?= $t['ml_anggota']['cadangan']['ml_id'] ?? '-' ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if ($t['id_kompetisi'] == 9): ?>
+                                                <?php if (!empty($t['ml_anggota']['anggota'])): ?>
+                                                    <?php foreach ($t['ml_anggota']['anggota'] as $index => $anggota): ?>
+                                                        <div class="detail">
+                                                            <label>Anggota <?= $index + 1 ?></label>
+                                                            Nama: <?= $anggota['nama'] ?? '-' ?>,
+                                                            (Nickname: <?= $anggota['nickname'] ?? '-' ?>,
+                                                            ID: <?= $anggota['ml_id'] ?? '-' ?>)
                                                         </div>
                                                     <?php endforeach; ?>
                                                 <?php else: ?>

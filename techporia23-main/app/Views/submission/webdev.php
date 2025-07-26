@@ -6,7 +6,7 @@
 <div class="main">
   <div class="container top">
     <div class="submission-flex">
-      <img src="<?= base_url('assets/images/competition-logo/webdev.webp'); ?>" alt="Web Dev" class="logo-kompetisi-lg" />
+      <img src="<?= base_url('assets/images/competition-logo/web.webp'); ?>" alt="Web Dev" class="logo-kompetisi-lg" />
       <div class="submission-detail">
         <h1 class="submission-title">Submission Web Development</h1>
 
@@ -48,4 +48,3 @@
     </div>
   </div>
 </div>
-<?= $this->endSection(); ?>
