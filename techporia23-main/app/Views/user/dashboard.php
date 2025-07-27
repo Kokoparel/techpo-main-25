@@ -161,9 +161,10 @@
                                                 <label>Ketua Tim</label>
                                                 <span>
                                                     <?= $t['ketua']['nama'] ?><span>
-                                                    <?php if ($t['id_kompetisi'] == 9): ?>
-                                                    <span>(Nickname: <?= $t['ml_anggota']['ketua']['nickname'] ?>, ID: <?= $t['ml_anggota']['ketua']['ml_id'] ?>)</span>
-                                                    <?php endif; ?>
+                                                   <?php if ($t['id_kompetisi'] == 9 && isset($t['ml_anggota']['ketua'])): ?>
+                                                        <span>(Nickname: <?= $t['ml_anggota']['ketua']['nickname'] ?? '-' ?>, ID: <?= $t['ml_anggota']['ketua']['ml_id'] ?? '-' ?>)</span>
+                                                   <?php endif; ?>
+
                                             </div>
                                             <?php if ($t['anggota']): ?>
                                                 <?php foreach ($t['anggota'] as $anggota): ?>
