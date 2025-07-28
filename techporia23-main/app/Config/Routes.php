@@ -51,6 +51,8 @@ $routes->get('transaction/handler', 'NotificationController::handleTransactionSt
 $routes->get('sejarah', 'MainController::kilasBalik');
 $routes->get('sejarah/(:segment)', 'MainController::sejarah/$1');
 
+$routes->get('event/bloodlink', 'MainController::bloodlink');
+
 $routes->get('kompetisi/payment/(:segment)', 'PaymentController::lomba/$1');
 $routes->get('payment/cancel/lomba/(:segment)', 'PaymentController::cancelLomba/$1');
 $routes->get('/payment/finish', 'PaymentController::finishPayment');
@@ -90,6 +92,12 @@ $routes->group('admin', ['filter' => 'group:admin'], static function($routes) {
     $routes->get('tolak-berkas/(:segment)', 'AdminController::tolakBerkas/$1');
     $routes->get('detail-tim/(:segment)', 'AdminController::detailTim/$1');
     $routes->get('download/(:segment)', 'AdminController::downloadBerkas/$1');
+    $routes->get('workshop', 'AdminController::workshop');
+    $routes->get('detail-workshop/(:segment)', 'AdminController::detailWorkshop/$1');
+    $routes->get('workshop/add', 'AdminController::addWorkshop');
+    $routes->post('workshop/add', 'AdminController::addWorkshop');
+    $routes->get('workshop/create-tiket/(:segment)', 'AdminController::createTiketWorkshop/$1');
+    $routes->get('workshop/download-tiket/(:segment)', 'AdminController::downloadTiketWorkshop/$1');
 });
 
 $routes->get('download/(:segment)', 'MainController::downloadTemplate/$1');

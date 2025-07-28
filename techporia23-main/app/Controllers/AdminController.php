@@ -10,6 +10,8 @@ use App\Models\DataTimModel;
 use App\Models\TiketModel;
 use App\Models\TransactionsModel;
 use App\Models\UserDataModel;
+use App\Models\DataWorkshopModel;
+use App\Models\TiketWorkshopModel;
 use CodeIgniter\Shield\Entities\User;
 use Config\Services;
 
@@ -29,6 +31,18 @@ class AdminController extends BaseController
             ->where('transaction_status', 'settlement')
             ->orwhere('transaction_status', 'capture')
             ->countAllResults();
+            
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel
+            ->select('username, name, phone, email, instansi, domisili, kategori, transaction_time')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->findAll();
+
+        $jumlahWorkshopSettlement = $dataWorkshopModel->selectCount("transaction_status")
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('transaction_status', 'settlement')
+            ->orwhere('transaction_status', 'capture')
+            ->countAllResults();
 
         $dataTimModel = new DataTimModel();
         $dataTim = $dataTimModel
@@ -45,8 +59,10 @@ class AdminController extends BaseController
 
         return view('admin/dashboard_v2', [
             'dataSeminar' => $dataSeminar,
+            'dataWorkshop' => $dataWorkshop,
             'dataTim' => $dataTim,
             'jumlahSeminarSettlement' => $jumlahSeminarSettlement,
+            'jumlahWorkshopSettlement' => $jumlahWorkshopSettlement,
             'jumlahTimSettlement' => $jumlahTimSettlement,
         ]);
     }
@@ -154,63 +170,63 @@ class AdminController extends BaseController
     }
 
     public function detailTim($id = null)
-{
-    $dataTimModel = new DataTimModel();
-    $dataTim = $dataTimModel
-        ->select('data_tim.tim_id, nama_tim, nama_kompetisi, kompetisi.id_kompetisi, status, transactions.order_id, transaction_status, transaction_time, payment_type')
-        ->join('kompetisi', 'kompetisi.id_kompetisi=data_tim.id_kompetisi', 'left')
-        ->join('transactions', 'transactions.order_id=data_tim.order_id', 'left')
-        ->find($id);
+    {
+        $dataTimModel = new DataTimModel();
+        $dataTim = $dataTimModel
+            ->select('data_tim.tim_id, nama_tim, nama_kompetisi, kompetisi.id_kompetisi, status, transactions.order_id, transaction_status, transaction_time, payment_type')
+            ->join('kompetisi', 'kompetisi.id_kompetisi=data_tim.id_kompetisi', 'left')
+            ->join('transactions', 'transactions.order_id=data_tim.order_id', 'left')
+            ->find($id);
 
-    // Jika tim Mobile Legends (id_kompetisi = 9)
-    if ($dataTim['id_kompetisi'] == 9) {
-        // Query data anggota ML dari tabel data_tim_ml_anggota
-        $db = \Config\Database::connect();
-        $dataTim['anggota_ml'] = $db->query("
-            SELECT * FROM data_tim_ml_anggota 
-            WHERE tim_id = ? 
-            ORDER BY FIELD(posisi, 'ketua', 'anggota', 'cadangan'), id
-        ", [$id])->getResultArray();
-        
-        // Tetap ambil data ketua dari tabel biasa untuk informasi lengkap
-        $anggotaTimModel = new AnggotaTimModel();
-        $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
-            ->join('user_data', 'user_data.username=anggota_tim.anggota')
-            ->join('users', 'users.username=anggota_tim.anggota')
-            ->join('auth_identities', 'users.id=auth_identities.user_id')
-            ->where('tim_id', $id)
-            ->where('role', 'ketua')
-            ->first();
-    } else {
-        // Untuk kompetisi selain ML, gunakan query biasa
-        $anggotaTimModel = new AnggotaTimModel();
-        $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
-            ->join('user_data', 'user_data.username=anggota_tim.anggota')
-            ->join('users', 'users.username=anggota_tim.anggota')
-            ->join('auth_identities', 'users.id=auth_identities.user_id')
-            ->where('tim_id', $id)
-            ->where('role', 'ketua')
-            ->first();
+        // Jika tim Mobile Legends (id_kompetisi = 9)
+        if ($dataTim['id_kompetisi'] == 9) {
+            // Query data anggota ML dari tabel data_tim_ml_anggota
+            $db = \Config\Database::connect();
+            $dataTim['anggota_ml'] = $db->query("
+                SELECT * FROM data_tim_ml_anggota 
+                WHERE tim_id = ? 
+                ORDER BY FIELD(posisi, 'ketua', 'anggota', 'cadangan'), id
+            ", [$id])->getResultArray();
+            
+            // Tetap ambil data ketua dari tabel biasa untuk informasi lengkap
+            $anggotaTimModel = new AnggotaTimModel();
+            $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+                ->join('user_data', 'user_data.username=anggota_tim.anggota')
+                ->join('users', 'users.username=anggota_tim.anggota')
+                ->join('auth_identities', 'users.id=auth_identities.user_id')
+                ->where('tim_id', $id)
+                ->where('role', 'ketua')
+                ->first();
+        } else {
+            // Untuk kompetisi selain ML, gunakan query biasa
+            $anggotaTimModel = new AnggotaTimModel();
+            $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+                ->join('user_data', 'user_data.username=anggota_tim.anggota')
+                ->join('users', 'users.username=anggota_tim.anggota')
+                ->join('auth_identities', 'users.id=auth_identities.user_id')
+                ->where('tim_id', $id)
+                ->where('role', 'ketua')
+                ->first();
 
-        $dataTim['anggota'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
-            ->join('user_data', 'user_data.username=anggota_tim.anggota')
-            ->join('users', 'users.username=anggota_tim.anggota')
-            ->join('auth_identities', 'users.id=auth_identities.user_id')
-            ->where('tim_id', $id)
-            ->where('role', 'anggota')
-            ->findAll();
+            $dataTim['anggota'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+                ->join('user_data', 'user_data.username=anggota_tim.anggota')
+                ->join('users', 'users.username=anggota_tim.anggota')
+                ->join('auth_identities', 'users.id=auth_identities.user_id')
+                ->where('tim_id', $id)
+                ->where('role', 'anggota')
+                ->findAll();
+        }
+
+            $berkasModel = new BerkasModel();
+            $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
+            $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
+
+            return view('admin/detail_tim', [
+                'data' => $dataTim,
+                'berkasProposal' => $berkasProposal,
+                'berkasSourceCode' => $berkasSourceCode,
+            ]);
     }
-
-    $berkasModel = new BerkasModel();
-    $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
-    $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
-
-    return view('admin/detail_tim', [
-        'data' => $dataTim,
-        'berkasProposal' => $berkasProposal,
-        'berkasSourceCode' => $berkasSourceCode,
-    ]);
-}
 
     public function addSeminar()
     {
@@ -557,6 +573,161 @@ class AdminController extends BaseController
             'grossAmountLomba' => $grossAmountLomba,
             'pendapatanLomba' => $pendapatanLomba,
         ]);
+    }
+
+    public function workshop()
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel
+            ->select('username, name, phone, instansi, domisili, kategori, transaction_time, transaction_status')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->findAll();
+
+        $dataVip = $dataWorkshopModel->where('kategori', 'VIP')->countAllResults();
+        $dataReguler = $dataWorkshopModel->where('kategori', 'Reguler')->countAllResults();
+
+        $dataVipSettlement = $dataWorkshopModel->selectCount("transaction_status")
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('kategori', 'VIP')
+            ->where('transaction_status', 'settlement')
+            ->orwhere('transaction_status', 'capture')
+            ->countAllResults();
+
+        $dataRegulerSettlement = $dataWorkshopModel->selectCount("transaction_status")
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('kategori', 'Reguler')
+            ->where('transaction_status', 'settlement')
+            ->orwhere('transaction_status', 'capture')
+            ->countAllResults();
+
+        return view('admin/data_workshop', [
+            'dataWorkshop' => $dataWorkshop,
+            'dataVip' => $dataVip,
+            'dataReguler' => $dataReguler,
+            'dataVipSettlement' => $dataVipSettlement,
+            'dataRegulerSettlement' => $dataRegulerSettlement,
+        ]);
+    }
+
+    public function detailWorkshop($username)
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel
+            ->select('username, name, phone, email, instansi, domisili, status, kategori, transactions.order_id, transaction_status, transaction_time, payment_type')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('data_workshop.username', $username)
+            ->first();
+
+        $tiketWorkshopModel = new TiketWorkshopModel();
+        $tiket = $tiketWorkshopModel->find($dataWorkshop['order_id']);
+        if ($tiket) {
+            $tiket = $tiket['ticket'];
+        }
+
+        return view('admin/detail_workshop', [
+            'data' => $dataWorkshop,
+            'tiket' => $tiket,
+        ]);
+    }
+
+    public function addWorkshop()
+    {
+        if (!$this->request->is('post')) {
+            return view('admin/add_workshop');
+        }
+
+        $validatoin = Services::validation();
+        $validatoin->setRuleGroup('adminWorkshop');
+        if ($validatoin->withRequest($this->request)->run() === false) {
+            return redirect()->back()->withInput()->with('errors', $validatoin->getErrors());
+        }
+
+        $usersModel = auth()->getProvider();
+        $user = new User([
+            'username' => $this->request->getPost('username'),
+            'email' => $this->request->getPost('email'),
+            'password' => $this->request->getPost('password'),
+        ]);
+        $usersModel->save($user);
+        $user = $usersModel->find($usersModel->getInsertID());
+        $user->activate();
+
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = [
+            'username' => $this->request->getPost('username'),
+            'name' => $this->request->getPost('nama'),
+            'phone' => $this->request->getPost('phone'),
+            'email' => $this->request->getPost('email'),
+            'instansi' => $this->request->getPost('instansi'),
+            'domisili' => $this->request->getPost('domisili'),
+            'kategori' => $this->request->getPost('kategori'),
+            'status' => $this->request->getPost('status'),
+            'order_id' => Utils::generateOrderId(),
+        ];
+        $dataWorkshopModel->save($dataWorkshop);
+
+        $transactionsModel = new TransactionsModel();
+        $transactions = [
+            'order_id' => $dataWorkshop['order_id'],
+            'gross_amount' => $dataWorkshop['kategori'] == 'VIP' ? 115000 : 75000,
+            'payment_type' => 'Offline',
+            'transaction_status' => 'settlement',
+            'transaction_time' => date('Y-m-d H:i:s'),
+            'snap_token' => 'no_snap',
+            'transaction_id' => 'no_transaction',
+        ];
+        $transactionsModel->save($transactions);
+
+        return redirect()->to('admin/detail-workshop/' . $this->request->getPost('username'));
+    }
+
+    public function createTiketWorkshop($username = null)
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel->where('username', $username)->first();
+
+        if ($dataWorkshop == null) {
+            return redirect()->back()->with('error', 'Data workshop tidak ditemukan');
+        }
+
+        $transactionsModel = new TransactionsModel();
+        $transaction = $transactionsModel->find($dataWorkshop['order_id']);
+
+        if ($transaction == null || ($transaction['transaction_status'] != 'settlement' && $transaction['transaction_status'] != 'capture')) {
+            return redirect()->back()->with('error', 'Pembayaran belum diverifikasi');
+        }
+
+        $tiketWorkshopModel = new TiketWorkshopModel();
+        $tiket = $tiketWorkshopModel->where('username', $username)->first();
+        if ($tiket) {
+            return redirect()->back()->with('error', 'Tiket sudah dibuat');
+        }
+
+        $tiketData = [
+            'order_id' => $dataWorkshop['order_id'],
+            'username' => $dataWorkshop['username'],
+            'ticket' => Utils::getUniqueTiket(),
+            'created_at' => date('Y-m-d H:i:s'),
+        ];
+        $id = $tiketWorkshopModel->insert($tiketData, true);
+        $tiket = $tiketWorkshopModel->find($id);
+
+        $pdf = Utils::generatePdf($tiket['ticket']);
+        Utils::sendMail($pdf, $dataWorkshop['email']);
+
+        return redirect()->back()->with('success', 'Tiket berhasil dibuat dan dikirim ke email user');
+    }
+
+    public function downloadTiketWorkshop($username)
+    {
+        $tiketWorkshopModel = new TiketWorkshopModel();
+        $tiket = $tiketWorkshopModel->where('username', $username)->first();
+
+        if (!$tiket) {
+            return redirect()->back()->with('error', 'Tiket tidak ditemukan');
+        }
+
+        Utils::generatePdf($tiket['ticket'], true);
     }
 }
 
