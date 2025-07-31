@@ -55,7 +55,7 @@
     </div>
     <a class="logo-section" href="<?= base_url(); ?>">
         <img src="/assets/images/sinergifest.png" alt="Sinergi Fest 2025" />
-        <h1>Sinergi Fest</h1>
+        <h1>SINERGI FEST</h1>
     </a>
 </div>
 
