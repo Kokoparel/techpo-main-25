@@ -122,6 +122,11 @@ class MainController extends BaseController
         return view('sejarah/sejarah');
     }
 
+    public function bloodlink()
+    {
+        return view('event/bloodlink');
+    }
+
     public function sejarah($tahun = null)
     {
         if ($tahun < 2014 || $tahun > 2024) {

@@ -7,11 +7,14 @@
 
 <div class="main">
     <div class="section" style="padding-top: 3rem">
+        <!--
         <div class="comingsoon">
             <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
             <h1>Day - 1</h1>
         </div>
-        <!-- <div class="detail-horizontal">
+        -->
+
+        <div class="detail-horizontal">
             <div class="image onscroll-r">
                 <img src="/assets/images/competition-logo/web.webp" alt="Web Development" />
             </div>
@@ -190,12 +193,12 @@
                     </span>
                 </li>
             </ol>
-        </div> -->
+        </div> 
     </div>
 </div>
 
 <script type="text/javascript">
-    let countdownDate = new Date('Sep 1, 2024').getTime();
+    let countdownDate = new Date('Sep 1, 2025').getTime();
     let x = setInterval(function() {
         let now = new Date().getTime();
         let distance = countdownDate - now;

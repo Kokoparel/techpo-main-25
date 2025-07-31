@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin | Technology Euphoria</title>
+    <title>Admin | Sinergi Fest</title>
 
     <!-- Custom fonts for this template-->
     <link href="/assets/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
@@ -58,9 +58,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/seminar'); ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Data Seminar</span></a>
+                    <span>Data Talkshow</span></a>
             </li>
-            
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/workshop'); ?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Data Workshop</span></a>
+            </li>
             <!-- Nav Item - Data Lomba -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/lomba/0'); ?>">
@@ -101,7 +106,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('admin/finance'); ?>">Dashboard</a>
-                        <a class="collapse-item" href="<?= base_url('admin/finance/seminar'); ?>">Finance Seminar</a>
+                        <a class="collapse-item" href="<?= base_url('admin/finance/seminar'); ?>">Finance Talkshow</a>
+                        <a class="collapse-item" href="<?= base_url('admin/finance/workshop'); ?>">Finance Workshop</a>
                         <a class="collapse-item" href="<?= base_url('admin/finance/lomba'); ?>">Finance Lomba</a>
                     </div>
                 </div>

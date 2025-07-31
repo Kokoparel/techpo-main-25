@@ -22,6 +22,9 @@
                             <li>
                                 <a class="nav-data-link" href="<?= base_url('workshop'); ?>">Workshop</a>
                             </li>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('event/bloodlink'); ?>">bloodlink</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
