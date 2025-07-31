@@ -579,7 +579,7 @@ class AdminController extends BaseController
     {
         $dataWorkshopModel = new DataWorkshopModel();
         $dataWorkshop = $dataWorkshopModel
-            ->select('username, name, phone, instansi, domisili, kategori, transaction_time, transaction_status')
+            ->select('username, name, phone, email, instansi, domisili, kategori, transaction_time, transaction_status')
             ->join('transactions', 'transactions.order_id=data_workshop.order_id')
             ->findAll();
 
@@ -636,12 +636,23 @@ class AdminController extends BaseController
             return view('admin/add_workshop');
         }
 
-        $validatoin = Services::validation();
-        $validatoin->setRuleGroup('adminWorkshop');
-        if ($validatoin->withRequest($this->request)->run() === false) {
-            return redirect()->back()->withInput()->with('errors', $validatoin->getErrors());
+        // Validasi email admin
+        $inputEmail = $this->request->getPost('email');
+        $adminEmail = auth()->user()->email;
+        
+        if (strtolower($inputEmail) === strtolower($adminEmail)) {
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', ['Email admin tidak boleh digunakan untuk pendaftaran peserta workshop!']);
         }
 
+        $validation = Services::validation();
+        $validation->setRuleGroup('adminWorkshop');
+        if ($validation->withRequest($this->request)->run() === false) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        // 1. Simpan user terlebih dahulu
         $usersModel = auth()->getProvider();
         $user = new User([
             'username' => $this->request->getPost('username'),
@@ -652,6 +663,24 @@ class AdminController extends BaseController
         $user = $usersModel->find($usersModel->getInsertID());
         $user->activate();
 
+        // Generate order_id
+        $orderId = Utils::generateOrderId();
+
+        // 2. SIMPAN TRANSACTIONS TERLEBIH DAHULU
+        $transactionsModel = new TransactionsModel();
+        $kategori = $this->request->getPost('kategori');
+        $transactions = [
+            'order_id' => $orderId,
+            'gross_amount' => $kategori == 'VIP' ? 115000 : 75000,
+            'payment_type' => 'Offline',
+            'transaction_status' => 'settlement',
+            'transaction_time' => date('Y-m-d H:i:s'),
+            'snap_token' => 'no_snap',
+            'transaction_id' => 'no_transaction',
+        ];
+        $transactionsModel->save($transactions);
+
+        // 3. BARU SIMPAN DATA_WORKSHOP
         $dataWorkshopModel = new DataWorkshopModel();
         $dataWorkshop = [
             'username' => $this->request->getPost('username'),
@@ -660,23 +689,11 @@ class AdminController extends BaseController
             'email' => $this->request->getPost('email'),
             'instansi' => $this->request->getPost('instansi'),
             'domisili' => $this->request->getPost('domisili'),
-            'kategori' => $this->request->getPost('kategori'),
+            'kategori' => $kategori,
             'status' => $this->request->getPost('status'),
-            'order_id' => Utils::generateOrderId(),
+            'order_id' => $orderId, // Menggunakan order_id yang sudah ada di transactions
         ];
         $dataWorkshopModel->save($dataWorkshop);
-
-        $transactionsModel = new TransactionsModel();
-        $transactions = [
-            'order_id' => $dataWorkshop['order_id'],
-            'gross_amount' => $dataWorkshop['kategori'] == 'VIP' ? 115000 : 75000,
-            'payment_type' => 'Offline',
-            'transaction_status' => 'settlement',
-            'transaction_time' => date('Y-m-d H:i:s'),
-            'snap_token' => 'no_snap',
-            'transaction_id' => 'no_transaction',
-        ];
-        $transactionsModel->save($transactions);
 
         return redirect()->to('admin/detail-workshop/' . $this->request->getPost('username'));
     }
@@ -728,6 +745,86 @@ class AdminController extends BaseController
         }
 
         Utils::generatePdf($tiket['ticket'], true);
+    }
+
+    public function financeWorkshop()
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+
+        // Workshop Offline
+        $workshopOffline = $dataWorkshopModel->select('name, instansi, status, kategori, gross_amount, payment_type')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('transaction_status', 'settlement')
+            ->where('payment_type', 'offline')
+            ->findAll();
+
+        foreach ($workshopOffline as $idx => $val) {
+            switch ($val['payment_type']) {
+                case 'qris':
+                    $fee = floor($val['gross_amount'] * 0.7 / 100);
+                    break;
+                case 'gopay':
+                    $fee = floor($val['gross_amount'] * 2 / 100);
+                    break;
+                case 'bank_transfer':
+                case 'echannel':
+                    $fee = 4440;
+                    break;
+                default:
+                    $fee = 0;
+            }
+            $workshopOffline[$idx]['fee'] = $fee;
+            $workshopOffline[$idx]['pendapatan'] = $val['gross_amount'] - $fee;
+        }
+
+        $grossAmountOffline = 0;
+        $pendapatanOffline = 0;
+        foreach ($workshopOffline as $val) {
+            $grossAmountOffline += $val['gross_amount'];
+            $pendapatanOffline += $val['pendapatan'];
+        }
+
+        // Workshop Online
+        $workshopOnline = $dataWorkshopModel->select('name, instansi, status, kategori, gross_amount, payment_type')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('transaction_status', 'settlement')
+            ->where('payment_type !=', 'offline')
+            ->findAll();
+
+        foreach ($workshopOnline as $idx => $val) {
+            switch ($val['payment_type']) {
+                case 'qris':
+                    $fee = floor($val['gross_amount'] * 0.7 / 100);
+                    break;
+                case 'gopay':
+                    $fee = floor($val['gross_amount'] * 2 / 100);
+                    break;
+                case 'bank_transfer':
+                case 'echannel':
+                    $fee = 4440;
+                    break;
+                default:
+                    $fee = 0;
+            }
+            $workshopOnline[$idx]['fee'] = $fee;
+            $workshopOnline[$idx]['pendapatan'] = $val['gross_amount'] - $fee;
+        }
+
+        $grossAmountOnline = 0;
+        $pendapatanOnline = 0;
+        foreach ($workshopOnline as $val) {
+            $grossAmountOnline += $val['gross_amount'];
+            $pendapatanOnline += $val['pendapatan'];
+        }
+
+        return view('admin/finance_workshop', [
+            'workshopOffline' => $workshopOffline,
+            'grossAmountOffline' => $grossAmountOffline,
+            'pendapatanOffline' => $pendapatanOffline,
+            'workshopOnline' => $workshopOnline,
+            'grossAmountOnline' => $grossAmountOnline,
+            'pendapatanOnline' => $pendapatanOnline,
+        ]);
     }
 }
 

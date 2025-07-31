@@ -80,6 +80,7 @@ $routes->group('admin', ['filter' => 'group:admin'], static function($routes) {
     $routes->get('seminar', 'AdminController::seminar');
     $routes->get('finance', 'AdminController::dashboardFinance');
     $routes->get('finance/seminar', 'AdminController::financeSeminar');
+    $routes->get('finance/workshop', 'AdminController::financeWorkshop');
     $routes->get('finance/lomba', 'AdminController::financeLomba');
     $routes->get('detail-seminar/(:segment)', 'AdminController::detailSeminar/$1');
     $routes->get('lomba/(:segment)', 'AdminController::lomba/$1');
