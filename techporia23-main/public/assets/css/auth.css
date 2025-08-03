@@ -119,6 +119,8 @@ a {
 
 .main-section {
   background-image: url("/assets/images/sinergibg.svg");
+  background-size: cover;
+  background-size: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,12 +165,14 @@ a {
 .auth-section > .form-card > h2 {
   color: var(--text-dark);
   font-size: 20px;
-  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
   margin: 0.5rem 0;
 }
 
 .auth-section > .form-card > .alert {
-  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
 }
 
 .auth-section > form {
@@ -184,7 +188,7 @@ a {
 }
 
 .input-label {
-  color: #F9EB3D;
+  color: #f9eb3d;
   font-family: "Press-Start-2P", sans-serif;
   font-size: 18px;
   margin-bottom: 0.6rem;
@@ -216,7 +220,7 @@ a {
   }
   &::placeholder {
     font-family: "Press-Start-2P", sans-serif;
-    color: #A3A3A3;
+    color: #a3a3a3;
     text-transform: uppercase;
     font-size: 0.9rem;
   }
@@ -266,15 +270,17 @@ button[type="submit"] {
 }
 
 .auth-section > .form-card > p {
-  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
   font-size: 20px;
   margin-top: 1.5rem;
   color: #fff;
 }
 
 .auth-section > .form-card > p > a {
-  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #F9EB3D;
+  font-family: "Pixelify-Sans", Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
+  color: #f9eb3d;
   font-size: 20px;
 }
 
@@ -306,11 +312,108 @@ button[type="submit"] {
 }
 
 @media (max-width: 860px) {
-  .logo-section {
-    display: none;
+  .main-section {
+    background-image: url("/assets/images/sinergibgmobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    padding: 0;
   }
-  .auth-section {
+
+  .logo-section {
+    display: flex;
     width: 100%;
+    padding: 2rem 0 0 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    animation: none;
+    order: 1;
+  }
+
+  .logo-section > img {
+    width: 32vw;
+    max-width: 120px;
+    min-width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    animation: none;
+  }
+
+  .logo-section > h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .auth-section {
+    width: 90vw;
+    margin: 0;
+    padding: 0 5vw;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 60vh;
+    order: 2;
+  }
+
+  .form-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem 1rem 1.5rem 1rem;
+    box-sizing: border-box;
+    margin: 2rem 0 0 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .auth-section > .form-card > h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .auth-section > .form-card > h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .input-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+  }
+
+  .input-field {
+    font-size: 1.2rem;
+    padding: 0.8rem 2.2rem 0.7rem 0.8rem;
+  }
+
+  .password-toggle {
+    top: 3.2rem;
+    right: 0.5rem;
+    width: 1.8rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+
+  .auth-section > form > button[type="submit"],
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .auth-section > .form-card > p,
+  .auth-section > .form-card > p > a {
+    font-size: 1rem;
+    text-align: center;
   }
 }
 
