@@ -227,11 +227,6 @@
                                     <a href="<?= base_url('kompetisi/payment/' . $t['tim_id']) ?>"
                                         class="btn btn-outline-primary" style="margin-right: 10px;">Lanjutkan Pembayaran</a>
                                 <?php elseif (($t['transaction_status'] == 'settlement' || $t['transaction_status'] == 'capture') && $t['status'] == 'verified'): ?>
-                                    <!-- Tombol Submission untuk kompetisi tertentu -->
-                                    <?php if (($t['id_kompetisi'] == 2 || $t['id_kompetisi'] == 3 || $t['id_kompetisi'] == 5)): ?>
-                                        <a href="<?= base_url('profile/submission?id=' . $t['tim_id']) ?>"
-                                            class="btn btn-outline-primary" style="margin-right: 10px;">Submission</a>
-                                    <?php endif; ?>
                                     
                                     <!-- Tombol Grup WhatsApp dengan design menarik -->
                                     <?php if (isset($whatsapp_groups[$t['id_kompetisi']])): ?>
