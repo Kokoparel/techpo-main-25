@@ -1540,6 +1540,7 @@ textarea {
   padding: 15vh 15vw;
   width: 100%;
   gap: 3rem;
+  background-image: url("/assets/images/About Section.svg");
 }
 @media (max-width: 960px) {
   .about {
@@ -1578,6 +1579,7 @@ textarea {
 
 #competition {
   padding: 5rem 10vw;
+  background-image: url("/assets/images/Competition Section.svg");
 }
 
 #competition h1 {
@@ -1648,6 +1650,7 @@ textarea {
 
 #seminar {
   padding: 5vw 0;
+  background-image: url("/assets/images/Talkshow Section.svg");
 }
 
 .seminar-img {
@@ -2157,6 +2160,65 @@ textarea {
   }
 }
 
+.section-workshop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  width: 100%;
+}
+
+.section-workshop .item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+}
+
+.section-workshop .item.center {
+  padding: 0 5%;
+}
+
+.section-workshop .item h1 {
+  text-align: center;
+  font-family: "Technonomicon";
+}
+
+.section-workshop .item .item-detail {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-workshop .item .item-detail p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  text-align: justify;
+}
+
+.section-workshop .item .item-detail span {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  padding-left: 1rem;
+}
+
+.section-workshop .item a {
+  margin-top: 1rem;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .section-workshop {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section-workshop .item {
+    width: 90vw;
+  }
+}
+
 .colored-toast.swal2-icon-success {
   background-color: var(--secondary-color) !important;
 }
@@ -2258,4 +2320,16 @@ textarea {
   font-weight: 700;
   font-family: "Technonomicon";
   text-align: center;
+}
+
+#workshop {
+  background-image: url("/assets/images/Workshop Section.svg");
+}
+
+#sponsors {
+  background-image: url("/assets/images/Sponsor Section.svg");
+}
+
+#media-partners {
+  background-image: url("/assets/images/Medpar Section.svg");
 }

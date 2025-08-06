@@ -145,8 +145,8 @@
         </div>
     </div> 
 
-    <div class="section light" id="seminar">
-        <div class="section-seminar">
+    <div class="section light" id="workshop">
+        <div class="section-workshop">
             <!-- Gambar ke kiri -->
             <div class="item onscroll-r" style="--delay: 1;">
                 <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />

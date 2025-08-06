@@ -100,11 +100,11 @@
                 <?php 
                 // Array untuk link grup WhatsApp berdasarkan ID kompetisi
                 $whatsapp_groups = [
-                    1 => 'https://chat.whatsapp.com/competitive-programming-link', // Competitive Programming
-                    2 => 'https://chat.whatsapp.com/web-development-link',        // Web Development
-                    3 => 'https://chat.whatsapp.com/ui-ux-design-link',          // UI/UX Design
-                    5 => 'https://chat.whatsapp.com/business-plan-link',         // Business Plan
-                    9 => 'https://chat.whatsapp.com/mobile-legends-link'         // Mobile Legends
+                    1 => 'https://chat.whatsapp.com/G2W1taz0jBG8ZXgb526qeq?mode=ac_t', // Competitive Programming
+                    2 => 'https://chat.whatsapp.com/J1pD1SN93ZyEoLDRg96bTI?mode=ac_t',        // Web Development
+                    3 => 'https://chat.whatsapp.com/DuJt9vYNVYH6bFHaAhlSt9?mode=ac_t',          // UI/UX Design
+                    5 => 'https://chat.whatsapp.com/BoR25i600Vy6fGbU3dY5DH?mode=ac_t',         // Business Plan
+                    9 => 'https://chat.whatsapp.com/CgcosSdGdmg4qZ9jJNO1jS?mode=ac_t'         // Mobile Legends
                 ];
                 ?>
                 <?php foreach ($tim as $t): ?>
