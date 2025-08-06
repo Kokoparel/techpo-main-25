@@ -37,77 +37,47 @@
         </div>
     </div>
 
-    <div class="section" id="competition">
-        <h1 class="onscroll-r">COMPETITION</h1>
-        <p class="onscroll-r">Dalam Sinergi Fest ini, terdapat beberapa lomba yang diadakan seperti dibawah ini
-        </p>
-        <div class="competition-grid">
-            <div class="first-grid">
-                <div class="grid-child onscroll-r" style="--delay: 0;">
-                    <img src="<?= base_url('assets/images/competition-logo/business.webp'); ?>" alt="Business Plan" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Business Plan<br>Competition</p>
-                        <a href="<?= base_url('kompetisi/business-plan'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
+    <!-- COMPE Start -->
+    <div class="section light">
+        <h1>COMPETITION</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide card">
+                    <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" />
+                    <h3>Business Plan</h3>
+                    <a href="/kompetisi/business-plan"><button>More</button></a>
                 </div>
-                
-                <div class="grid-child onscroll-r" style="--delay: 1;">
-                    <img src="<?= base_url('assets/images/competition-logo/essay.webp'); ?>" alt="Network Competition" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Essay</p>
-                        <a href="<?= base_url('kompetisi/networking-competition'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
+                <div class="swiper-slide card">
+                    <img src="/assets/images/competition-logo/compe-2025/Compe.svg" />
+                    <h3>Competitive Programming</h3>
+                    <a href="/kompetisi/competitive-programming"><button>More</button></a>
                 </div>
-                
-                <div class="grid-child onscroll-r" style="--delay: 2;">
-                    <img src="<?= base_url('assets/images/competition-logo/ui-ux.webp'); ?>" alt="UI/UX Design" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>UI/UX Design<br>Competition</p>
-                        <a href="<?= base_url('kompetisi/ui-ux'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
+                <div class="swiper-slide card">
+                    <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" />
+                    <h3>UI/UX Design</h3>
+                    <a href="/kompetisi/ui-ux"><button>More</button></a>
                 </div>
-            </div>
-            <div class="second-grid">
-                <div class="grid-child onscroll-r" style="--delay: 1;">
-                    <img src="<?= base_url('assets/images/competition-logo/competitive.webp'); ?>" alt="Competitive Programming" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Competitive<br>Programming</p>
-                        <a href="<?= base_url('kompetisi/competitive-programming'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
+                <div class="swiper-slide card">
+                    <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" />
+                    <h3>Web Development</h3>
+                    <a href="/kompetisi/web-development"><button>More</button></a>
                 </div>
-                <div class="grid-child onscroll-r" style="--delay: 2;">
-                    <img src="<?= base_url('assets/images/competition-logo/web.webp'); ?>" alt="Website Development" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Web Development<br>Competition</p>
-                        <a href="<?= base_url('kompetisi/web-development'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
-                </div>
-                <div class="grid-child onscroll-r" style="--delay: 2;">
-                    <img src="<?= base_url('assets/images/competition-logo/painting.webp'); ?>" alt="Website Development" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Painting</p>
-                        <a href="<?= base_url('kompetisi/web-development'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
+                <div class="swiper-slide card">
+                    <img src="/assets/images/competition-logo/compe-2025/ML.svg" />
+                    <h3>Mobile Legends</h3>
+                    <a href="/kompetisi/mobile-legend"><button>More</button></a>
                 </div>
             </div>
-            <div class="second-grid">
-                <div class="grid-child onscroll-r" style="--delay: 1;">
-                    <img src="<?= base_url('assets/images/competition-logo/band.webp'); ?>" alt="Competitive Programming" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Band / Acoustic</p>
-                        <a href="<?= base_url('kompetisi/competitive-programming'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
-                </div>
-                <div class="grid-child onscroll-r" style="--delay: 2;">
-                    <img src="<?= base_url('assets/images/competition-logo/dance.webp'); ?>" alt="Website Development" class="logo-kompetisi-lg" />
-                    <div class="competition-detail">
-                        <p>Dance Creation</p>
-                        <a href="<?= base_url('kompetisi/web-development'); ?>" class="btn btn-secondary">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
+
+            <!-- Panah Navigasi -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
+
+
     </div>
+
+    <!-- COMPE END -->
 
     <div class="section light" id="seminar">
         <div class="section-seminar">
@@ -143,7 +113,7 @@
                 <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
             </div>
         </div>
-    </div> 
+    </div>
 
     <div class="section light" id="seminar">
         <div class="section-seminar">
@@ -242,7 +212,7 @@
                 ?>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div class="section" id="media-partners">
         <div class="section-ms">
