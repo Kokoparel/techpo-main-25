@@ -21,50 +21,52 @@
     </div>
 
     <div class="section light" id="about">
-        <div class="about">
-            <img src="<?php echo base_url('assets/images/MASKOT 2.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
-            <div class="about-detail onscroll-r" style="--delay: 1;">
-                <h1>About <br> Sinergi Fest </h1>
-                <p>
+        <div class="about-container">
+            <div class="speech-bubble onscroll-r" style="--delay: 0;">
+                <h1 class="about-title">ABOUT<br>SINERGI FEST</h1><br>
+                <p class="about-text">
                     Sinergi Fest merupakan serangkaian acara IT tahunan dengan fokus utama kompetisi yang diperuntukan
-                    bagi Universitas/Politeknik
-                    se-Indonesia untuk meningkatkan kesadaran tentang peranan IT serta meningkatkan nilai keilmuan dan
-                    komprehensif di bidang
-                    ilmu teknologi informasi komputer. Ajang ini sendiri diprakarsai oleh Mahasiswa Fakultas Ilmu
-                    Komputer Universitas Sriwijaya.
+                    bagi Universitas/Politeknik se-Indonesia untuk meningkatkan kesadaran tentang peranan IT serta 
+                    meningkatkan nilai keilmuan dan komprehensif di bidang ilmu teknologi informasi komputer. 
+                    Ajang ini sendiri diprakarsai oleh Mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
                 </p>
+            </div>
+            <div class="mascot-container onscroll-r" style="--delay: 1;">
+                <img src="<?php echo base_url('assets/images/Mascot Head.svg') ?>" 
+                    alt="Sinergi Fest Mascot" 
+                    class="mascot" />
             </div>
         </div>
     </div>
 
     <!-- COMPE Start -->
-    <div class="section light">
+    <div class="section light" id="competition">
         <h1>COMPETITION</h1>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide card">
                     <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" />
-                    <h3>Business Plan</h3>
+                    <h3>Business<br>Plan</h3>
                     <a href="/kompetisi/business-plan"><button>More</button></a>
                 </div>
                 <div class="swiper-slide card">
                     <img src="/assets/images/competition-logo/compe-2025/Compe.svg" />
-                    <h3>Competitive Programming</h3>
+                    <h3>Competitive <br>Programming</h3>
                     <a href="/kompetisi/competitive-programming"><button>More</button></a>
                 </div>
                 <div class="swiper-slide card">
                     <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" />
-                    <h3>UI/UX Design</h3>
+                    <h3>UI/UX <br>Design</h3>
                     <a href="/kompetisi/ui-ux"><button>More</button></a>
                 </div>
                 <div class="swiper-slide card">
                     <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" />
-                    <h3>Web Development</h3>
+                    <h3>Web <br>Development</h3>
                     <a href="/kompetisi/web-development"><button>More</button></a>
                 </div>
                 <div class="swiper-slide card">
                     <img src="/assets/images/competition-logo/compe-2025/ML.svg" />
-                    <h3>Mobile Legends</h3>
+                    <h3>Mobile<br> Legends</h3>
                     <a href="/kompetisi/mobile-legend"><button>More</button></a>
                 </div>
             </div>
