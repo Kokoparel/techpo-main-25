@@ -99,7 +99,7 @@
                         </ul>
                     </div>
                 <?php else: ?>
-                    <a class="btn btn-outline-primary" href="<?= base_url('login'); ?>">Login</a>
+                    <a class="btn btn-outline-primary" href="<?= base_url('login'); ?>">LOGIN</a>
                 <?php endif; ?>
                 <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
                     <i class="bx bx-menu" aria-hidden="true"></i>
