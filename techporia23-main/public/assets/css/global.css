@@ -151,6 +151,7 @@ body {
           drop-shadow(1px 1px 0 #ffffff)
           drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
 }
+
 /* CARD STYLING */
 .card {
   background: linear-gradient(135deg, #1c0036, #31005a);
@@ -582,7 +583,8 @@ svg {
 }
 
 .btn-outline-primary {
-  color: white; /* Warna teks */
+  color: white;
+  background-color: ; 
   font-weight: 500;
   font-size: 1.05rem;
   border-radius: 5px;
@@ -2239,7 +2241,7 @@ textarea {
 .faq h1 {
   font-size: 40px;
   font-weight: 700;
-  font-family: "Technonomicon";
+  font-family: "Nulshock";
   text-align: center;
 }
 
@@ -2395,7 +2397,7 @@ textarea {
   width: 100%;
 }
 
-.section-seminar .item {
+ .item {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -2409,20 +2411,36 @@ textarea {
 }
 
 .section-seminar .item h1 {
+  font-weight: 900;
+  font-family: "Press-Start-2P", monospace;
   text-align: center;
-  font-family: "Technonomicon";
+  line-height: 1.3;
+
+  background: linear-gradient(to bottom, #ff0000, #f6ca00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Filter drop shadow */
+  filter: drop-shadow(-1px -1px 0 #ffffff) 
+          drop-shadow(1px -1px 0 #ffffff)
+          drop-shadow(-1px 1px 0 #ffffff) 
+          drop-shadow(1px 1px 0 #ffffff)
+          drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
 .section-seminar .item .item-detail {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  font-family: "Poppins-Regular", sans-serif;
 }
 
 .section-seminar .item .item-detail p {
   font-size: 1.1rem;
   color: var(--text-dark);
   text-align: justify;
+  font-family: "Poppins-Regular", sans-serif;
 }
 
 .section-seminar .item .item-detail span {
@@ -2468,8 +2486,22 @@ textarea {
 }
 
 .section-workshop .item h1 {
+  font-weight: 900;
+  font-family: "Press-Start-2P", monospace;
   text-align: center;
-  font-family: "Technonomicon";
+  line-height: 1.3;
+
+  background: linear-gradient(to bottom, #ff0000, #f6ca00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Filter drop shadow */
+  filter: drop-shadow(-1px -1px 0 #ffffff) 
+          drop-shadow(1px -1px 0 #ffffff)
+          drop-shadow(-1px 1px 0 #ffffff) 
+          drop-shadow(1px 1px 0 #ffffff)
+          drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
 .section-workshop .item .item-detail {
