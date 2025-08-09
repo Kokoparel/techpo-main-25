@@ -205,11 +205,11 @@
     <div class="section light" id="sponsors">
         <div class="section-ms">
             <h1 class="onscroll-r">SPONSORS</h1>
-            <div class="ms">
+            <div class="ms sponsors-list">
                 <?php
                 $path = FCPATH . 'assets' . DIRECTORY_SEPARATOR . 'sponsor' . DIRECTORY_SEPARATOR;
                 foreach (glob($path . "*.*") as $file) {
-                    echo '<img class="ms-images onscroll-r" src="/assets/sponsor/' . basename($file) . '" alt="' . basename($file) . '" />';
+                    echo '<img class="ms-images sponsor-img onscroll-r" src="/assets/sponsor/' . basename($file) . '" alt="' . basename($file) . '" />';
                 }
                 ?>
             </div>
