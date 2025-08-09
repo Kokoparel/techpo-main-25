@@ -6,7 +6,7 @@
 <div class="main">
   <div class="container top">
     <div class="submission-flex">
-      <img src="<?= base_url('assets/images/competition-logo/competitive.webp'); ?>" alt="Competitive Programming" class="logo-kompetisi-lg" />
+      <img src="<?= base_url('assets/images/competition-logo/compe-2025/Compe.svg'); ?>" alt="Competitive Programming" class="logo-kompetisi-lg" />
       <div class="submission-detail">
         <h1 class="submission-title">Submission Competitive Programming</h1>
 

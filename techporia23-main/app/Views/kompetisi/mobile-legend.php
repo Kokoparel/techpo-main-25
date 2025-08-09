@@ -13,7 +13,7 @@
         </div> -->
          <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/competitive.webp" alt="Competitive Programming" />
+                <img src="/assets/images/competition-logo/compe-2025/ML.svg" alt="Competitive Programming" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>Mobile Legends</h1>

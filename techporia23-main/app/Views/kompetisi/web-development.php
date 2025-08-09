@@ -16,7 +16,7 @@
 
         <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/web.webp" alt="Web Development" />
+                <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" alt="Web Development" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>Web Development</h1>

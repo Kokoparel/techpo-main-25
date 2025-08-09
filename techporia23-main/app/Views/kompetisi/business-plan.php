@@ -9,7 +9,7 @@
     <div class="section" style="padding-top: 3rem;">
         <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/business.webp" alt="Business Plan" />
+                <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" alt="Business Plan" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>Business Plan</h1>

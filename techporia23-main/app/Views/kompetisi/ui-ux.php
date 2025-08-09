@@ -16,7 +16,7 @@
         
         <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/ui-ux.webp" alt="UI/UX Design" />
+                <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" alt="UI/UX Design" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>UI/UX Design</h1>
