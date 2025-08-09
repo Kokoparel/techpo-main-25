@@ -11,8 +11,8 @@
             <div class="social-media">
                 <a href="https://x.com/techphoria24 " target="_blank"><i class="ri-twitter-x-fill"></i></a>
                 <a href="" target="_blank"><i class="ri-line-fill"></i></a>
-                <a href="https://www.instagram.com/technology.euphoria/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.tiktok.com/@technology.euphoria?_t=8oQaSjjdYdM&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                <a href="https://www.instagram.com/sinergi.fest?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.tiktok.com/@sinergi.fest?_t=ZS-8yjodPpW38y&_r=1" target="_blank"><i class='bx bxl-tiktok'></i></a>
             </div>
         </div>
         <div class="item onscroll-r" style="--delay: 2;">
@@ -38,6 +38,6 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <p>© 2024 Technology Euphoria. All rights reserved.</p>
+        <p>© 2025 Sinergi Fest. All rights reserved.</p>
     </div>
 </footer>
