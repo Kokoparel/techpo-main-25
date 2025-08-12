@@ -5,14 +5,14 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main competition-list" id="business-plan">
     <div class="section" style="padding-top: 3rem;">
         <div class="detail-horizontal">
             <div class="image onscroll-r">
                 <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" alt="Business Plan" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>Business Plan</h1>
+                <h1>BUSINESS PLAN</h1>
                 <div class="paragraphs">
                     <p>
                         Business Plan adalah salah satu cabang kompetisi berskala nasional dalam ajang Sinergi Fest 2025 yang diselenggarakan oleh Fakultas Ilmu Komputer Universitas Sriwijaya.
@@ -29,7 +29,7 @@
                 </div>
                 <table class="details-table">
                     <tr>
-                        <td><i class='bx bx-group'></i> Pendaftaran Peserta</td>
+                        <td><i class='bx bx-group'></i> PENDAFTARAN PESERTA</td>
                         <td>01 Agustus - 31 Agustus 2024</td>
                     </tr>
                     <tr>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="countdown">
-            <h1 class="onscroll">Penutupan Pendaftaran</h1>
+            <h1 class="onscroll">PENUTUPAN PENDAFTARAN</h1>
             <ul class="onscroll">
                 <li><span id="days">12</span>Hari</li>
                 <li>:</li>
@@ -85,7 +85,7 @@
             </ul>
         </div>
         <div class="informasi-lomba">
-            <h1 class="onscroll-r">Informasi Lomba</h1>
+            <h1 class="onscroll-r">INFORMASI LOMBA</h1>
             <ul>
                 <li class="onscroll-r"><i class='bx bxs-chevron-right'></i> Seluruh peserta diwajibkan membaca guidebook
                     sebelum melakukan pendaftaran</li>
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="faq onscroll">
-            <h1>Frequently Asked Question (FAQ)</h1>
+            <h1>FREQUENTLY ASKED QUESTIONS (FAQ)</h1>
             <ol>
                 <li>
                     Bagaimana cara mendaftarkan diri dalam kompetisi Business Plan Techphoria 2024?
