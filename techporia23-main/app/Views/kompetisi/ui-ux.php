@@ -5,7 +5,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main competition-list">
+<div class="main competition-list" id="ui-ux">
     <div class="section" style="padding-top: 3rem;">
         <!--
         <div class="comingsoon">
@@ -22,21 +22,28 @@
                 <h1>UI/UX DESIGN</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi UI/UX merupakan cabang kompetisi dalam ajang Sinergi Fest 2025 untuk
-                        menciptakan sebuah antarmuka produk yang dapat memberikan kenyamanan, kemudahan, dan mewujudkan
-                        pengalaman terbaik bagi pengguna. Acara ini bertaraf nasional dan diselenggarakan oleh keluarga
-                        mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
-                    </p>
-                    <p>
-                        Pada tahun ini, lomba UI/UX Technology Euphoria mengusung tema “UI/UX Design to Increase
-                        Creativity and Competitiveness on the Digital Era”, dan tujuan dari kompetisi ini adalah untuk
-                        menguji peserta dalam menganalisa, menggali, berkreasi, dan mengembangkan kemampuan dan
-                        kreatifitas mereka dalam bidang UI/UX designing. Fokus dari kompetisi ini adalah menciptakan
-                        desain produk aplikasi yang efektif dan efisien serta dapat memberikan pengalaman terbaik bagi
-                        pengguna saat menggunakan produk tersebut. Lomba ini akan terbagi menjadi dua babak, yaitu babak
-                        penyisihan yang dilakukan secara online melalui zoom meeting dan babak final yang diadakan
-                        secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya dan Zoom Meeting.
-                    </p>
+    Kompetisi UI/UX merupakan salah satu cabang kompetisi dalam Sinergi Fest 2025 yang bertujuan untuk menciptakan antarmuka produk yang memberikan kenyamanan, kemudahan, serta mewujudkan pengalaman terbaik bagi pengguna. 
+    Acara ini berskala nasional dan diselenggarakan oleh BEM KM Fakultas Ilmu Komputer Universitas Sriwijaya.
+</p>
+
+<p>
+    Pada tahun ini, Lomba UI/UX Sinergi Fest mengusung tema <strong>“Design for Everyone”</strong>. 
+    Melalui tema ini, peserta diajak untuk merancang pengalaman digital yang inklusif—dapat dinikmati oleh semua orang tanpa terkecuali. 
+    Fokus utamanya adalah menciptakan desain yang ramah, mudah digunakan, dan dapat diakses oleh siapa saja, termasuk anak-anak, lansia, maupun penyandang disabilitas. 
+    Peserta juga dapat memilih dari subtema berikut:
+</p>
+
+<ol>
+    <li>Bidang Pendidikan</li>
+    <li>Bidang Kesehatan</li>
+    <li>Bidang Ekonomi</li>
+    <li>Bidang Layanan Publik</li>
+</ol>
+
+<p>
+    Lomba ini terbagi menjadi dua babak, yaitu babak penyisihan dan babak final, yang akan dilaksanakan secara online.
+</p>
+
                 </div>
                 <table class="details-table">
                     <tr>

@@ -3,6 +3,26 @@
 <?= $this->section('title'); ?>Workshop | Technology Euphoria
 <?= $this->endSection(); ?>
 
+<?= $this->section('styles'); ?>
+<style>
+
+#workshop-page .section.light {
+background-image: url("/assets/images/WORKSHOP.svg");
+  background-size: cover;
+  background-position: center;
+
+  aspect-ratio: 2051 / 1334; /* Rasio dari Figma */
+}
+
+footer {
+   background-image: url("/assets/images/WORKSHOPfuter.svg");
+  background-size: cover;
+  
+  aspect-ratio: 2051 / 500; /* Rasio dari Figma */
+}
+</style>
+<?= $this->endSection(); ?>
+
 <?= $this->section('content'); ?>
 
 <div class="main" id="workshop-page">

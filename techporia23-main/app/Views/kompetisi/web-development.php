@@ -5,7 +5,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main competition-list">
+<div class="main competition-list" id="web-development">
     <div class="section" style="padding-top: 3rem">
         <!--
         <div class="comingsoon">
@@ -22,13 +22,14 @@
                 <h1>WEB DEVELOPMENT</h1>
                 <div class="paragraphs">
                     <p>
-                        Web development merupakan salah satu cabang kompetisi dalam event Sinergi Fest 2025,
-                        sebuah acara bertaraf nasional yang diadakan untuk mahasiswa aktif perguruan tinggi dan siswa
-                        SMA/SMK aktif dari seluruh sekolah negeri maupun swasta di Indonesia. Kompetisi ini merupakan
-                        kompetisi pengembangan web secara interaktif yang memberikan manfaat kepada penggunanya dimana
-                        peserta diminta untuk mengembangkan web yang dapat mempermudah pengguna dalam mendapatkan
-                        informasi, mempermudah interaksi antar pengguna dan penyedia layanan, menghibur, dan mudah untuk
-                        diakses.
+                        Sebagai bagian dari rangkaian Sinergi Fest, kompetisi Web Development hadir untuk
+memberikan ruang bagi generasi muda dalam menciptakan solusi digital yang
+inovatif, aplikatif, dan berdampak. Melalui lomba ini, peserta ditantang untuk
+menghadirkan ide, membangun website, dan menjawab permasalahan nyata di sekitar
+mereka dengan cara yang kreatif dan relevan. Lebih dari sekadar ajang adu skill,
+kompetisi ini adalah kesempatan untuk menyampaikan pesan, menciptakan
+perubahan, dan menunjukkan bahwa teknologi dapat menjadi jembatan antara ide dan
+aksi.
                     </p>
                 </div>
                 <table class="details-table">

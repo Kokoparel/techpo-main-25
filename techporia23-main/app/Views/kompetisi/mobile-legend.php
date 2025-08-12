@@ -5,7 +5,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main competition-list">
+<div class="main competition-list" id="mobile-legend">
     <!-- <div class="section" style="padding-top: 3rem">
         <div class="comingsoon">
             <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
@@ -19,14 +19,11 @@
                 <h1>MOBILE LEGENDS</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi Mobile Legends dengan tema "Strategy, Teamwork, and Precision Play" merupakan salah satu cabang perlombaan yang paling dinantikan dalam event Technology Euphoria, 
-                        sebuah acara bertaraf nasional yang ditujukan bagi mahasiswa aktif di perguruan tinggi dan siswa SMA/SMK sederajat di seluruh Indonesia. Turnamen Mobile Legends ini terdiri dari dua babak,
-                         yakni babak penyisihan yang dilaksanakan secara online melalui platform turnamen khusus dan babak final yang diselenggarakan secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya serta melalui siaran Zoom Meeting.
+                        Mobile Legend Sinergi Fest adalah sebuah festival kompetitif yang mengedepankan nilai sinergi — kerja sama yang harmonis antar pemain untuk meraih kemenangan. Kata Sinergi mencerminkan bagaimana strategi, peran, dan komunikasi antar anggota tim saling menyatu membentuk kekuatan. Sementara Fest melambangkan semangat kebersamaan dalam suasana yang meriah, santai, namun tetap kompetitif. Ajang ini bukan hanya soal mekanik atau kill terbanyak, tapi tentang bagaimana tim bisa saling melengkapi, berpikir bersama, dan melangkah menuju kemenangan dengan kekompakan.
 
                     </p>
                     <p>
-                        Tujuan utama dari kompetisi ini adalah menguji kemampuan peserta dalam menyusun strategi, komunikasi tim, dan pengambilan keputusan cepat di medan pertempuran. 
-                        Fokus perlombaan ini terletak pada kekompakan tim, ketepatan eksekusi, serta adaptasi taktik dalam setiap pertandingan Mobile Legends yang dijalani.
+                        Turnamen ini terdiri dari empat babak utama, yaitu: babak penyisihan, babak seperempat final, semifinal, dan final. Babak penyisihan mencakup pertandingan 16 besar yang dilaksanakan oleh 32 tim secara bersamaan dengan sistem best of one (BO1). Memasuki babak seperempat final, pertandingan akan dimulai secara bersamaan lagi dengan sistem yang sama dengan babak penyisihan yaitu best of one (BO1). Pada babak semifinal, pertandingan menggunakan format best of three (BO3), mulai dari babak ini hingga final, seluruh tim tidak lagi bertanding secara serentak dengan tim lain, melainkan akan tampil di panggung secara bergiliran sesuai dengan urutan bracket dan jadwal yang telah ditetapkan. Pada babak final pertandingan menggunakan format best of five (BO5) untuk menentukan tim pemenang. Event akan dilaksanakan secara offline di lokasi yang telah ditentukan.
 
                     </p>
                 </div>

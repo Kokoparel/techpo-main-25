@@ -2253,7 +2253,8 @@ textarea {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  background-color: var(--section);
+  /* background-color: var(--section); */
+  background: transparent;
   width: 100%;
   padding: 5rem 0;
 }
@@ -2897,7 +2898,35 @@ textarea {
 }
 
 #business-plan {
-  background-image: url("/assets/images/UX Desain.svg");
+  background-image: url("/assets/images/ux design tes.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#competitive-programming {
+  background-image: url("/assets/images/ux design tes.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#mobile-legend {
+  background-image: url("/assets/images/ux design tes.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ui-ux {
+  background-image: url("/assets/images/ux design tes.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#web-development {
+  background-image: url("/assets/images/ux design tes.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2933,7 +2962,7 @@ textarea {
 }
 
 #workshop-page {
-  background-image: url("/assets/images/Workshop Section.svg");
+  background-image: url("/assets/images/WORKSHOP.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
