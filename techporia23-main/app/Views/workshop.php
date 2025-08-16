@@ -27,6 +27,12 @@ footer {
 
 <div class="main" id="workshop-page">
     <div class="section light" style="padding: 3rem 0;">
+        <!--
+        <div class="comingsoon">
+            <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
+            <h1>Coming Soon</h1>
+        </div>
+        -->
         <div class="detail-horizontal">
             <div class="image">
                 <img src="/assets/images/workshop.webp" alt="Workshop Technology Euphoria" />
