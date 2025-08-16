@@ -1,6 +1,6 @@
 <?= $this->extend('layout/master_layout'); ?>
 
-<?= $this->section('title'); ?>Technology Euphoria
+<?= $this->section('title'); ?>Sinergi Fest 2025
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
@@ -22,8 +22,7 @@
 
     <div class="section light" id="about">
         <div class="about">
-            <img src="<?php echo base_url('assets/images/MASKOT 2.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
-            <div class="about-detail onscroll-r" style="--delay: 1;">
+        <div class="about-detail onscroll-r" style="--delay: 1;">
                 <h1>About <br> Sinergi Fest </h1>
                 <p>
                     Sinergi Fest merupakan serangkaian acara IT tahunan dengan fokus utama kompetisi yang diperuntukan
@@ -33,7 +32,8 @@
                     ilmu teknologi informasi komputer. Ajang ini sendiri diprakarsai oleh Mahasiswa Fakultas Ilmu
                     Komputer Universitas Sriwijaya.
                 </p>
-            </div>
+            </div>    
+        <img src="<?php echo base_url('assets/images/Head.svg') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
         </div>
     </div>
 
@@ -145,7 +145,7 @@
         </div>
     </div> 
 
-    <div class="section light" id="seminar">
+    <div class="section light" id="workshop">
         <div class="section-seminar">
             <!-- Gambar ke kiri -->
             <div class="item onscroll-r" style="--delay: 1;">
@@ -184,53 +184,7 @@
         </div>
     </div>
 
-    <!--
-    <div class="section onscroll" id="kilas-balik">
-        <h1>KILAS TECHPORIA 2024 </h1>
-        <p>Dalam Sinergi Fest ini, terdapat beberapa lomba yang diadakan seperti dibawah ini</p>
-        <a href="<?= base_url('sejarah'); ?>" class="btn btn-fancy">Selengkapnya</a>
-        <div class="kilas-balik-grid">
-            <div class="grid-child onscroll">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho24-1.jpg'); ?>" alt="kilas balik" />
-                <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
-                </div>
-            </div>
-            <div class="grid-child onscroll" style="--delay: 1;">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho24-2.jpg'); ?>" alt="kilas balik" />
-                <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
-                </div>
-            </div>
-            <div class="grid-child onscroll">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho24-3.jpg'); ?>" alt="kilas balik" />
-                <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
-                </div>
-            </div>
-            <div class="grid-child onscroll" style="--delay: 1;">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho23-7.jpg'); ?>" alt="kilas balik" />
-                <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
-                </div>
-            </div>
-            <div class="grid-child onscroll">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho24-5.jpg'); ?>" alt="kilas balik" />
-                <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
-                </div>
-            </div>
-            <div class="grid-child onscroll" style="--delay: 1;">
-                <img src="<?= base_url('assets-old/sejarah-image/techpho24-6.jpg'); ?>" alt="kilas balik" />
-                <div class="overlay">
-                    <a href="<?= base_url('sejarah'); ?>">Kilas Balik Technology Euphoria 2024</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-
-    <div class="section light" id="sponsors">
+    <section class="section-ms-sponsor">
         <div class="section-ms">
             <h1 class="onscroll-r">SPONSORS</h1>
             <div class="ms">
@@ -244,7 +198,7 @@
         </div>
     </div> 
 
-    <div class="section" id="media-partners">
+    <section class="section-ms-media">
         <div class="section-ms">
             <h1 class="onscroll-r">MEDIA PARTNERS</h1>
             <div class="ms">

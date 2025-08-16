@@ -1535,12 +1535,21 @@ textarea {
 }
 
 .about {
+  width: 100%;
+  min-height: calc(100vh - 70px);
   display: flex;
+  position: relative;
+  overflow: hidden;
   align-items: center;
   padding: 15vh 15vw;
   width: 100%;
   gap: 3rem;
+  background-image: url("/assets/images/BackgroundAbout.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
 @media (max-width: 960px) {
   .about {
     flex-direction: column;
@@ -1558,26 +1567,42 @@ textarea {
 }
 
 .about-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px;
+    border-radius: 8px;  
+    
+  background-image: url("/assets/images/BackgroundTextAbout.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;          
 }
 
 .about-detail h1 {
-  font-size: clamp(15px, 3.5vw, 2rem);
+  font-size: 14px;
   font-weight: 700;
   font-family: "Technonomicon";
-  text-align: center;
+  text-align: left;
 }
 
 .about-detail p {
   text-align: justify;
   color: var(--text-dark);
-  font-size: 18px;
+  font-size: 10px;
+  padding-right: 50px;
 }
 
 #competition {
-  padding: 5rem 10vw;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
+  /* filter: blur(12px); */
+  background-image: url("/assets/images/bgcompettion.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #competition h1 {
@@ -1647,7 +1672,26 @@ textarea {
 }
 
 #seminar {
-  padding: 5vw 0;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden; /* ← titik koma ini wajib */
+  /* filter: blur(12px); */
+  background-image: url("/assets/images/bgtalkshow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#workshop {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
+  background-image: url("/assets/images/bgworkshop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .seminar-img {
@@ -2066,13 +2110,28 @@ textarea {
   transform: translate(0);
 }
 
-.section-ms {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  padding: 15vh 15vw;
+.section-ms-sponsor {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
+  background-image: url("/assets/images/bgsponsor.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+.section-ms-media {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
+  background-image: url("/assets/images/bgmedpar.png"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 .section-ms > h1 {
   font-family: "Technonomicon";
