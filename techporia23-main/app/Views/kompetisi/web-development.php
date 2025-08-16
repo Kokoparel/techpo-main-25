@@ -16,23 +16,24 @@
 
         <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/web.webp" alt="Web Development" />
+                <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" alt="Web Development" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>Web Development</h1>
                 <div class="paragraphs">
                     <p>
-                        Web development merupakan salah satu cabang kompetisi dalam event Sinergi Fest 2025,
-                        sebuah acara bertaraf nasional yang diadakan untuk mahasiswa aktif perguruan tinggi dan siswa
-                        SMA/SMK aktif dari seluruh sekolah negeri maupun swasta di Indonesia. Kompetisi ini merupakan
-                        kompetisi pengembangan web secara interaktif yang memberikan manfaat kepada penggunanya dimana
-                        peserta diminta untuk mengembangkan web yang dapat mempermudah pengguna dalam mendapatkan
-                        informasi, mempermudah interaksi antar pengguna dan penyedia layanan, menghibur, dan mudah untuk
-                        diakses.
+                        Sebagai bagian dari rangkaian Sinergi Fest, kompetisi Web Development hadir untuk
+                        memberikan ruang bagi generasi muda dalam menciptakan solusi digital yang
+                        inovatif, aplikatif, dan berdampak. Melalui lomba ini, peserta ditantang untuk
+                        menghadirkan ide, membangun website, dan menjawab permasalahan nyata di sekitar
+                        mereka dengan cara yang kreatif dan relevan. Lebih dari sekadar ajang adu skill,
+                        kompetisi ini adalah kesempatan untuk menyampaikan pesan, menciptakan
+                        perubahan, dan menunjukkan bahwa teknologi dapat menjadi jembatan antara ide dan
+                        aksi.
                     </p>
                 </div>
                 <table class="details-table">
-                <tr>
+                    <tr>
                         <td><i class='bx bx-group'></i> Pendaftaran Peserta</td>
                         <td>01 Agustus - 31 Agustus 2024</td>
                     </tr>
@@ -123,18 +124,22 @@
             <h1>Frequently Asked Question (FAQ)</h1>
             <ol>
                 <li>
-                    Bagaimana cara mendaftarkan diri dalam kompetisi Web Development Sinergi Fest 2025?
+                    Jika tim saya lolos babak penyisihan dan verifikasi, apakah website yang dibuat
+                    boleh dimodifikasi sebelum babak final?
                     <span class="answer">
-                        Peserta telah mengikuti prosedur pendaftaran pada website resmi Techphoria 2024
-                        (https://technologyeuphoriaunsri.web.id) dan melengkapi data pendaftaran dengan benar. Peserta
-                        yang tidak memenuhi persyaratan pendaftaran sampai waktu yang ditentukan akan dinyatakan gugur.
-                    </span>
+                        Boleh, tetapi modifikasi yang dilakukan hanya sebatas penambahan atau
+                        pengurangan fitur dan bukan perubahan tema dan konsep.</span>
                 </li>
                 <li>
-                    Apakah setiap peserta harus melengkapi data pribadi secara terpisah?
+                    Apakah peserta boleh berasal dari kampus atau sekolah yang berbeda dalam satu
+                    tim?
                     <span class="answer">
-                        Pengunggahan data dilakukan dengan mengunggah foto/scan bukti pembayaran dan Foto/scan Kartu
-                        Tanda Pelajar.
+                        Tidak boleh. Tim terdiri dari anggota yang berasal dari instansi yang sama, selama
+                        masing-masing peserta memenuhi syarat sebagai mahasiswa atau siswa aktif.
+                        <br>● Untuk mahasiswa, diperbolehkan berasal dari jurusan atau fakultas yang
+                        berbeda, selama masih dalam satu perguruan tinggi yang sama (PTN/PTS).
+                        <br>● Untuk siswa SMA/SMK/sederajat, diperbolehkan berasal dari kelas atau
+                        jurusan yang berbeda, selama masih berasal dari sekolah yang sama.
                     </span>
                 </li>
                 <li>
@@ -144,56 +149,59 @@
                     </span>
                 </li>
                 <li>
-                    Bolehkah mendaftar jika kelompok saya hanya terdiri dari dua orang?
+                    Apakah ide web harus sesuai dengan salah satu subtema?
                     <span class="answer">
-                        Peserta dapat mendaftar selama tidak melebihi 3 orang dalam satu kelompok.
+                        Tidak harus. Peserta bebas mengembangkan ide di luar deskripsi yang disarankan
+                        selama tetap sesuai dengan tema besar “TRIGGER”, memiliki dampak positif, dan
+                        masih didalam ruang lingkup bidang yang telah ditentukan.
                     </span>
                 </li>
                 <li>
-                    Bolehkah seorang peserta menjadi anggota dari beberapa tim di kompetisi Web Development?
+                    Apakah peserta boleh digantikan oleh orang lain selama lomba berlangsung?
                     <span class="answer">
-                        Tidak boleh, setiap peserta hanya dapat tedaftar pada satu tim saja. Akan tetapi, setiap
-                        institusi pendidikan negeri maupun swasta dapat mengirimkan lebih dari satu perwakilan tim.
+                        Tidak boleh. Pergantian anggota tim setelah pendaftaran tidak diperbolehkan.
                     </span>
                 </li>
                 <li>
-                    Bagaimana sistem kompetisi web development?
+                    Apakah ada template proposal yang harus digunakan?
                     <span class="answer">
-                        Pada kompetisi ini terdapat dua babak, yakni babak penyisihan berupa pengumpulan proposal dan
-                        babak final berupa pengumpulan source code dan presentasi yang akan dilaksanakan secara hybrid
-                        di Fakultas Ilmu Komputer Universitas Sriwijaya dan Zoom Meeting.
+                        Ya, peserta wajib menggunakan template proposal resmi yang disediakan panitia
+                        dan mengunggahnya dalam format PDF dengan nama file sesuai ketentuan.
                     </span>
                 </li>
                 <li>
-                    Bagaiman saya bisa mendapatkan template untuk proposal?
+                    Apakah aplikasi web harus memiliki fitur CRUD?
                     <span class="answer">
-                        Template proposal dapat diunduh di website resmi Sinergi Fest 2025.
+                        Tidak wajib, tapi setiap karya harus memiliki minimal satu proses logika/interaksi
+                        data, seperti CRUD, autentikasi, kalkulasi otomatis, polling, komentar, atau fitur
+                        gamifikasi lainnya.
                     </span>
                 </li>
                 <li>
-                    Bolehkah tim saya mendaftar jika berasal dari jenjang pendidikan berbeda (seperti D3 dan S1 dalam
-                    satu tim) maupun dari jurusan yang berbeda?
+                    Apakah boleh mengambil gambar/icon dari internet?
                     <span class="answer">
-                        Diperbolehkan, asal tidak beda universitas.
+                        Boleh, asalkan mencantumkan sumbernya dan tidak melanggar hak cipta.
                     </span>
                 </li>
                 <li>
-                    Jika tim saya lolos babak penyisihan dan verifikasi, apakah website yang dibuat boleh dimodifikasi
-                    sebelum babak final?
+                    Saya menggunakan framework seperti React dan Tailwind. Apakah itu
+                    diperbolehkan dan apakah mempengaruhi nilai?
                     <span class="answer">
-                        Boleh, tetapi memodifikasi yang dilakukan hanya sebatas penambahan atau pengurangan fitur dan
-                        bukan perubahan tema dan konsep.
+                        Diperbolehkan. Framework modern diperbolehkan digunakan, dan tidak akan
+                        mengurangi nilai, selama struktur kode tetap rapi dan sesuai standar teknis.
                     </span>
                 </li>
                 <li>
-                    Bolehkah peserta mendaftarkan diri pada dua cabang kompetisi yang berbeda?
+                    Apakah kehadiran fitur CRUD saja sudah cukup untuk mendapat poin
+                    maksimal di aspek Functionality?
                     <span class="answer">
-                        Boleh saja, tetapi hanya bisa mendaftar sebagai ketua di satu kompetisi, jika ingin mendaftar
-                        ke cabang kompetisi lainnya hanya boleh mendaftar sebagai anggota.
+                        Tidak selalu. Penilaian Functionality juga mempertimbangkan nilai guna,
+                        kelengkapan fitur, dan kesesuaian dengan masalah yang diangkat. CRUD saja bisa
+                        dinilai kurang jika tidak kontekstual.
                     </span>
                 </li>
             </ol>
-        </div> 
+        </div>
     </div>
 </div>
 

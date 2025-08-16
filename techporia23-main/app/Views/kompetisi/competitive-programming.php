@@ -14,24 +14,16 @@
         </div> -->
         <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/competitive.webp" alt="Competitive Programming" />
+                <img src="/assets/images/competition-logo/compe-2025/Compe.svg" alt="Competitive Programming" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>Competitive Programming</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi Competitive Programming dengan tema "Code Optimization and Performance Tuning"
-                        merupakan salah satu cabang kompetisi yang sangat dinantikan dalam event Technology Euphoria,
-                        sebuah acara bertaraf nasional yang diadakan untuk mahasiswa aktif di perguruan tinggi dan siswa
-                        SMA/SMK sederajat di Indonesia. Competitive Programming ini terdiri dari dua babak, yaitu babak
-                        penyisihan yang dilakukan secara online melalui platform zoom meeting dan babak final yang
-                        dilakukan secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya dan Zoom Meeting.
+                        Kompetisi Competitive Programming dengan tema “Chronicles of The Syntax War” merupakan salah satu cabang kompetisi yang akan diadakan dalam event Sinergi Fest 2025, sebuah acara bertaraf nasional yang akan diadakan untuk mahasiswa aktif di perguruan tinggi di Indonesia. Competitive Programming ini terdiri dari dua babak yaitu babak penyisihan yang akan dilaksanakan melalui platform zoom meeting dan babak final yang akan dilaksanakan secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya.
                     </p>
                     <p>
-                        Tujuan utama dari kompetisi ini adalah menguji kemampuan peserta dalam berpikir logis dan
-                        sistematis dalam memecahkan persoalan dengan menggunakan bahasa pemrograman C++/Java. Fokus
-                        utama perlombaan ini adalah mengoptimalkan kode dan meningkatkan kinerja program yang ditulis
-                        oleh peserta.
+                        Tujuan utama dari kompetisi ini adalah menguji kemampuan sistematis peserta dalam merancang dan mengimplementasikan sebuah kode untuk menyelesaikan soal secara kreatif serta efisien dalam batas waktu dan memori yang ketat menggunakan bahasa pemrograman C/C++/Java/Python. Fokus utama perlombaan ini adalah mengoptimalkan kode dan mengembangkan kinerja program yang ditulis peserta.
                     </p>
                 </div>
                 <table class="details-table">
@@ -110,30 +102,19 @@
                 <li>
                     Bagaimana cara mendaftarkan diri dalam kompetisi Competitive Programming Sinergi Fest 2025?
                     <span class="answer">
-                        Peserta telah mengikuti prosedur pendaftaran pada website resmi Techphoria 2024 yakni
-                        http://technologyeuphoriaunsri.web.id dan mengisi data
-                        kelompok dengan lengkap. Peserta yang tidak memenuhi persyaratan pendaftaran sampai waktu yang
-                        ditentukan akan dinyatakan gugur.
+                        Peserta telah mengikuti prosedur pendaftaran pada website resmi Sinergi Fest 2025, yakni dan mengisi data kelompok dengan lengkap. Peserta yang tidak memenuhi persyaratan pendaftaran sampai waktu yang ditentukan akan dinyatakan gugur.
                     </span>
                 </li>
                 <li>
                     Apakah setiap peserta harus melengkapi data pribadi secara terpisah?
                     <span class="answer">
-                        Pengunggahan data dilakukan dengan mengunggah foto/scan bukti pembayaran dan Foto/scan Kartu
-                        Tanda Pelajar.
+                        Pengunggahan data dilakukan dengan mengunggah foto/scan bukti pembayaran dan foto/scan Kartu Tanda Mahasiswa.
                     </span>
                 </li>
                 <li>
                     Bolehkah saya menjadi anggota di tim competitive programming yang lain?
                     <span class="answer">
                         Tidak, satu anggota tidak bisa berada di tim lain dalam kompetisi ini.
-                    </span>
-                </li>
-                <li>
-                    Berapa jumlah maksimal anggota dalam satu tim?
-                    <span class="answer">
-                        Setiap peserta dapat mengikuti lomba secara individu (1 orang) maupun tim yang beranggotakan
-                        maksimal 3 orang mahasiswa. Masing-masing anggota boleh berasal dari universitas yang berbeda.
                     </span>
                 </li>
                 <li>
@@ -155,7 +136,7 @@
                 </li>
                 <li>
                     Bolehkah peserta Competitive Programming juga mendaftarkan diri pada cabang kompetisi lain di
-                    Techphoria 2024?
+                    Sinergi Fest 2025?
                     <span class="answer">
                         Boleh, tetapi hanya sebagai anggota.
                     </span>

@@ -13,29 +13,24 @@
             <h1>Day - 1</h1>
         </div>
         -->
-        
+
         <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/ui-ux.webp" alt="UI/UX Design" />
+                <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" alt="UI/UX Design" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
                 <h1>UI/UX Design</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi UI/UX merupakan cabang kompetisi dalam ajang Sinergi Fest 2025 untuk
-                        menciptakan sebuah antarmuka produk yang dapat memberikan kenyamanan, kemudahan, dan mewujudkan
-                        pengalaman terbaik bagi pengguna. Acara ini bertaraf nasional dan diselenggarakan oleh keluarga
-                        mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
+                        Kompetisi UI/UX merupakan salah satu cabang kompetisi dalam Sinergi Fest 2025 yang bertujuan untuk menciptakan antarmuka produk yang memberikan kenyamanan, kemudahan, serta mewujudkan pengalaman terbaik bagi pengguna. Acara ini berskala nasional dan diselenggarakan oleh BEM KM Fakultas Ilmu Komputer Universitas Sriwijaya.
                     </p>
                     <p>
-                        Pada tahun ini, lomba UI/UX Technology Euphoria mengusung tema “UI/UX Design to Increase
-                        Creativity and Competitiveness on the Digital Era”, dan tujuan dari kompetisi ini adalah untuk
-                        menguji peserta dalam menganalisa, menggali, berkreasi, dan mengembangkan kemampuan dan
-                        kreatifitas mereka dalam bidang UI/UX designing. Fokus dari kompetisi ini adalah menciptakan
-                        desain produk aplikasi yang efektif dan efisien serta dapat memberikan pengalaman terbaik bagi
-                        pengguna saat menggunakan produk tersebut. Lomba ini akan terbagi menjadi dua babak, yaitu babak
-                        penyisihan yang dilakukan secara online melalui zoom meeting dan babak final yang diadakan
-                        secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya dan Zoom Meeting.
+                        Pada tahun ini, Lomba UI/UX Sinergi Fest mengusung tema “Design for Everyone”. Melalui tema ini, peserta diajak untuk merancang pengalaman digital yang inklusif—dapat dinikmati oleh semua orang tanpa terkecuali. Fokus utamanya adalah menciptakan desain yang ramah, mudah digunakan, dan dapat diakses oleh siapa saja, termasuk anak-anak, lansia, maupun penyandang disabilitas.<br><br>Peserta juga dapat memilih dari subtema berikut:
+                        <br>Bidang Pendidikan
+                        <br>Bidang Kesehatan
+                        <br>Bidang Ekonomi
+                        <br>Bidang Layanan Publik
+                        <br><br>Lomba ini terbagi menjadi dua babak, yaitu babak penyisihan dan babak final, yang akan dilaksanakan secara online.
                     </p>
                 </div>
                 <table class="details-table">
@@ -143,7 +138,7 @@
                     </span>
                 </li>
                 <li>
-                    Bolehkah seorang peserta menjadi anggota dari beberapa tim di kompetisi UI/UX?
+                    Bolehkah seorang peserta mendaftar menjadi anggota dari beberapa tim di kompetisi UI/UX Sinergi Fest 2025 ini?
                     <span class="answer">
                         Tidak boleh, setiap peserta hanya dapat tedaftar pada satu tim saja.
                     </span>
