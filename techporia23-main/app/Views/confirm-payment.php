@@ -73,13 +73,16 @@
             <a class="btn btn-info" style="float: right;"
                 onclick="return confirm('Apakah kamu yakin? Membatalkan pembayaran akan menghapus data pendaftaran')"
                 href="<?= base_url('payment/cancel/' . $type . '/' . $data['order_id']); ?>">Cancel Payment</a>
+            <a class="btn btn-info" href="<?= base_url('profile'); ?>" style="margin-right: 1rem; float: left;">
+                Kembali
+            </a>
         </div>
         <div class="checkout" id="snap-container"></div>
     </div>
 </div>
 
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="<?= getenv('CLIENT_KEY') ?>"></script>
-<script type="text/javascript">
+ <script type="text/javascript">
     window.snap.embed('<?= $snap_token; ?>', {
         embedId: 'snap-container',
         onClose: function () {

@@ -5,27 +5,31 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main competition-list" id="web-development">
     <div class="section" style="padding-top: 3rem">
+        <!--
         <div class="comingsoon">
             <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
             <h1>Day - 1</h1>
         </div>
-        <!-- <div class="detail-horizontal">
+        -->
+
+        <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/web.webp" alt="Web Development" />
+                <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" alt="Web Development" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>Web Development</h1>
+                <h1>WEB DEVELOPMENT</h1>
                 <div class="paragraphs">
                     <p>
-                        Web development merupakan salah satu cabang kompetisi dalam event Sinergi Fest 2025,
-                        sebuah acara bertaraf nasional yang diadakan untuk mahasiswa aktif perguruan tinggi dan siswa
-                        SMA/SMK aktif dari seluruh sekolah negeri maupun swasta di Indonesia. Kompetisi ini merupakan
-                        kompetisi pengembangan web secara interaktif yang memberikan manfaat kepada penggunanya dimana
-                        peserta diminta untuk mengembangkan web yang dapat mempermudah pengguna dalam mendapatkan
-                        informasi, mempermudah interaksi antar pengguna dan penyedia layanan, menghibur, dan mudah untuk
-                        diakses.
+                        Sebagai bagian dari rangkaian Sinergi Fest, kompetisi Web Development hadir untuk
+memberikan ruang bagi generasi muda dalam menciptakan solusi digital yang
+inovatif, aplikatif, dan berdampak. Melalui lomba ini, peserta ditantang untuk
+menghadirkan ide, membangun website, dan menjawab permasalahan nyata di sekitar
+mereka dengan cara yang kreatif dan relevan. Lebih dari sekadar ajang adu skill,
+kompetisi ini adalah kesempatan untuk menyampaikan pesan, menciptakan
+perubahan, dan menunjukkan bahwa teknologi dapat menjadi jembatan antara ide dan
+aksi.
                     </p>
                 </div>
                 <table class="details-table">
@@ -77,7 +81,7 @@
             </div>
         </div>
         <div class="countdown">
-            <h1 class="onscroll">Penutupan Pendaftaran</h1>
+            <h1 class="onscroll">PENUTUPAN PENDAFTARAN</h1>
             <ul class="onscroll">
                 <li><span id="days">12</span>Hari</li>
                 <li>:</li>
@@ -89,7 +93,7 @@
             </ul>
         </div>
         <div class="informasi-lomba">
-            <h1 class="onscroll-r">Informasi Lomba</h1>
+            <h1 class="onscroll-r">INFORMASI LOMBA</h1>
             <ul>
                 <li class="onscroll-r"><i class='bx bxs-chevron-right'></i> Seluruh peserta diwajibkan membaca guidebook
                     sebelum melakukan pendaftaran</li>
@@ -117,7 +121,7 @@
             </div>
         </div>
         <div class="faq onscroll">
-            <h1>Frequently Asked Question (FAQ)</h1>
+            <h1>FREQUENTLY ASKED QUESTION (FAQ)</h1>
             <ol>
                 <li>
                     Bagaimana cara mendaftarkan diri dalam kompetisi Web Development Sinergi Fest 2025?
@@ -190,12 +194,12 @@
                     </span>
                 </li>
             </ol>
-        </div> -->
+        </div> 
     </div>
 </div>
 
 <script type="text/javascript">
-    let countdownDate = new Date('Sep 1, 2024').getTime();
+    let countdownDate = new Date('Sep 1, 2025').getTime();
     let x = setInterval(function() {
         let now = new Date().getTime();
         let distance = countdownDate - now;

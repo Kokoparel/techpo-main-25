@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\AnggotaTimModel;
 use App\Models\DataSeminarModel;
+use App\Models\DataWorkshopModel;
 use App\Models\DataTimModel;
 use App\Models\KompetisiModel;
 use App\Models\TransactionsModel;
@@ -45,10 +46,45 @@ class MainController extends BaseController
         $order = $dataSeminarModel->where('username', auth()->user()->username)->first();
 
         if ($order != null) {
-            return redirect()->to('payment/seminar');
+            return redirect()->to('payment/talkshow');
         }
 
         return view('daftar-seminar');
+    }
+
+    public function workshop()
+    {
+        if (auth()->loggedIn()) {
+            $transactionsModel = new TransactionsModel();
+            $status = $transactionsModel->select('transaction_status')
+                ->join('data_workshop', 'data_workshop.order_id=transactions.order_id')
+                ->where('data_workshop.username', auth()->user()->username)
+                ->first();
+
+            if ($status) {
+                $status = $status['transaction_status'];
+            }
+
+            $isOrdered = $status == 'capture' || $status == 'settlement';
+        } else {
+            $isOrdered = false;
+        }
+
+        return view('workshop', [
+            'isOrdered' => $isOrdered,
+        ]);
+    }
+
+    public function daftarWorkshop()
+    {
+        $dataWorkshopModel = new \App\Models\DataWorkshopModel(); // jangan lupa bikin modelnya!
+        $order = $dataWorkshopModel->where('username', auth()->user()->username)->first();
+
+        if ($order != null) {
+            return redirect()->to('payment/workshop');
+        }
+
+        return view('daftar-workshop');
     }
 
     public function kompetisi($kompetisi)
@@ -84,6 +120,11 @@ class MainController extends BaseController
     public function kilasBalik()
     {
         return view('sejarah/sejarah');
+    }
+
+    public function bloodlink()
+    {
+        return view('event/bloodlink');
     }
 
     public function sejarah($tahun = null)

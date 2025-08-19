@@ -5,7 +5,7 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main competition-list" id="mobile-legend">
     <!-- <div class="section" style="padding-top: 3rem">
         <div class="comingsoon">
             <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
@@ -13,20 +13,17 @@
         </div> -->
          <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/competitive.webp" alt="Competitive Programming" />
+                <img src="/assets/images/competition-logo/compe-2025/ML.svg" alt="Competitive Programming" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>Mobile Legends</h1>
+                <h1>MOBILE LEGENDS</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi Mobile Legends dengan tema "Strategy, Teamwork, and Precision Play" merupakan salah satu cabang perlombaan yang paling dinantikan dalam event Technology Euphoria, 
-                        sebuah acara bertaraf nasional yang ditujukan bagi mahasiswa aktif di perguruan tinggi dan siswa SMA/SMK sederajat di seluruh Indonesia. Turnamen Mobile Legends ini terdiri dari dua babak,
-                         yakni babak penyisihan yang dilaksanakan secara online melalui platform turnamen khusus dan babak final yang diselenggarakan secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya serta melalui siaran Zoom Meeting.
+                        Mobile Legend Sinergi Fest adalah sebuah festival kompetitif yang mengedepankan nilai sinergi — kerja sama yang harmonis antar pemain untuk meraih kemenangan. Kata Sinergi mencerminkan bagaimana strategi, peran, dan komunikasi antar anggota tim saling menyatu membentuk kekuatan. Sementara Fest melambangkan semangat kebersamaan dalam suasana yang meriah, santai, namun tetap kompetitif. Ajang ini bukan hanya soal mekanik atau kill terbanyak, tapi tentang bagaimana tim bisa saling melengkapi, berpikir bersama, dan melangkah menuju kemenangan dengan kekompakan.
 
                     </p>
                     <p>
-                        Tujuan utama dari kompetisi ini adalah menguji kemampuan peserta dalam menyusun strategi, komunikasi tim, dan pengambilan keputusan cepat di medan pertempuran. 
-                        Fokus perlombaan ini terletak pada kekompakan tim, ketepatan eksekusi, serta adaptasi taktik dalam setiap pertandingan Mobile Legends yang dijalani.
+                        Turnamen ini terdiri dari empat babak utama, yaitu: babak penyisihan, babak seperempat final, semifinal, dan final. Babak penyisihan mencakup pertandingan 16 besar yang dilaksanakan oleh 32 tim secara bersamaan dengan sistem best of one (BO1). Memasuki babak seperempat final, pertandingan akan dimulai secara bersamaan lagi dengan sistem yang sama dengan babak penyisihan yaitu best of one (BO1). Pada babak semifinal, pertandingan menggunakan format best of three (BO3), mulai dari babak ini hingga final, seluruh tim tidak lagi bertanding secara serentak dengan tim lain, melainkan akan tampil di panggung secara bergiliran sesuai dengan urutan bracket dan jadwal yang telah ditetapkan. Pada babak final pertandingan menggunakan format best of five (BO5) untuk menentukan tim pemenang. Event akan dilaksanakan secara offline di lokasi yang telah ditentukan.
 
                     </p>
                 </div>
@@ -73,7 +70,7 @@
             </div>
         </div>
         <div class="countdown">
-            <h1 class="onscroll">Penutupan Pendaftaran</h1>
+            <h1 class="onscroll">PENUTUPAN PENDAFTARAN</h1>
             <ul class="onscroll">
                 <li><span id="days">12</span>Hari</li>
                 <li>:</li>
@@ -85,7 +82,7 @@
             </ul>
         </div>
         <div class="informasi-lomba">
-            <h1 class="onscroll-r">Informasi Lomba</h1>
+            <h1 class="onscroll-r">INFORMASI LOMBA</h1>
             <ul>
                 <li class="onscroll-r"><i class='bx bxs-chevron-right'></i> Seluruh peserta diwajibkan membaca guidebook
                     sebelum melakukan pendaftaran</li>
@@ -101,7 +98,7 @@
             </div>
         </div>
         <div class="faq onscroll">
-            <h1>Frequently Asked Question (FAQ)</h1>
+            <h1>FREQUENTLY ASKED QUESTION (FAQ)</h1>
             <ol>
                 <li>
                     Bagaimana cara mendaftarkan diri dalam kompetisi Competitive Programming Sinergi Fest 2025?
@@ -163,7 +160,7 @@
 
 <script type="text/javascript" src="<?= base_url('assets/js/competition.js'); ?>"></script>
 <script type="text/javascript">
-    let countdownDate = new Date('Sep 1, 2024').getTime();
+    let countdownDate = new Date('Sep 1, 2025').getTime();
     let x = setInterval(function() {
         let now = new Date().getTime();
         let distance = countdownDate - now;

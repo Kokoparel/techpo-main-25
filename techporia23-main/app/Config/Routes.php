@@ -32,19 +32,28 @@ $routes->set404Override();
 $routes->get('/', 'MainController::index');
 $routes->get('kompetisi/(:segment)', 'MainController::kompetisi/$1');
 
-$routes->get('seminar', 'MainController::seminar');
-$routes->get('seminar/daftar', 'MainController::daftarSeminar');
-$routes->get('seminar/tiket', 'SeminarController::tiket');
-$routes->get('seminar/tiket/download', 'SeminarController::downloadTiket');
-$routes->get('payment/seminar', 'PaymentController::seminar');
-$routes->post('payment/seminar', 'PaymentController::seminar');
+$routes->get('workshop', 'MainController::workshop');
+$routes->get('workshop/daftar', 'MainController::daftarWorkshop');
+$routes->get('workshop/tiket', 'WorkshopController::tiket');
+$routes->get('workshop/tiket/download', 'WorkshopController::downloadTiket');
+$routes->get('payment/workshop', 'PaymentController::workshop');
+$routes->post('payment/workshop', 'PaymentController::workshop');
+
+$routes->get('talkshow', 'MainController::seminar');
+$routes->get('talkshow/daftar', 'MainController::daftarSeminar');
+$routes->get('talkshow/tiket', 'SeminarController::tiket');
+$routes->get('talkshow/tiket/download', 'SeminarController::downloadTiket');
+$routes->get('payment/talkshow', 'PaymentController::seminar');
+$routes->post('payment/talkshow', 'PaymentController::seminar');
+$routes->get('payment/cancel/talkshow/(:segment)', 'PaymentController::cancelSeminar/$1');
 
 $routes->get('transaction/handler', 'NotificationController::handleTransactionStatus');
 $routes->get('sejarah', 'MainController::kilasBalik');
 $routes->get('sejarah/(:segment)', 'MainController::sejarah/$1');
 
+$routes->get('event/bloodlink', 'MainController::bloodlink');
+
 $routes->get('kompetisi/payment/(:segment)', 'PaymentController::lomba/$1');
-$routes->get('payment/cancel/seminar/(:segment)', 'PaymentController::cancelSeminar/$1');
 $routes->get('payment/cancel/lomba/(:segment)', 'PaymentController::cancelLomba/$1');
 $routes->get('/payment/finish', 'PaymentController::finishPayment');
 $routes->get('/payment/error', 'PaymentController::errorPayment');
@@ -71,6 +80,7 @@ $routes->group('admin', ['filter' => 'group:admin'], static function($routes) {
     $routes->get('seminar', 'AdminController::seminar');
     $routes->get('finance', 'AdminController::dashboardFinance');
     $routes->get('finance/seminar', 'AdminController::financeSeminar');
+    $routes->get('finance/workshop', 'AdminController::financeWorkshop');
     $routes->get('finance/lomba', 'AdminController::financeLomba');
     $routes->get('detail-seminar/(:segment)', 'AdminController::detailSeminar/$1');
     $routes->get('lomba/(:segment)', 'AdminController::lomba/$1');
@@ -83,6 +93,12 @@ $routes->group('admin', ['filter' => 'group:admin'], static function($routes) {
     $routes->get('tolak-berkas/(:segment)', 'AdminController::tolakBerkas/$1');
     $routes->get('detail-tim/(:segment)', 'AdminController::detailTim/$1');
     $routes->get('download/(:segment)', 'AdminController::downloadBerkas/$1');
+    $routes->get('workshop', 'AdminController::workshop');
+    $routes->get('detail-workshop/(:segment)', 'AdminController::detailWorkshop/$1');
+    $routes->get('workshop/add', 'AdminController::addWorkshop');
+    $routes->post('workshop/add', 'AdminController::addWorkshop');
+    $routes->get('workshop/create-tiket/(:segment)', 'AdminController::createTiketWorkshop/$1');
+    $routes->get('workshop/download-tiket/(:segment)', 'AdminController::downloadTiketWorkshop/$1');
 });
 
 $routes->get('download/(:segment)', 'MainController::downloadTemplate/$1');

@@ -1,14 +1,14 @@
 <?= $this->extend('layout/master_layout'); ?>
 
-<?= $this->section('title'); ?>Daftar Seminar | Technology Euphoria<?= $this->endSection(); ?>
+<?= $this->section('title'); ?>Daftar Talkshow | Technology Euphoria<?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
 
 <div class="main">
     <div class="container-form">
-        <h1>Daftar Seminar</h1>
+        <h1>Daftar Talkshow</h1>
         <?= validation_list_errors(); ?>
-        <?= form_open('payment/seminar'); ?>
+        <?= form_open('payment/talkshow'); ?>
         <div class="input-wrapper">
             <label for="nama">Nama Lengkap</label>
             <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" />

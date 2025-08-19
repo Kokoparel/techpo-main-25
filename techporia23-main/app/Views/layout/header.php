@@ -1,14 +1,33 @@
 <header>
     <div class="header-wrapper">
         <a class="header-logo" href="<?php echo base_url(); ?>">
-            <img src="<?php echo base_url(); ?>/assets/images/logo24.webp" alt="Technology Euphoria">
-            <span>Sinergi Fest </span>
+            <img src="<?php echo base_url(); ?>/assets/images/sinergifest.png" alt="Technology Euphoria">
+            <span>SINERGI FEST </span>
         </a>
         <nav>
             <ul class="menu">
                 <li><a class="nav-link" href="<?php echo base_url(); ?>">Home</a></li>
                 <li><a class="nav-link" href="<?php echo base_url('#about'); ?>">About</a></li>
-                <li><a class="nav-link" href="<?php echo base_url('seminar'); ?>">Seminar</a></li>
+                <li>
+                    <button class="nav-link nav-dropdown" data-dropdown="event-nav" aria-haspopup="true"
+                        aria-expanded="false" aria-label="event">
+                        Event
+                        <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="event-nav" class="nav-box" style="padding-right: 2rem;">
+                        <ul>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('talkshow'); ?>">Talkshow</a>
+                            </li>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('workshop'); ?>">Workshop</a>
+                            </li>
+                            <li>
+                                <a class="nav-data-link" href="<?= base_url('event/bloodlink'); ?>">bloodlink</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li>
                     <button class="nav-link nav-dropdown" data-dropdown="competition-nav" aria-haspopup="true"
                         aria-expanded="false" aria-label="competition">
@@ -39,7 +58,7 @@
                             </li>
                             <li>
                                 <a class="nav-data-link"
-                                href="<?= base_url('kompetisi/mobile-legend'); ?>">Mobile Legend</a>
+                                href="<?= base_url('kompetisi/mobile-legend'); ?>">Mobile Legends</a>
                             </li>
                             <!-- <li>
                                 <a class="nav-data-link"
@@ -56,7 +75,7 @@
                         </ul>
         
                 </li>
-                <li><a class="nav-link" href="<?php echo base_url('sejarah'); ?>">Kilas Balik</a></li>
+                <!-- <li><a class="nav-link" href="<?php echo base_url('#kilas-balik'); ?>">Kilas Balik</a></li> -->
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
             <div class="right-corner">
@@ -80,7 +99,7 @@
                         </ul>
                     </div>
                 <?php else: ?>
-                    <a class="btn btn-outline-primary" href="<?= base_url('login'); ?>">Login</a>
+                    <a class="btn btn-outline-primary" href="<?= base_url('login'); ?>">LOGIN</a>
                 <?php endif; ?>
                 <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
                     <i class="bx bx-menu" aria-hidden="true"></i>

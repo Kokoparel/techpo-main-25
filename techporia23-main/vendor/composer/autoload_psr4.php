@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Tests\\Support\\' => array($baseDir . '/tests/_support'),
     'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src/Svg'),
+    'SnapBi\\' => array($vendorDir . '/midtrans/midtrans-php/SnapBi'),
     'Sabberworm\\CSS\\' => array($vendorDir . '/sabberworm/php-css-parser/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin | Technology Euphoria</title>
+    <title>Admin | Sinergi Fest</title>
 
     <!-- Custom fonts for this template-->
     <link href="/assets/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
@@ -33,8 +33,8 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-text mx-3">Technology Euphoria</div>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href=" <?= base_url('admin/dashboard'); ?>">
+                <div class="sidebar-brand-text mx-3">Sinergi Fest</div>
             </a>
 
             <!-- Divider -->
@@ -58,9 +58,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/seminar'); ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Data Seminar</span></a>
+                    <span>Data Talkshow</span></a>
             </li>
-            
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/workshop'); ?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Data Workshop</span></a>
+            </li>
             <!-- Nav Item - Data Lomba -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('admin/lomba/0'); ?>">
@@ -80,12 +85,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('admin/lomba/5'); ?>">Business Plan</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/1'); ?>">Competitive Programming</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/4'); ?>">Essay</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/3'); ?>">UI/UX Design</a>
                         <a class="collapse-item" href="<?= base_url('admin/lomba/2'); ?>">Web Development</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/8'); ?>">Band / Acoustic</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/6'); ?>">Painting</a>
-                        <a class="collapse-item" href="<?= base_url('admin/lomba/7'); ?>">Dance Creation</a>
+                        <a class="collapse-item" href="<?= base_url('admin/lomba/9'); ?>">Mobile Legends</a>
                     </div>
                 </div>
             </li>
@@ -104,7 +106,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('admin/finance'); ?>">Dashboard</a>
-                        <a class="collapse-item" href="<?= base_url('admin/finance/seminar'); ?>">Finance Seminar</a>
+                        <a class="collapse-item" href="<?= base_url('admin/finance/seminar'); ?>">Finance Talkshow</a>
+                        <a class="collapse-item" href="<?= base_url('admin/finance/workshop'); ?>">Finance Workshop</a>
                         <a class="collapse-item" href="<?= base_url('admin/finance/lomba'); ?>">Finance Lomba</a>
                     </div>
                 </div>
@@ -203,7 +206,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Technology Euphoria 2023</span>
+                        <span>Copyright &copy; Sinergi Fest 2025</span>
                     </div>
                 </div>
             </footer>

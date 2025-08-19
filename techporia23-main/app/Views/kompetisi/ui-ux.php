@@ -5,35 +5,45 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main competition-list" id="ui-ux">
     <div class="section" style="padding-top: 3rem;">
+        <!--
         <div class="comingsoon">
             <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
             <h1>Day - 1</h1>
         </div>
-        <!-- <div class="detail-horizontal">
+        -->
+        
+        <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/ui-ux.webp" alt="UI/UX Design" />
+                <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" alt="UI/UX Design" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>UI/UX Design</h1>
+                <h1>UI/UX DESIGN</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi UI/UX merupakan cabang kompetisi dalam ajang Sinergi Fest 2025 untuk
-                        menciptakan sebuah antarmuka produk yang dapat memberikan kenyamanan, kemudahan, dan mewujudkan
-                        pengalaman terbaik bagi pengguna. Acara ini bertaraf nasional dan diselenggarakan oleh keluarga
-                        mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
-                    </p>
-                    <p>
-                        Pada tahun ini, lomba UI/UX Technology Euphoria mengusung tema “UI/UX Design to Increase
-                        Creativity and Competitiveness on the Digital Era”, dan tujuan dari kompetisi ini adalah untuk
-                        menguji peserta dalam menganalisa, menggali, berkreasi, dan mengembangkan kemampuan dan
-                        kreatifitas mereka dalam bidang UI/UX designing. Fokus dari kompetisi ini adalah menciptakan
-                        desain produk aplikasi yang efektif dan efisien serta dapat memberikan pengalaman terbaik bagi
-                        pengguna saat menggunakan produk tersebut. Lomba ini akan terbagi menjadi dua babak, yaitu babak
-                        penyisihan yang dilakukan secara online melalui zoom meeting dan babak final yang diadakan
-                        secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya dan Zoom Meeting.
-                    </p>
+    Kompetisi UI/UX merupakan salah satu cabang kompetisi dalam Sinergi Fest 2025 yang bertujuan untuk menciptakan antarmuka produk yang memberikan kenyamanan, kemudahan, serta mewujudkan pengalaman terbaik bagi pengguna. 
+    Acara ini berskala nasional dan diselenggarakan oleh BEM KM Fakultas Ilmu Komputer Universitas Sriwijaya.
+</p>
+
+<p>
+    Pada tahun ini, Lomba UI/UX Sinergi Fest mengusung tema <strong>“Design for Everyone”</strong>. 
+    Melalui tema ini, peserta diajak untuk merancang pengalaman digital yang inklusif—dapat dinikmati oleh semua orang tanpa terkecuali. 
+    Fokus utamanya adalah menciptakan desain yang ramah, mudah digunakan, dan dapat diakses oleh siapa saja, termasuk anak-anak, lansia, maupun penyandang disabilitas. 
+    Peserta juga dapat memilih dari subtema berikut:
+</p>
+
+<ol>
+    <li>Bidang Pendidikan</li>
+    <li>Bidang Kesehatan</li>
+    <li>Bidang Ekonomi</li>
+    <li>Bidang Layanan Publik</li>
+</ol>
+
+<p>
+    Lomba ini terbagi menjadi dua babak, yaitu babak penyisihan dan babak final, yang akan dilaksanakan secara online.
+</p>
+
                 </div>
                 <table class="details-table">
                     <tr>
@@ -81,7 +91,7 @@
             </div>
         </div>
         <div class="countdown">
-            <h1 class="onscroll">Penutupan Pendaftaran</h1>
+            <h1 class="onscroll">PENUTUPAN PENDAFTARAN</h1>
             <ul class="onscroll">
                 <li><span id="days">12</span>Hari</li>
                 <li>:</li>
@@ -93,7 +103,7 @@
             </ul>
         </div>
         <div class="informasi-lomba">
-            <h1 class="onscroll-r">Informasi Lomba</h1>
+            <h1 class="onscroll-r">INFORMASI LOMBA</h1>
             <ul>
                 <li class="onscroll-r"><i class='bx bxs-chevron-right'></i> Seluruh peserta diwajibkan membaca guidebook
                     sebelum melakukan pendaftaran</li>
@@ -117,7 +127,7 @@
             </div>
         </div>
         <div class="faq onscroll">
-            <h1>Frequently Asked Question (FAQ)</h1>
+            <h1>FREQUENTLY ASKED QUESTION (FAQ)</h1>
             <ol>
                 <li>
                     Apakah setiap peserta harus melengkapi data pribadi secara terpisah?
@@ -153,12 +163,12 @@
                     </span>
                 </li>
             </ol>
-        </div> -->
+        </div>
     </div>
 </div>
 
 <script type="text/javascript">
-    let countdownDate = new Date('Sep 1, 2024').getTime();
+    let countdownDate = new Date('Sep 1, 2025').getTime();
     let x = setInterval(function() {
         let now = new Date().getTime();
         let distance = countdownDate - now;

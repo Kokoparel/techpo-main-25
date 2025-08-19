@@ -5,32 +5,22 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main competition-list" id="competitive-programming">
     <div class="section" style="padding-top: 3rem">
-        <div class="comingsoon">
-            <img src="<?php echo base_url('assets/images/MASKOT 4.png') ?>" alt="maskot" class="onscroll-r" style="--delay: 0;" />
-            <h1>Day - 1</h1>
-        </div>
-        <!-- <div class="detail-horizontal">
+        <div class="detail-horizontal">
             <div class="image onscroll-r">
-                <img src="/assets/images/competition-logo/competitive.webp" alt="Competitive Programming" />
+                <img src="/assets/images/competition-logo/compe-2025/Compe.svg" alt="Competitive Programming" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>Competitive Programming</h1>
+                <h1>COMPETITIVE PROGRAMMING</h1>
                 <div class="paragraphs">
                     <p>
-                        Kompetisi Competitive Programming dengan tema "Code Optimization and Performance Tuning"
-                        merupakan salah satu cabang kompetisi yang sangat dinantikan dalam event Technology Euphoria,
-                        sebuah acara bertaraf nasional yang diadakan untuk mahasiswa aktif di perguruan tinggi dan siswa
-                        SMA/SMK sederajat di Indonesia. Competitive Programming ini terdiri dari dua babak, yaitu babak
-                        penyisihan yang dilakukan secara online melalui platform zoom meeting dan babak final yang
-                        dilakukan secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya dan Zoom Meeting.
+                        Kompetisi Competitive Programming dengan tema <strong>“Chronicles of The Syntax War”</strong> merupakan salah satu cabang kompetisi yang akan diadakan dalam event Sinergi Fest 2025, sebuah acara bertaraf nasional yang akan diadakan untuk mahasiswa aktif di perguruan tinggi di Indonesia. Competitive Programming ini terdiri dari dua babak yaitu babak penyisihan yang akan dilaksanakan melalui platform zoom meeting dan babak final yang akan dilaksanakan secara hybrid di Fakultas Ilmu Komputer Universitas Sriwijaya.
+
                     </p>
                     <p>
-                        Tujuan utama dari kompetisi ini adalah menguji kemampuan peserta dalam berpikir logis dan
-                        sistematis dalam memecahkan persoalan dengan menggunakan bahasa pemrograman C++/Java. Fokus
-                        utama perlombaan ini adalah mengoptimalkan kode dan meningkatkan kinerja program yang ditulis
-                        oleh peserta.
+                        Tujuan utama dari kompetisi ini adalah menguji kemampuan sistematis peserta dalam merancang dan mengimplementasikan sebuah kode untuk menyelesaikan soal secara kreatif serta efisien dalam batas waktu dan memori yang ketat menggunakan bahasa pemrograman C/C++/Java/Python. Fokus utama perlombaan ini adalah mengoptimalkan kode dan mengembangkan kinerja program yang ditulis peserta.
+
                     </p>
                 </div>
                 <table class="details-table">
@@ -76,7 +66,7 @@
             </div>
         </div>
         <div class="countdown">
-            <h1 class="onscroll">Penutupan Pendaftaran</h1>
+            <h1 class="onscroll">PENUTUPAN PENDAFTARAN</h1>
             <ul class="onscroll">
                 <li><span id="days">12</span>Hari</li>
                 <li>:</li>
@@ -88,7 +78,7 @@
             </ul>
         </div>
         <div class="informasi-lomba">
-            <h1 class="onscroll-r">Informasi Lomba</h1>
+            <h1 class="onscroll-r">INFORMASI LOMBA</h1>
             <ul>
                 <li class="onscroll-r"><i class='bx bxs-chevron-right'></i> Seluruh peserta diwajibkan membaca guidebook
                     sebelum melakukan pendaftaran</li>
@@ -104,7 +94,7 @@
             </div>
         </div>
         <div class="faq onscroll">
-            <h1>Frequently Asked Question (FAQ)</h1>
+            <h1>FREQUENTLY ASKED QUESTIONS (FAQ)</h1>
             <ol>
                 <li>
                     Bagaimana cara mendaftarkan diri dalam kompetisi Competitive Programming Sinergi Fest 2025?
@@ -160,7 +150,7 @@
                     </span>
                 </li>
             </ol>
-        </div> -->
+        </div>
     </div>
 </div>
 

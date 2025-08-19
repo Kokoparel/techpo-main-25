@@ -10,6 +10,8 @@ use App\Models\DataTimModel;
 use App\Models\TiketModel;
 use App\Models\TransactionsModel;
 use App\Models\UserDataModel;
+use App\Models\DataWorkshopModel;
+use App\Models\TiketWorkshopModel;
 use CodeIgniter\Shield\Entities\User;
 use Config\Services;
 
@@ -29,6 +31,18 @@ class AdminController extends BaseController
             ->where('transaction_status', 'settlement')
             ->orwhere('transaction_status', 'capture')
             ->countAllResults();
+            
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel
+            ->select('username, name, phone, email, instansi, domisili, kategori, transaction_time')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->findAll();
+
+        $jumlahWorkshopSettlement = $dataWorkshopModel->selectCount("transaction_status")
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('transaction_status', 'settlement')
+            ->orwhere('transaction_status', 'capture')
+            ->countAllResults();
 
         $dataTimModel = new DataTimModel();
         $dataTim = $dataTimModel
@@ -45,8 +59,10 @@ class AdminController extends BaseController
 
         return view('admin/dashboard_v2', [
             'dataSeminar' => $dataSeminar,
+            'dataWorkshop' => $dataWorkshop,
             'dataTim' => $dataTim,
             'jumlahSeminarSettlement' => $jumlahSeminarSettlement,
+            'jumlahWorkshopSettlement' => $jumlahWorkshopSettlement,
             'jumlahTimSettlement' => $jumlahTimSettlement,
         ]);
     }
@@ -125,6 +141,7 @@ class AdminController extends BaseController
             $band = $dataTimModel->where('id_kompetisi', 8)->countAllResults();
             $painting = $dataTimModel->where('id_kompetisi', 6)->countAllResults();
             $dance = $dataTimModel->where('id_kompetisi', 7)->countAllResults();
+            $ml = $dataTimModel->where('id_kompetisi', 9)->countAllResults();
 
             return view('admin/data_lomba_all', [
                 'dataTim' => $dataTim,
@@ -135,7 +152,8 @@ class AdminController extends BaseController
                 'web' => $web,
                 'band' => $band,
                 'painting' => $painting,
-                'dance' => $dance
+                'dance' => $dance,
+                'ml' => $ml
             ]);
         }
 
@@ -160,32 +178,54 @@ class AdminController extends BaseController
             ->join('transactions', 'transactions.order_id=data_tim.order_id', 'left')
             ->find($id);
 
-        $anggotaTimModel = new AnggotaTimModel();
-        $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
-            ->join('user_data', 'user_data.username=anggota_tim.anggota')
-            ->join('users', 'users.username=anggota_tim.anggota')
-            ->join('auth_identities', 'users.id=auth_identities.user_id')
-            ->where('tim_id', $id)
-            ->where('role', 'ketua')
-            ->first();
+        // Jika tim Mobile Legends (id_kompetisi = 9)
+        if ($dataTim['id_kompetisi'] == 9) {
+            // Query data anggota ML dari tabel data_tim_ml_anggota
+            $db = \Config\Database::connect();
+            $dataTim['anggota_ml'] = $db->query("
+                SELECT * FROM data_tim_ml_anggota 
+                WHERE tim_id = ? 
+                ORDER BY FIELD(posisi, 'ketua', 'anggota', 'cadangan'), id
+            ", [$id])->getResultArray();
+            
+            // Tetap ambil data ketua dari tabel biasa untuk informasi lengkap
+            $anggotaTimModel = new AnggotaTimModel();
+            $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+                ->join('user_data', 'user_data.username=anggota_tim.anggota')
+                ->join('users', 'users.username=anggota_tim.anggota')
+                ->join('auth_identities', 'users.id=auth_identities.user_id')
+                ->where('tim_id', $id)
+                ->where('role', 'ketua')
+                ->first();
+        } else {
+            // Untuk kompetisi selain ML, gunakan query biasa
+            $anggotaTimModel = new AnggotaTimModel();
+            $dataTim['ketua'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+                ->join('user_data', 'user_data.username=anggota_tim.anggota')
+                ->join('users', 'users.username=anggota_tim.anggota')
+                ->join('auth_identities', 'users.id=auth_identities.user_id')
+                ->where('tim_id', $id)
+                ->where('role', 'ketua')
+                ->first();
 
-        $dataTim['anggota'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
-            ->join('user_data', 'user_data.username=anggota_tim.anggota')
-            ->join('users', 'users.username=anggota_tim.anggota')
-            ->join('auth_identities', 'users.id=auth_identities.user_id')
-            ->where('tim_id', $id)
-            ->where('role', 'anggota')
-            ->findAll();
+            $dataTim['anggota'] = $anggotaTimModel->select('users.username, nama, nim, universitas, auth_identities.secret, kontak')
+                ->join('user_data', 'user_data.username=anggota_tim.anggota')
+                ->join('users', 'users.username=anggota_tim.anggota')
+                ->join('auth_identities', 'users.id=auth_identities.user_id')
+                ->where('tim_id', $id)
+                ->where('role', 'anggota')
+                ->findAll();
+        }
 
-        $berkasModel = new BerkasModel();
-        $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
-        $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
+            $berkasModel = new BerkasModel();
+            $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
+            $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
 
-        return view('admin/detail_tim', [
-            'data' => $dataTim,
-            'berkasProposal' => $berkasProposal,
-            'berkasSourceCode' => $berkasSourceCode,
-        ]);
+            return view('admin/detail_tim', [
+                'data' => $dataTim,
+                'berkasProposal' => $berkasProposal,
+                'berkasSourceCode' => $berkasSourceCode,
+            ]);
     }
 
     public function addSeminar()
@@ -534,4 +574,257 @@ class AdminController extends BaseController
             'pendapatanLomba' => $pendapatanLomba,
         ]);
     }
+
+    public function workshop()
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel
+            ->select('username, name, phone, email, instansi, domisili, kategori, transaction_time, transaction_status')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->findAll();
+
+        $dataVip = $dataWorkshopModel->where('kategori', 'VIP')->countAllResults();
+        $dataReguler = $dataWorkshopModel->where('kategori', 'Reguler')->countAllResults();
+
+        $dataVipSettlement = $dataWorkshopModel->selectCount("transaction_status")
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('kategori', 'VIP')
+            ->where('transaction_status', 'settlement')
+            ->orwhere('transaction_status', 'capture')
+            ->countAllResults();
+
+        $dataRegulerSettlement = $dataWorkshopModel->selectCount("transaction_status")
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('kategori', 'Reguler')
+            ->where('transaction_status', 'settlement')
+            ->orwhere('transaction_status', 'capture')
+            ->countAllResults();
+
+        return view('admin/data_workshop', [
+            'dataWorkshop' => $dataWorkshop,
+            'dataVip' => $dataVip,
+            'dataReguler' => $dataReguler,
+            'dataVipSettlement' => $dataVipSettlement,
+            'dataRegulerSettlement' => $dataRegulerSettlement,
+        ]);
+    }
+
+    public function detailWorkshop($username)
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel
+            ->select('username, name, phone, email, instansi, domisili, status, kategori, transactions.order_id, transaction_status, transaction_time, payment_type')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('data_workshop.username', $username)
+            ->first();
+
+        $tiketWorkshopModel = new TiketWorkshopModel();
+        $tiket = $tiketWorkshopModel->find($dataWorkshop['order_id']);
+        if ($tiket) {
+            $tiket = $tiket['ticket'];
+        }
+
+        return view('admin/detail_workshop', [
+            'data' => $dataWorkshop,
+            'tiket' => $tiket,
+        ]);
+    }
+
+    public function addWorkshop()
+    {
+        if (!$this->request->is('post')) {
+            return view('admin/add_workshop');
+        }
+
+        // Validasi email admin
+        $inputEmail = $this->request->getPost('email');
+        $adminEmail = auth()->user()->email;
+        
+        if (strtolower($inputEmail) === strtolower($adminEmail)) {
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', ['Email admin tidak boleh digunakan untuk pendaftaran peserta workshop!']);
+        }
+
+        $validation = Services::validation();
+        $validation->setRuleGroup('adminWorkshop');
+        if ($validation->withRequest($this->request)->run() === false) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        // 1. Simpan user terlebih dahulu
+        $usersModel = auth()->getProvider();
+        $user = new User([
+            'username' => $this->request->getPost('username'),
+            'email' => $this->request->getPost('email'),
+            'password' => $this->request->getPost('password'),
+        ]);
+        $usersModel->save($user);
+        $user = $usersModel->find($usersModel->getInsertID());
+        $user->activate();
+
+        // Generate order_id
+        $orderId = Utils::generateOrderId();
+
+        // 2. SIMPAN TRANSACTIONS TERLEBIH DAHULU
+        $transactionsModel = new TransactionsModel();
+        $kategori = $this->request->getPost('kategori');
+        $transactions = [
+            'order_id' => $orderId,
+            'gross_amount' => $kategori == 'VIP' ? 115000 : 75000,
+            'payment_type' => 'Offline',
+            'transaction_status' => 'settlement',
+            'transaction_time' => date('Y-m-d H:i:s'),
+            'snap_token' => 'no_snap',
+            'transaction_id' => 'no_transaction',
+        ];
+        $transactionsModel->save($transactions);
+
+        // 3. BARU SIMPAN DATA_WORKSHOP
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = [
+            'username' => $this->request->getPost('username'),
+            'name' => $this->request->getPost('nama'),
+            'phone' => $this->request->getPost('phone'),
+            'email' => $this->request->getPost('email'),
+            'instansi' => $this->request->getPost('instansi'),
+            'domisili' => $this->request->getPost('domisili'),
+            'kategori' => $kategori,
+            'status' => $this->request->getPost('status'),
+            'order_id' => $orderId, // Menggunakan order_id yang sudah ada di transactions
+        ];
+        $dataWorkshopModel->save($dataWorkshop);
+
+        return redirect()->to('admin/detail-workshop/' . $this->request->getPost('username'));
+    }
+
+    public function createTiketWorkshop($username = null)
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+        $dataWorkshop = $dataWorkshopModel->where('username', $username)->first();
+
+        if ($dataWorkshop == null) {
+            return redirect()->back()->with('error', 'Data workshop tidak ditemukan');
+        }
+
+        $transactionsModel = new TransactionsModel();
+        $transaction = $transactionsModel->find($dataWorkshop['order_id']);
+
+        if ($transaction == null || ($transaction['transaction_status'] != 'settlement' && $transaction['transaction_status'] != 'capture')) {
+            return redirect()->back()->with('error', 'Pembayaran belum diverifikasi');
+        }
+
+        $tiketWorkshopModel = new TiketWorkshopModel();
+        $tiket = $tiketWorkshopModel->where('username', $username)->first();
+        if ($tiket) {
+            return redirect()->back()->with('error', 'Tiket sudah dibuat');
+        }
+
+        $tiketData = [
+            'order_id' => $dataWorkshop['order_id'],
+            'username' => $dataWorkshop['username'],
+            'ticket' => Utils::getUniqueTiket(),
+            'created_at' => date('Y-m-d H:i:s'),
+        ];
+        $id = $tiketWorkshopModel->insert($tiketData, true);
+        $tiket = $tiketWorkshopModel->find($id);
+
+        $pdf = Utils::generatePdf($tiket['ticket']);
+        Utils::sendMail($pdf, $dataWorkshop['email']);
+
+        return redirect()->back()->with('success', 'Tiket berhasil dibuat dan dikirim ke email user');
+    }
+
+    public function downloadTiketWorkshop($username)
+    {
+        $tiketWorkshopModel = new TiketWorkshopModel();
+        $tiket = $tiketWorkshopModel->where('username', $username)->first();
+
+        if (!$tiket) {
+            return redirect()->back()->with('error', 'Tiket tidak ditemukan');
+        }
+
+        Utils::generatePdf($tiket['ticket'], true);
+    }
+
+    public function financeWorkshop()
+    {
+        $dataWorkshopModel = new DataWorkshopModel();
+
+        // Workshop Offline
+        $workshopOffline = $dataWorkshopModel->select('name, instansi, status, kategori, gross_amount, payment_type')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('transaction_status', 'settlement')
+            ->where('payment_type', 'offline')
+            ->findAll();
+
+        foreach ($workshopOffline as $idx => $val) {
+            switch ($val['payment_type']) {
+                case 'qris':
+                    $fee = floor($val['gross_amount'] * 0.7 / 100);
+                    break;
+                case 'gopay':
+                    $fee = floor($val['gross_amount'] * 2 / 100);
+                    break;
+                case 'bank_transfer':
+                case 'echannel':
+                    $fee = 4440;
+                    break;
+                default:
+                    $fee = 0;
+            }
+            $workshopOffline[$idx]['fee'] = $fee;
+            $workshopOffline[$idx]['pendapatan'] = $val['gross_amount'] - $fee;
+        }
+
+        $grossAmountOffline = 0;
+        $pendapatanOffline = 0;
+        foreach ($workshopOffline as $val) {
+            $grossAmountOffline += $val['gross_amount'];
+            $pendapatanOffline += $val['pendapatan'];
+        }
+
+        // Workshop Online
+        $workshopOnline = $dataWorkshopModel->select('name, instansi, status, kategori, gross_amount, payment_type')
+            ->join('transactions', 'transactions.order_id=data_workshop.order_id')
+            ->where('transaction_status', 'settlement')
+            ->where('payment_type !=', 'offline')
+            ->findAll();
+
+        foreach ($workshopOnline as $idx => $val) {
+            switch ($val['payment_type']) {
+                case 'qris':
+                    $fee = floor($val['gross_amount'] * 0.7 / 100);
+                    break;
+                case 'gopay':
+                    $fee = floor($val['gross_amount'] * 2 / 100);
+                    break;
+                case 'bank_transfer':
+                case 'echannel':
+                    $fee = 4440;
+                    break;
+                default:
+                    $fee = 0;
+            }
+            $workshopOnline[$idx]['fee'] = $fee;
+            $workshopOnline[$idx]['pendapatan'] = $val['gross_amount'] - $fee;
+        }
+
+        $grossAmountOnline = 0;
+        $pendapatanOnline = 0;
+        foreach ($workshopOnline as $val) {
+            $grossAmountOnline += $val['gross_amount'];
+            $pendapatanOnline += $val['pendapatan'];
+        }
+
+        return view('admin/finance_workshop', [
+            'workshopOffline' => $workshopOffline,
+            'grossAmountOffline' => $grossAmountOffline,
+            'pendapatanOffline' => $pendapatanOffline,
+            'workshopOnline' => $workshopOnline,
+            'grossAmountOnline' => $grossAmountOnline,
+            'pendapatanOnline' => $pendapatanOnline,
+        ]);
+    }
 }
+
