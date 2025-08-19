@@ -5,9 +5,9 @@
 
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main" id="dashboard-page">
     <div class="container top" id="notifikasi">
-        <h1>Notifikasi</h1>
+        <h1>NOTIFIKASI</h1>
         <?php if ($notifikasi == null): ?>
             <p style="margin-top: 1rem;">
                 Belum ada notifikasi ~
@@ -76,7 +76,7 @@
 
     <div class="container" id="tim">
         <div class="container-4">
-            <h1>Data Tim</h1>
+            <h1>DATA TIM</h1>
             <a href="<?= base_url('profile/daftar-lomba') ?>" class="btn btn-outline-primary btn-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="15" width="15">
                     <path
@@ -148,7 +148,7 @@
                         <td colspan="6" class="anggota-detail">
                             <div class="card-flex">
                                 <div class="card">
-                                    <h1 class="card-title">Data Tim</h1>
+                                    <h1 class="card-title">DATA TIM</h1>
                                     <div class="detail">
                                         <label>ID Tim</label>
                                         <?= $t['tim_id']; ?>
@@ -286,7 +286,7 @@
             <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
         <?php endif; ?>
         
-        <h1>Pengaturan Akun</h1>
+        <h1>PENGATURAN AKUN</h1>
         <?= form_open('profile/ubah-password'); ?>
         <div class="input-wrapper-horizontal">
             <input type="password" id="password" name="password" placeholder="Ubah Password" />

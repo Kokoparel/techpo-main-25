@@ -4,9 +4,20 @@
 Blood Link | Technology Euphoria
 <?= $this->endSection(); ?>
 
+<?= $this->section('styles'); ?>
+<style>
+footer {
+  background-image: url("/assets/images/WORKSHOPfuter.svg");
+  background-size: cover;
+  
+  aspect-ratio: 2051 / 500; /* Rasio dari Figma */
+}
+</style>
+<?= $this->endSection(); ?>
+
 <?= $this->section('content'); ?>
 
-<div class="main">
+<div class="main" id="workshop-page">
     <div class="section light" style="padding: 3rem 0;">
         <div class="detail-horizontal">
             <div class="image">
@@ -22,31 +33,31 @@ Blood Link | Technology Euphoria
                 <table class="details-table">
                     <tbody>
                         <tr>
-                            <td><i class='bx bx-calendar-alt'></i> Tanggal Pelaksanaan</td>
+                            <td><i class='bx bx-calendar-alt'></i> TANGGAL PELAKSANAAN </td>
                             <td>Akan segera diumumkan</td>
                         </tr>
                         <tr>
-                            <td><i class='bx bx-stopwatch'></i> Jam Pelaksanaan</td>
+                            <td><i class='bx bx-stopwatch'></i> JAM PELAKSANAAN </td>
                             <td>Akan segera diumumkan</td>
                         </tr>
                         <tr>
-                            <td><i class='bx bx-map'></i> Tempat Pelaksanaan</td>
+                            <td><i class='bx bx-map'></i> TEMPAT PELAKSANAAN</td>
                             <td>Fakultas Ilmu Komputer Universitas Sriwijaya</td>
                         </tr>
                         <tr>
-                            <td><i class='bx bx-heart'></i> Kerja Sama</td>
+                            <td><i class='bx bx-heart'></i> KERJA SAMA</td>
                             <td>Palang Merah Indonesia (PMI) Sumatera Selatan</td>
                         </tr>
                         <tr>
-                            <td><i class='bx bx-group'></i> Target Peserta</td>
+                            <td><i class='bx bx-group'></i> TARGET PESERTA</td>
                             <td>Mahasiswa, Dosen, dan Masyarakat Umum</td>
                         </tr>
                         <tr>
-                            <td><i class='bx bx-purchase-tag-alt'></i> Syarat Partisipasi</td>
+                            <td><i class='bx bx-purchase-tag-alt'></i> SYARAT PARTISIPASI</td>
                             <td>Sehat jasmani, usia 17-65 tahun<br />Berat badan minimal 45 kg</td>
                         </tr>
                         <tr>
-                            <td><i class='bx bx-gift'></i> Fasilitas</td>
+                            <td><i class='bx bx-gift'></i> FASILITAS</td>
                             <td>Sertifikat, Snack, Merchandise<br />Bazaar & Door Prize</td>
                         </tr>
                     </tbody>
