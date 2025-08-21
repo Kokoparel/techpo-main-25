@@ -90,7 +90,10 @@
                     mengikuti lomba</li>
             </ul>
             <div class="links onscroll-r">
-                <a href="<?= base_url('download/' . urlencode('GB CP.pdf')); ?>" class="btn btn-secondary">Download Guidebook</a>
+                <a href="<?= base_url('download/' . urlencode('Logo Technology Euphoria.png')); ?>" class="btn btn-secondary">Download Logo Techpo</a>
+    <a href="<?= base_url('download/' . urlencode('GB [NAMA_LOMBA].pdf')); ?>" class="btn btn-secondary">Download Guidebook</a>
+    <!-- Tambahkan template proposal jika lomba membutuhkan -->
+    <a href="<?= base_url('download/' . urlencode('Template Proposal [NAMA_LOMBA].docx')); ?>" class="btn btn-secondary">Template Proposal</a>
             </div>
         </div>
         <div class="faq onscroll">
