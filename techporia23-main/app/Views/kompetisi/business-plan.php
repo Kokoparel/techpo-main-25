@@ -1,19 +1,18 @@
 <?= $this->extend('layout/master_layout'); ?>
-<?php $this->setVar('page-competitive'); ?>
 
 <?= $this->section('title'); ?> Business Plan | Technology Euhporia
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
 
-<div class="main competition-list" id="business-plan">
+<div class="main">
     <div class="section" style="padding-top: 3rem;">
         <div class="detail-horizontal">
             <div class="image onscroll-r">
                 <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" alt="Business Plan" />
             </div>
             <div class="keterangan onscroll-r" style="--delay: 1;">
-                <h1>BUSINESS PLAN</h1>
+                <h1>Business Plan</h1>
                 <div class="paragraphs">
                     <p>
                         Business plan adalah salah satu cabang kompetisi berskala nasional dalam ajang Sinergi Fest 2025 yang diselenggarakan oleh keluarga mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
@@ -22,13 +21,12 @@
                         Kompetisi ini merupakan suatu perencanaan bisnis yang dibuat dalam bentuk tertulis dalam sebuah dokumen yang menjelaskan tentang bagaimana suatu bisnis tersebut dapat berjalan dengan menggunakan strategi dan juga teknik pemasaran yang tepat, agar tujuan dari bisnis tersebut dapat tercapai.
                     </p>
                     <p>
-                        Tema dari lomba ini adalah  <strong>”FUTURE OF TECH : INNOVATING FOR A BETTER TOMORROW”</strong>.
-</p>
+                        Tema dari lomba ini adalah <span class="SPAN">”FUTURE OF TECH : INNOVATING FOR A BETTER TOMORROW”.</span>
                     </p>
                 </div>
                 <table class="details-table">
                     <tr>
-                        <td><i class='bx bx-group'></i> PENDAFTARAN PESERTA</td>
+                        <td><i class='bx bx-group'></i> Pendaftaran Peserta</td>
                         <td>01 Agustus - 31 Agustus 2024</td>
                     </tr>
                     <tr>
@@ -72,7 +70,7 @@
             </div>
         </div>
         <div class="countdown">
-            <h1 class="onscroll">PENUTUPAN PENDAFTARAN</h1>
+            <h1 class="onscroll">Penutupan Pendaftaran</h1>
             <ul class="onscroll">
                 <li><span id="days">12</span>Hari</li>
                 <li>:</li>
@@ -84,7 +82,7 @@
             </ul>
         </div>
         <div class="informasi-lomba">
-            <h1 class="onscroll-r">INFORMASI LOMBA</h1>
+            <h1 class="onscroll-r">Informasi Lomba</h1>
             <ul>
                 <li class="onscroll-r"><i class='bx bxs-chevron-right'></i> Seluruh peserta diwajibkan membaca guidebook
                     sebelum melakukan pendaftaran</li>
@@ -101,27 +99,24 @@
                     mengikuti lomba dan template proposal untuk pendaftaran</li>
             </ul>
             <div class="links onscroll-r">
-                <a href="<?= base_url('download/' . urlencode('Logo Technology Euphoria.png')); ?>" class="btn btn-secondary">Download Logo Techpo</a>
+                <a href="<?= base_url('download/' . urlencode('Logo Technology Euphoria.png')); ?>" class="btn btn-secondary">Download Logo Sinergi Fest</a>
                 <a href="<?= base_url('download/' . urlencode('GB Business Plan.pdf')); ?>" class="btn btn-secondary">Download Guidebook</a>
                 <a href="<?= base_url('download/' . urlencode('Template Proposal Business Plan TECHPO 2024.docx')); ?>" class="btn btn-secondary">Template Proposal</a>
             </div>
         </div>
         <div class="faq onscroll">
-            <h1>FREQUENTLY ASKED QUESTIONS (FAQ)</h1>
+            <h1>Frequently Asked Question (FAQ)</h1>
             <ol>
                 <li>
-                    Bagaimana cara mendaftarkan diri dalam kompetisi Business Plan Techphoria 2024?
+                    Bagaimana cara mendaftarkan diri dalam kompetisi Business Plan Techphoria 2025?
                     <span class="answer">
-                        Peserta telah mengikuti prosedur pendaftaran pada website resmi Techphoria 2024
-                        (https://technologyeuphoriaunsri.web.id/) dan melengkapi data pendaftaran dengan benar. Peserta yang
-                        tidak memenuhi persyaratan pendaftaran sampai waktu yang ditentukan akan dinyatakan gugur.
+                        peserta telah mengikuti prosedur pendaftaran pada website resmi sinergi fest 2025 dan melengkapi data pendaftaran dengan benar. Peserta yang tidak memenuhi persyaratan pendaftaran sampai waktu yang ditentukan akan dinyatakan gugur.
                     </span>
                 </li>
                 <li>
                     Apakah setiap peserta harus melengkapi data pribadi secara terpisah?
                     <span class="answer">
-                        Pengunggahan data diwakilkan oleh ketua tim dengan melampirkan foto/scan bukti pembayaran dan
-                        foto/scan kartu tanda mahasiswa atau kartu pelajar.
+                        pengunggahan data diwakilkan oleh ketua tim dengan melampirkan foto/scan bukti pembayaran dan foto/scan kartu tanda mahasiswa atau kartu pelajar.
                     </span>
                 </li>
                 <li>
@@ -153,8 +148,7 @@
                 <li>
                     Bagaimana saya bisa mendapatkan template untuk proposal?
                     <span class="answer">
-                        Template proposal dapat diunduh pada website Tehcphoria 2024 di
-                        https://technologyeuphoriaunsri.web.id/
+                        template proposal dapat diunduh pada website sinergi fest 2025.
                     </span>
                 </li>
                 <li>
