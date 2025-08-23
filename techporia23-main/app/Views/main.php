@@ -79,10 +79,6 @@
 
     <div class="section light" id="seminar">
         <div class="section-seminar">
-            <div class="item onscroll-r" style="--delay: 1;">
-                <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
-            </div>
-            
             <div class="item center onscroll-r">
                 <h1>TALSKHOW NASIONAL</h1>
                 <h1>SINERGI FEST 2025</h1>
@@ -111,17 +107,15 @@
                 </div>
                 <a href="<?= base_url('talkshow'); ?>" class="btn btn-fancy">Selengkapnya</a>
             </div>
+
+            <div class="item onscroll-r" style="--delay: 1;">
+                <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
+            </div>
         </div>
     </div>
 
     <div class="section light" id="workshop">
         <div class="section-workshop">
-            <!-- Gambar ke kiri -->
-            <div class="item onscroll-r" style="--delay: 1;">
-                <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
-            </div>
-
-            <!-- Teks ke kanan -->
             <div class="item center onscroll-r">
                 <h1>WORKSHOP NASIONAL</h1>
                 <h1>SINERGI FEST 2025</h1>
@@ -149,6 +143,10 @@
                     </table>
                 </div>
                 <a href="<?= base_url('workshop'); ?>" class="btn btn-fancy">Selengkapnya</a>
+            </div>
+
+            <div class="item onscroll-r" style="--delay: 1;">
+                <img src="/assets/images/seminar.webp" alt="Seminar Nasional" class="seminar-img" />
             </div>
         </div>
     </div>

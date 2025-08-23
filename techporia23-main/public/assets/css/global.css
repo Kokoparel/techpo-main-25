@@ -6,6 +6,8 @@ html, body {
   width: 100%;
 }
 
+
+/* ================= Hero Section ================= */
 .section, .hero-bg, .main {
   overflow-x: hidden;
   max-width: 100vw;
@@ -172,6 +174,8 @@ body {
 }
 
 /* CARD STYLING */
+
+/* ================= Card Styles ================= */
 .card {
   background: linear-gradient(135deg, #1c0036, #31005a);
   border-radius: 20px;
@@ -277,6 +281,8 @@ header.sticky {
   }
 }
 
+
+/* ================= Header Styles ================= */
 .header-wrapper {
   height: 70px;
   width: 100%;
@@ -453,6 +459,8 @@ footer {
     padding: 3rem 1rem;
   }
   
+
+/* ================= Footer Styles ================= */
   .footer-detail > .item img {
     width: 100%;
   }
@@ -520,6 +528,8 @@ footer .footer-detail {
   color: var(--text-dark);
 }
 
+
+/* ================= Contact Section ================= */
 .contact {
   display: flex;
   flex-direction: column;
@@ -538,6 +548,8 @@ footer .footer-detail {
   color: var(--text-dark);
 }
 
+
+/* ================= Footer Styles ================= */
 .footer-copyright {
   text-align: center;
 }
@@ -907,18 +919,82 @@ svg {
   }
 }
 
+
+
 .container-form {
+  font-family: "Press-Start-2P";
   margin: 3rem 0;
   padding: 2rem;
   width: 40%;
-  background-color: var(--content);
-  box-shadow: var(--shadow);
+  background-color: rgba(131, 14, 106, 0.95); /* 95% transparency */
   border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(131, 14, 106, 0.95), rgba(131, 14, 106, 0.95)),
+    linear-gradient(to bottom, #FF00FF 0%, #FFD700 50%, #FF5A1D 100%);
+  background-size: 
+    calc(100% - 8px) calc(100% - 8px),
+    100% 100%;
+  background-position: 
+    center center,
+    0 0;
+  background-repeat: no-repeat;
 }
-@media (max-width: 800px) {
+
+/* Tablet */
+@media (max-width: 1024px) {
   .container-form {
-    width: 100%;
-    border-radius: 0;
+    width: 60%;
+    margin: 2rem auto; /* Center horizontally */
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .container-form {
+    width: 85%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    font-size: 0.9rem; /* Slightly smaller text for better fit */
+  }
+}
+
+/* Mobile Medium & Small */
+@media (max-width: 480px) {
+  .container-form {
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border-radius: 0.25rem; /* Smaller border radius */
+    background-size: 
+      calc(100% - 6px) calc(100% - 6px), /* Thinner border */
+      100% 100%;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .container-form {
+    width: 98%;
+    margin: 1rem auto;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    background-size: 
+      calc(100% - 4px) calc(100% - 4px), /* Even thinner border */
+      100% 100%;
+  }
+}
+
+.container-form h1 {
+  font-family: "Press-Start-2P";
+  font-size: 1.5rem;
+  color:#FFF680
+}
+@media (max-width: 860px) {
+  .container-form h1 {
+    font-size: 1.2rem; 
+    text-align: center;
   }
 }
 
@@ -1117,9 +1193,9 @@ td {
 
 .input-wrapper label {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  color: var(--text);
+  color: #FFF680;
   overflow: hidden;
 }
 
@@ -1329,6 +1405,8 @@ textarea {
   padding: 1rem 0px;
 }
 
+
+/* ================= Card Styles ================= */
 .card-flex {
   display: flex;
   align-items: start;
@@ -1534,6 +1612,8 @@ textarea {
   width: auto;
 }
 
+
+/* ================= Hero Section ================= */
 .hero-bg {
   width: 100%;
   min-height: calc(100vh - 70px);
@@ -1601,16 +1681,20 @@ textarea {
   text-align: center;
   margin: 0px 2%;
   line-height: 1.3;
-  
-  background: linear-gradient(to bottom, #ff0000, #f6ca00);
+
+  background: linear-gradient(135deg, #ff0000, #f6ca00, #ff0000); /* buat lebih panjang */
+  background-size: 200% 200%; /* penting untuk animasi */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
+  animation: gradientShift 3s ease-in-out infinite;
+
   /* Filter drop shadow */
-  filter: drop-shadow(-2px -2px 0 #ffffff) drop-shadow(2px -2px 0 #ffffff)
-  drop-shadow(-2px 2px 0 #ffffff) drop-shadow(2px 2px 0 #ffffff)
-  drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(-2px -2px 0 #ffffff) 
+          drop-shadow(2px -2px 0 #ffffff)
+          drop-shadow(-2px 2px 0 #ffffff) 
+          drop-shadow(2px 2px 0 #ffffff)
+          drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
 .hero h3 {
@@ -1653,6 +1737,8 @@ textarea {
 /* ====================================================================== */
 
 /* About Section Background & Layout */
+
+/* ================= About Section ================= */
 #about {
   background: linear-gradient(135deg, #2D1B69 0%, #1A0F3D 50%, #0D0622 100%);
   position: relative;
@@ -1865,14 +1951,15 @@ textarea {
   }
 }
 
+
+/* ================= Competition Styles ================= */
 #competition {
   padding: 5rem 10vw;
   background-image: url("/assets/images/Competition Section.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  aspect-ratio: 1871 / 1024; /* Rasio dari Figma */
-  
+  min-height: 100vh;
 }
 
 @media (max-width: 1024px) {
@@ -1979,6 +2066,8 @@ textarea {
   font-family: "ST-SimpleSquare";
 }
 
+
+/* ================= Seminar Styles ================= */
 #seminar {
   background-image: url("/assets/images/Talkshow Section.svg");
   background-position: center;
@@ -2517,6 +2606,8 @@ textarea {
 }
 
 /* ==================== SPONSOR STYLES - IMPROVED ==================== */
+
+/* ================= Sponsors Section ================= */
 .sponsors-list {
   display: flex !important;
   justify-content: center;
@@ -2818,6 +2909,8 @@ textarea {
     
     /* Tablet Responsiveness */
     @media (max-width: 1024px) {
+
+/* ================= Seminar Styles ================= */
       #seminar, #workshop {
         padding: 2.5rem 0;
         min-height: 70vh;
@@ -3103,6 +3196,8 @@ textarea {
       text-align: center;
     }
     
+
+/* ================= Workshop Styles ================= */
     #workshop {
       background-image: url("/assets/images/Workshop Section.svg");
       background-size: cover;
@@ -3145,6 +3240,8 @@ textarea {
       }
     }
     
+
+/* ================= About Section ================= */
     #about {
       background-image: url("/assets/images/About Section.svg");
       background-size: cover;
@@ -3170,6 +3267,8 @@ textarea {
       }
     }
     
+
+/* ================= Sponsors Section ================= */
     #sponsors {
       background-image: url("/assets/images/Sponsor Section.svg");
       background-size: cover;
@@ -3269,6 +3368,8 @@ textarea {
       padding: 0;
     }
     
+
+/* ================= Competition Styles ================= */
     .competition-list {
       font-family: "Poppins-Regular";
     }
@@ -3513,6 +3614,8 @@ textarea {
       }
       
       /* Card and content improvements */
+
+/* ================= Card Styles ================= */
       .card-flex {
         flex-direction: column;
         gap: 1.5rem;
@@ -3596,6 +3699,8 @@ textarea {
         overflow-y: auto;
       }
       
+
+/* ================= Competition Styles ================= */
       .competition-list h1 {
         font-size: clamp(1rem, 4vw, 1.5rem);
         margin-bottom: 1rem;
@@ -3660,6 +3765,8 @@ textarea {
         max-width: 150px;
       }
       
+
+/* ================= Card Styles ================= */
       .card-title {
         font-size: 1.3rem;
       }
@@ -3673,6 +3780,8 @@ textarea {
       }
     }
     
+
+/* ================= Workshop & Talkshow Styles ================= */
     #workshop-page .section.light {
       background-image: url("/assets/images/WORKSHOP.svg");
       background-size: cover;
@@ -3737,12 +3846,21 @@ textarea {
         font-size: clamp(1.8rem, 3vw, 2.5rem);
       }
     }
-    
+
+    /* ================= DAFTAR LOMBA STYLES ================= */
+    #daftar-lomba {
+      background-image: url("/assets/images/daftar kompetisi.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* ================= Card Styles Mobile ================= */
     @media (max-width: 768px) {
       .swiper {
         padding: 40px 0;
       }
-      
+
       .card {
         width: 280px;
         height: 380px;
@@ -3758,7 +3876,8 @@ textarea {
         height: 80px;
       }
     }
-    
+
+    /* ================= Hero Section Mobile ================= */
     @media (max-width: 768px) {
       .hero-bg {
         min-height: 100vh;
@@ -3800,6 +3919,12 @@ textarea {
     
     /* ==================== DETAILS TABLE MOBILE FIX ==================== */
     @media (max-width: 768px) {
+      .section-seminar .item.center::before,
+      .section-workshop .item.center::before {
+        content: none;             
+        background-image: none;     
+      }
+
       .detail-horizontal {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -3869,10 +3994,20 @@ textarea {
       }
       
       /* Reduce opacity of individual section backgrounds */
+
+/* ================= About Section ================= */
       #about,
+
+/* ================= Competition Styles ================= */
       #competition,
+
+/* ================= Seminar Styles ================= */
       #seminar,
+
+/* ================= Workshop Styles ================= */
       #workshop,
+
+/* ================= Sponsors Section ================= */
       #sponsors,
       #media-partners {
         background-color: rgba(13, 6, 34, 0.3) !important;

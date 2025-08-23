@@ -1,32 +1,33 @@
 <?= $this->extend('user/layout'); ?>
 
-<?= $this->section('title'); ?>Daftar Lomba | Technology Euphoria
+<?= $this->section('title'); ?>Daftar Lomba | Sinergi Fest
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
 
-<div class="main">
-    <div class="container-form" style="display:flex; flex-direction:column; gap:1rem;">
-        <h1>Daftar Kompetisi Technology Euphoria</h1>
+<div class="main" id="daftar-lomba">
+    <div class="container-form" style="display:flex; flex-direction:column; gap:1rem;" id="daftar-lomba-form">
+        <h1>DAFTAR KOMPETISI SINERGI FEST</h1>
 
         <?= validation_list_errors(); ?>
-
+        
         <div class="btn-group">
             <button class="tab-link active btn btn-info btn-lg" onclick="openform(event, 'daftar')">Daftar Tim</button>
             <button class="tab-link btn btn-info btn-lg" onclick="openform(event, 'gabung')">Gabung Tim</button>
         </div>
+        
         <div id="daftar" class="tab-content" style="display: block;">
             <?= form_open('profile/daftar-lomba'); ?>
             <div class="input-wrapper">
-                <label for="nama_tim">Nama Tim</label>
+                <label for="nama_tim">NAMA TIM</label>
                 <input type="text" name="nama_tim" id="nama_tim" placeholder="Nama Tim" required>
-            </div>
+            </div><br>
             <div class="input-wrapper">
-                <label for="universitas">Universitas/Sekolah (isi"-" jika bukan keduanya)</label>
+                <label for="universitas">UNIVERSITAS/SEKOLAH (ISI "-" JIKA BUKAN KEDUANYA)</label>
                 <input type="text" name="universitas" id="universitas" value="<?= $userData['universitas'] ?>" disabled>
-            </div>
+            </div><br>
             <div class="input-wrapper">
-                <label for="kompetisi">Cabang Kompetisi</label>
+                <label for="kompetisi">CABANG KOMPETISI</label>
                 <div class="select-dropdown">
                     <select name="kompetisi" id="kompetisi" onchange="toggleMLFields()">
                             <option value="1">Competitive Programming</option>
@@ -74,7 +75,7 @@
                     <input type="text" name="ml_cadangan[id]" placeholder="ID Cadangan">
                 </div>
             </div>
-            <input type="submit" value="Daftar" class="btn btn-submit" />
+            <input type="submit" value="DAFTAR" class="btn btn-submit" />
             <p>*NB: Pembuat tim otomatis menjadi ketua tim</p>
             <?= form_close(); ?>
         </div>
@@ -108,7 +109,7 @@
                     <input type="text" name="ml_id_join" id="ml_id_join" placeholder="ID Mobile Legends">
                 </div>
             </div>
-            <input type="submit" value="Daftar" class="btn btn-submit" />
+            <input type="submit" value = "DAFTAR" class="btn btn-submit" />
             <?= form_close(); ?>
         </div>
 
