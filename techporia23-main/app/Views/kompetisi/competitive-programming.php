@@ -60,6 +60,9 @@
                 <?php if ($data) : ?>
                     <div class="badge badge-success" style="margin-top: 2rem; display: block;">Sudah Daftar</div>
                     <a href="<?= base_url('profile'); ?>" class="btn btn-info-solid" style="display: block; margin-top: 1rem;">Lihat Detail</a>
+                    <?php if ($isVerified) : ?>
+                        <a href="<?= base_url('profile/submission?id=' . $data['tim_id']); ?>" class="btn btn-info-solid" style="display: block; margin-top: 1rem;">Submission</a>
+                    <?php endif; ?>
                 <?php else : ?>
                     <a href="<?= base_url('profile/daftar-lomba'); ?>" class="btn btn-secondary" style="margin-top: 2rem;">Daftar Sekarang</a>
                 <?php endif; ?>

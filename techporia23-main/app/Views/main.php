@@ -44,30 +44,40 @@
         <h1>COMPETITION</h1>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide card">
-                    <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" />
-                    <h3>Business<br>Plan</h3>
-                    <a href="/kompetisi/business-plan"><button>More</button></a>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="/assets/images/competition-logo/compe-2025/Bisnis.svg" />
+                        <h3>Business<br>Plan</h3>
+                        <a href="/kompetisi/business-plan"><button>More</button></a>
+                    </div>
                 </div>
-                <div class="swiper-slide card">
-                    <img src="/assets/images/competition-logo/compe-2025/Compe.svg" />
-                    <h3>Competitive <br>Programming</h3>
-                    <a href="/kompetisi/competitive-programming"><button>More</button></a>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="/assets/images/competition-logo/compe-2025/Compe.svg" />
+                        <h3>Competitive <br>Programming</h3>
+                        <a href="/kompetisi/competitive-programming"><button>More</button></a>
+                    </div>
                 </div>
-                <div class="swiper-slide card">
-                    <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" />
-                    <h3>UI/UX <br>Design</h3>
-                    <a href="/kompetisi/ui-ux"><button>More</button></a>
+                <div class="swiper-slide">
+                    <div class="card">
+                       <img src="/assets/images/competition-logo/compe-2025/UI-UX.svg" />
+                        <h3>UI/UX <br>Design</h3>
+                        <a href="/kompetisi/ui-ux"><button>More</button></a> 
+                    </div>
                 </div>
-                <div class="swiper-slide card">
-                    <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" />
-                    <h3>Web <br>Development</h3>
-                    <a href="/kompetisi/web-development"><button>More</button></a>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="/assets/images/competition-logo/compe-2025/Web-Dev.svg" />
+                        <h3>Web <br>Development</h3>
+                        <a href="/kompetisi/web-development"><button>More</button></a>
+                    </div>
                 </div>
-                <div class="swiper-slide card">
-                    <img src="/assets/images/competition-logo/compe-2025/ML.svg" />
-                    <h3>Mobile<br> Legends</h3>
-                    <a href="/kompetisi/mobile-legend"><button>More</button></a>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="/assets/images/competition-logo/compe-2025/ML.svg" />
+                        <h3>Mobile<br> Legends</h3>
+                        <a href="/kompetisi/mobile-legend"><button>More</button></a>
+                    </div>
                 </div>
             </div>
             <!-- Panah Navigasi -->
