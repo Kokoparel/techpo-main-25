@@ -136,11 +136,11 @@
                                 <span class="badge badge-danger">Ditolak</span>
                             <?php endif; ?>
                         </td>
-                        <td style="text-align: right; width: 5%;">
+                        <td class="action-cell" style="text-align: right; width: 5%;">
                             <?php if ($t['transaction_status'] != 'settlement' && $t['transaction_status'] != 'capture'): ?>
-                                <a href="<?= base_url('kompetisi/payment/' . $t['tim_id']) ?>" class="btn btn-outline-primary">Lanjutkan Pembayaran</a>
+                                <a href="<?= base_url('kompetisi/payment/' . $t['tim_id']) ?>" class="btn btn-outline-primary primary-action">Lanjutkan Pembayaran</a>
                             <?php elseif (!in_array($t['id_kompetisi'], [6, 7, 8]) && $t['status'] == 'verified'): ?>
-                                <a href="<?= base_url('profile/submission?id=' . $t['tim_id']) ?>" class="btn btn-outline-primary">Submission</a>
+                                <a href="<?= base_url('profile/submission?id=' . $t['tim_id']) ?>" class="btn btn-outline-primary primary-action">Submission</a>
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -222,10 +222,10 @@
                             </div>
                             
                             <!-- Tombol aksi di bagian detail dengan design yang diperbaiki -->
-                            <div style="margin-top: 20px; text-align: center; border-top: 1px solid #ddd; padding-top: 15px;">
+                            <div class="detail-actions" style="margin-top: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 12px;">
                                 <?php if ($t['transaction_status'] != 'settlement' && $t['transaction_status'] != 'capture'): ?>
                                     <a href="<?= base_url('kompetisi/payment/' . $t['tim_id']) ?>"
-                                        class="btn btn-outline-primary" style="margin-right: 10px;">Lanjutkan Pembayaran</a>
+                                        class="btn btn-outline-primary primary-action" style="margin-right: 10px;">Lanjutkan Pembayaran</a>
                                 <?php elseif (($t['transaction_status'] == 'settlement' || $t['transaction_status'] == 'capture') && $t['status'] == 'verified'): ?>
                                     
                                     <!-- Tombol Grup WhatsApp dengan design menarik -->
@@ -360,7 +360,7 @@
     </div>
 </div>
 
-<!-- CSS untuk animasi WhatsApp button -->
+<!-- CSS untuk animasi WhatsApp button dan perbaikan responsif mobile -->
 <style>
 .whatsapp-btn:hover .shine-effect {
     animation: shine 0.6s ease-in-out;
@@ -370,6 +370,41 @@
     0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
     50% { opacity: 1; }
     100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+}
+
+
+
+/* Tombol aksi utama konsisten panjangnya */
+.primary-action {
+    min-width: 240px;
+}
+.action-cell .primary-action {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Container anggota & grid: cegah overflow dengan konten banyak (ML) */
+.anggota-detail {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.card-grid-wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+}
+.card-grid .card {
+    min-width: 220px;
+    box-sizing: border-box;
+}
+.detail-actions {
+    position: relative;
+    clear: both;
+    z-index: 1;
 }
 
 /* Responsif untuk mobile */
@@ -385,6 +420,120 @@
         width: 16px !important;
         height: 16px !important;
     }
+
+    /* Tabel utama: scroll horizontal jika sempit */
+    .table-toggle {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    .table-toggle thead th,
+    .table-toggle tbody td {
+        white-space: nowrap;
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    /* Kartu dan grid anggota: menjadi satu kolom */
+    .card-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .card-grid-wrapper {
+        width: 100%;
+    }
+    .card-grid { grid-template-columns: 1fr; }
+    .card-title {
+        font-size: 18px;
+    }
+    .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 8px;
+        word-break: break-word;
+        white-space: normal;
+    }
+    .detail label {
+        min-width: 110px;
+        font-size: 13px;
+    }
+    .detail span,
+    .detail p {
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    /* Tombol aksi di bagian detail: center & wrap */
+    .anggota-detail .btn {
+        margin-bottom: 10px;
+    }
+    .anggota-detail [style*="text-align: center;"] .btn {
+        display: inline-block;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+
+    /* Header daftar + tombol daftar align vertikal */
+    .container-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    /* Notifikasi detail grid menjadi kolom */
+    .detail-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .detail-flex {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 6px;
+    }
+
+    /* Form ubah password horizontal menjadi wrap */
+    .input-wrapper-horizontal {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* Tombol aksi sama panjang dan tidak jauh dari konten */
+    .primary-action {
+        width: 100%;
+        min-width: unset;
+    }
+    .action-cell {
+        min-width: 180px;
+    }
+    .action-cell .primary-action {
+        width: 100%;
+        max-width: 100%;
+    }
+    .detail-actions .primary-action { width: 100%; }
+
+    /* Rapikan kartu detail */
+    .card { padding: 12px; }
+    .card-title { font-size: 18px; margin-bottom: 8px; }
+    .detail label { min-width: 96px; }
+}
+
+/* Global overflow safety for long member data */
+.tim-detail .card .detail span,
+.tim-detail .card .detail small,
+.tim-detail .card .detail label {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Ensure grid adapts on wider screens too to prevent overflow */
+@media (min-width: 769px) {
+    .detail-actions .primary-action { min-width: 240px; width: auto; }
 }
 </style>
 

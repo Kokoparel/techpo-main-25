@@ -129,6 +129,23 @@
         </div>
     </div>
 
+    <!-- Pending Manual Proofs Card -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                            Menunggu Verifikasi Manual</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                            <?= isset($jumlahPendingManual) ? $jumlahPendingManual : 0; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <div class="card shadow mb-4">
@@ -146,6 +163,7 @@
                         <th>Instansi</th>
                         <th>Kategori</th>
                         <th>Waktu Transaksi</th>
+                        <th>Bukti</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -158,6 +176,13 @@
                             <td><?= $seminar['instansi']; ?></td>
                             <td><?= $seminar['kategori']; ?></td>
                             <td><?= $seminar['transaction_time']; ?></td>
+                            <td>
+                                <?php if (!empty($seminar['proof_at'])): ?>
+                                    <span class="badge badge-success">Ada bukti</span>
+                                <?php else: ?>
+                                    <span class="badge badge-secondary">Belum ada</span>
+                                <?php endif; ?>
+                            </td>
                             <td>
                                 <a href="<?= base_url('admin/detail-seminar/'.$seminar['username']); ?>" class="btn btn-primary">Lihat Detail</a>
                             </td>
@@ -184,6 +209,7 @@
                         <th>Instansi</th>
                         <th>Kategori</th>
                         <th>Waktu Transaksi</th>
+                        <th>Bukti</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -196,6 +222,13 @@
                             <td><?= $workshop['instansi']; ?></td>
                             <td><?= $workshop['kategori']; ?></td>
                             <td><?= $workshop['transaction_time']; ?></td>
+                            <td>
+                                <?php if (!empty($workshop['proof_at'])): ?>
+                                    <span class="badge badge-success">Ada bukti</span>
+                                <?php else: ?>
+                                    <span class="badge badge-secondary">Belum ada</span>
+                                <?php endif; ?>
+                            </td>
                             <td>
                                 <a href="<?= base_url('admin/detail-workshop/'.$workshop['username']); ?>" class="btn btn-info">Lihat Detail</a>
                             </td>
@@ -221,6 +254,7 @@
                         <th>Kompetisi</th>
                         <th>Status Pembayaran</th>
                         <th>Status Berkas</th>
+                        <th>Bukti</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -232,6 +266,13 @@
                             <td><?= $tim['nama_kompetisi']; ?></td>
                             <td><?= $tim['transaction_status']; ?></td>
                             <td><?= $tim['status']; ?></td>
+                            <td>
+                                <?php if (!empty($tim['proof_at'])): ?>
+                                    <span class="badge badge-success">Ada bukti</span>
+                                <?php else: ?>
+                                    <span class="badge badge-secondary">Belum ada</span>
+                                <?php endif; ?>
+                            </td>
                             <td>
                                 <a href="<?= base_url('admin/detail-tim/'.$tim['tim_id']); ?>" class="btn btn-primary">Lihat Detail</a>
                             </td>

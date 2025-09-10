@@ -14,6 +14,7 @@ class DataTimModel extends Model
         'nama_tim',
         'id_kompetisi',
         'order_id',
+        'ml_follow_proof',
         'status',
     ];
 }

@@ -9,6 +9,7 @@ use App\Models\DataWorkshopModel;
 use App\Models\DataTimModel;
 use App\Models\KompetisiModel;
 use App\Models\TransactionsModel;
+use CodeIgniter\HTTP\Files\UploadedFile;
 use App\Models\UserDataModel;
 use \Midtrans\Config;
 use Midtrans\Snap;
@@ -102,7 +103,12 @@ class PaymentController extends BaseController
                     'email' => $dataSeminar['email'],
                     'phone' => $dataSeminar['phone'],
                 ],
-            ];
+                'callbacks' => [
+                'finish' => base_url('payment/finish'),
+                'unfinish' => base_url('payment/finish'),
+                'error' => base_url('payment/error')
+            ]
+        ];
 
             $snapToken = Snap::getSnapToken($transactionData);
 
@@ -237,6 +243,12 @@ class PaymentController extends BaseController
                 'email' => $dataWorkshop['email'],
                 'phone' => $dataWorkshop['phone'],
             ],
+
+                'callbacks' => [
+                'finish' => base_url('payment/finish'),
+                'unfinish' => base_url('payment/finish'),
+                'error' => base_url('payment/error')
+            ]
         ];
 
         $snapToken = Snap::getSnapToken($transactionData);
@@ -394,6 +406,12 @@ class PaymentController extends BaseController
                     'email' => auth()->getUser()->getEmail(),
                     'phone' => $user['kontak'],
                 ],
+                
+                'callbacks' => [
+                'finish' => base_url('payment/finish'),
+                'unfinish' => base_url('payment/finish'),
+                'error' => base_url('payment/error')
+            ]
             ];
 
             $snapToken = Snap::getSnapToken($transactionData);
@@ -564,6 +582,94 @@ class PaymentController extends BaseController
         $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
         $first_name = trim(preg_replace('#' . preg_quote($last_name, '#') . '#', '', $name));
         return array($first_name, $last_name);
+    }
+
+    public function uploadProof()
+    {
+        $session = Services::session();
+
+        if (!$this->request->is('post')) {
+            return redirect()->back();
+        }
+
+        $orderId = $this->request->getPost('order_id');
+        $type = $this->request->getPost('type');
+        $file = $this->request->getFile('payment_proof');
+
+        if (!$orderId || !$file || !$file->isValid()) {
+            $session->setFlashdata('alert', 'Data tidak valid. Mohon coba lagi.');
+            $session->setFlashdata('alertTitle', 'Error');
+            $session->setFlashdata('alertType', 'error');
+            return redirect()->back();
+        }
+
+        $validation = Services::validation();
+        $validation->setRules([
+            'payment_proof' => [
+                'uploaded[payment_proof]',
+                'max_size[payment_proof,5120]',
+                'ext_in[payment_proof,png,jpg,jpeg,pdf]',
+                'mime_in[payment_proof,image/png,image/jpg,image/jpeg,application/pdf]'
+            ]
+        ]);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            $errors = $validation->getErrors();
+            $session->setFlashdata('alert', implode(', ', $errors));
+            $session->setFlashdata('alertTitle', 'Error');
+            $session->setFlashdata('alertType', 'error');
+            return redirect()->back()->withInput();
+        }
+
+        $uploadDirectory = FCPATH . 'uploads/payment_proofs/';
+        if (!is_dir($uploadDirectory)) {
+            mkdir($uploadDirectory, 0755, true);
+        }
+
+        $safeFileName = $orderId . '_' . time() . '.' . $file->getClientExtension();
+        if (!$file->hasMoved()) {
+            $file->move($uploadDirectory, $safeFileName);
+        }
+
+        $relativePath = 'uploads/payment_proofs/' . $safeFileName;
+
+        $transactionsModel = new TransactionsModel();
+        $transaction = $transactionsModel->where('order_id', $orderId)->first();
+        if (!$transaction) {
+            $session->setFlashdata('alert', 'Transaksi tidak ditemukan.');
+            $session->setFlashdata('alertTitle', 'Error');
+            $session->setFlashdata('alertType', 'error');
+            return redirect()->back();
+        }
+
+        $transactionsModel
+            ->set('transaction_status', 'pending_manual')
+            ->where('order_id', $orderId)
+            ->update();
+
+        $db = \Config\Database::connect();
+        $db->table('payment_proofs')->insert([
+            'order_id' => $orderId,
+            'username' => auth()->user()->username,
+            'path' => $relativePath,
+            'created_at' => date('Y-m-d H:i:s'),
+        ]);
+
+        $session->setFlashdata('alert', 'Bukti pembayaran berhasil dikirim. Mohon tunggu verifikasi panitia.');
+        $session->setFlashdata('alertTitle', 'Terkirim');
+        $session->setFlashdata('alertType', 'success');
+
+        if ($type === 'seminar') {
+            return redirect()->to('payment/talkshow');
+        }
+        if ($type === 'workshop') {
+            return redirect()->to('payment/workshop');
+        }
+        if ($type === 'lomba') {
+            return redirect()->back();
+        }
+
+        return redirect()->to('/profile');
     }
 }
 

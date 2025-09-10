@@ -153,65 +153,165 @@ class UserController extends BaseController
     }
 
     public function daftarLomba()
-    {
-        $userDataModel = new UserDataModel();
-        $userData = $userDataModel->find(auth()->user()->username);
-        if (!$userData) {
-            return redirect()->to('/profile/confirm');
-        }
+{
+    $userDataModel = new UserDataModel();
+    $userData = $userDataModel->find(auth()->user()->username);
+    if (!$userData) {
+        return redirect()->to('/profile/confirm');
+    }
 
-        if (!$this->request->is('post')) {
-            return view('user/daftar-lomba', [
-                'userData' => $userData,
-            ]);
-        }
+    if (!$this->request->is('post')) {
+        return view('user/daftar-lomba', [
+            'userData' => $userData,
+        ]);
+    }
 
-        $dataTimModel = new DataTimModel();
-        $checkName = $dataTimModel->where('nama_tim', $this->request->getPost('nama_tim'))->first();
-        if ($checkName) {
-            $session = Services::session();
-            $session->setFlashdata('alert', 'Nama tim sudah digunakan');
+    $session = Services::session();
+    
+    // Validasi khusus untuk Mobile Legends
+    if ($this->request->getPost('kompetisi') == '9') {
+        $validation = Services::validation();
+        
+        // Cek apakah file diupload
+        $followProofFile = $this->request->getFile('ml_follow_proof');
+        
+        if (!$followProofFile || !$followProofFile->isValid()) {
+            $session->setFlashdata('alert', 'File bukti follow Instagram wajib diupload');
             $session->setFlashdata('alertTitle', 'Error');
             $session->setFlashdata('alertType', 'error');
-            return redirect()->back();
+            return redirect()->back()->withInput();
         }
-
-        $data = [
-            'tim_id' => $this->getUniqueId(),
-            'nama_tim' => $this->request->getPost('nama_tim'),
-            'id_kompetisi' => $this->request->getPost('kompetisi'),
-            'order_id' => Utils::generateOrderId(),
+        
+        // Validasi file
+        $rules = [
+            'ml_follow_proof' => [
+                'uploaded[ml_follow_proof]',
+                'max_size[ml_follow_proof,2048]', // 2MB
+                'ext_in[ml_follow_proof,png,jpg,jpeg]',
+                'mime_in[ml_follow_proof,image/png,image/jpg,image/jpeg]'
+            ]
         ];
+        $validation->setRules($rules);
+        
+        if (!$validation->withRequest($this->request)->run()) {
+            $errors = $validation->getErrors();
+            $errorMessage = implode(', ', $errors);
+            $session->setFlashdata('alert', 'Error upload file: ' . $errorMessage);
+            $session->setFlashdata('alertTitle', 'Error');
+            $session->setFlashdata('alertType', 'error');
+            return redirect()->back()->withInput();
+        }
+    }
+
+    // Cek nama tim
+    $dataTimModel = new DataTimModel();
+    $checkName = $dataTimModel->where('nama_tim', $this->request->getPost('nama_tim'))->first();
+    if ($checkName) {
+        $session->setFlashdata('alert', 'Nama tim sudah digunakan');
+        $session->setFlashdata('alertTitle', 'Error');
+        $session->setFlashdata('alertType', 'error');
+        return redirect()->back();
+    }
+
+    // Prepare data tim
+    $data = [
+        'tim_id' => $this->getUniqueId(),
+        'nama_tim' => $this->request->getPost('nama_tim'),
+        'id_kompetisi' => $this->request->getPost('kompetisi'),
+        'order_id' => Utils::generateOrderId(),
+    ];
+
+    // Handle upload file untuk Mobile Legends
+    if ($this->request->getPost('kompetisi') == '9') {
+        $followProofFile = $this->request->getFile('ml_follow_proof');
+        
+        if ($followProofFile && $followProofFile->isValid() && !$followProofFile->hasMoved()) {
+            try {
+                // Buat folder jika belum ada
+                $uploadPath = FCPATH . 'uploads/ml_follow_proof/';
+                if (!is_dir($uploadPath)) {
+                    mkdir($uploadPath, 0755, true);
+                }
+                
+                // Generate nama file unik
+                $fileName = $data['tim_id'] . '_' . time() . '.' . $followProofFile->getClientExtension();
+                
+                // Pindahkan file
+                $followProofFile->move($uploadPath, $fileName);
+                
+                // Simpan path ke database
+                $data['ml_follow_proof'] = 'uploads/ml_follow_proof/' . $fileName;
+                
+                // Log untuk debugging
+                error_log('ML Follow Proof uploaded: ' . $data['ml_follow_proof']);
+                
+            } catch (Exception $e) {
+                error_log('Error uploading ML follow proof: ' . $e->getMessage());
+                $session->setFlashdata('alert', 'Error saat upload file: ' . $e->getMessage());
+                $session->setFlashdata('alertTitle', 'Error');
+                $session->setFlashdata('alertType', 'error');
+                return redirect()->back()->withInput();
+            }
+        } else {
+            error_log('ML Follow Proof file not valid or already moved');
+            $session->setFlashdata('alert', 'File bukti follow Instagram tidak valid');
+            $session->setFlashdata('alertTitle', 'Error');
+            $session->setFlashdata('alertType', 'error');
+            return redirect()->back()->withInput();
+        }
+    }
+
+    // Insert data tim ke database
+    try {
         $dataTimModel->insert($data);
+        error_log('Team data inserted: ' . json_encode($data));
+    } catch (Exception $e) {
+        error_log('Error inserting team data: ' . $e->getMessage());
+        $session->setFlashdata('alert', 'Error saat menyimpan data tim');
+        $session->setFlashdata('alertTitle', 'Error');
+        $session->setFlashdata('alertType', 'error');
+        return redirect()->back()->withInput();
+    }
 
-        if ($this->request->getPost('kompetisi') == '9') {
-            $db = \Config\Database::connect();
-            $userDataModel = new UserDataModel();
-            $userData = $userDataModel->find(auth()->user()->username);
+    // Handle Mobile Legends member data
+    if ($this->request->getPost('kompetisi') == '9') {
+        $db = \Config\Database::connect();
+        $userDataModel = new UserDataModel();
+        $userData = $userDataModel->find(auth()->user()->username);
 
+        try {
             // Simpan ketua tim (nama dari akun)
             $ml_member = $this->request->getPost('ml_member');
+            
+            if (!$ml_member || !isset($ml_member[1])) {
+                throw new Exception('Data member Mobile Legends tidak lengkap');
+            }
+            
             $db->table('data_tim_ml_anggota')->insert([
                 'tim_id' => $data['tim_id'],
                 'nama' => $userData['nama'], // nama dari akun
-                'nickname' => $ml_member[1]['nickname'],
-                'ml_id' => $ml_member[1]['id'],
+                'nickname' => $ml_member[1]['nickname'] ?? '',
+                'ml_id' => $ml_member[1]['id'] ?? '',
                 'posisi' => 'ketua'
             ]);
+            
             // Simpan anggota 2-5
             for ($i = 2; $i <= 5; $i++) {
-                $member = $ml_member[$i];
-                $db->table('data_tim_ml_anggota')->insert([
-                    'tim_id' => $data['tim_id'],
-                    'nama' => $member['nama'],
-                    'nickname' => $member['nickname'],
-                    'ml_id' => $member['id'],
-                    'posisi' => 'anggota'
-                ]);
+                if (isset($ml_member[$i])) {
+                    $member = $ml_member[$i];
+                    $db->table('data_tim_ml_anggota')->insert([
+                        'tim_id' => $data['tim_id'],
+                        'nama' => $member['nama'] ?? '',
+                        'nickname' => $member['nickname'] ?? '',
+                        'ml_id' => $member['id'] ?? '',
+                        'posisi' => 'anggota'
+                    ]);
+                }
             }
+            
             // Simpan cadangan jika diisi
             $ml_cadangan = $this->request->getPost('ml_cadangan');
-            if (!empty($ml_cadangan['nama']) && !empty($ml_cadangan['nickname']) && !empty($ml_cadangan['id'])) {
+            if ($ml_cadangan && !empty($ml_cadangan['nama']) && !empty($ml_cadangan['nickname']) && !empty($ml_cadangan['id'])) {
                 $db->table('data_tim_ml_anggota')->insert([
                     'tim_id' => $data['tim_id'],
                     'nama' => $ml_cadangan['nama'],
@@ -220,18 +320,35 @@ class UserController extends BaseController
                     'posisi' => 'cadangan'
                 ]);
             }
+            
+            error_log('ML member data inserted for tim_id: ' . $data['tim_id']);
+            
+        } catch (Exception $e) {
+            error_log('Error inserting ML member data: ' . $e->getMessage());
+            $session->setFlashdata('alert', 'Error saat menyimpan data member Mobile Legends: ' . $e->getMessage());
+            $session->setFlashdata('alertTitle', 'Error');
+            $session->setFlashdata('alertType', 'error');
+            return redirect()->back()->withInput();
         }
-
-        $anggotaTimModel = new AnggotaTimModel();
-        $anggota = [
-            'tim_id' => $data['tim_id'],
-            'anggota' => auth()->user()->username,
-            'role' => 'ketua',
-        ];
-        $anggotaTimModel->insert($anggota);
-
-        return redirect()->to('/kompetisi/payment/' . $data['tim_id']);
     }
+
+    // Insert anggota tim
+    $anggotaTimModel = new AnggotaTimModel();
+    $anggota = [
+        'tim_id' => $data['tim_id'],
+        'anggota' => auth()->user()->username,
+        'role' => 'ketua',
+    ];
+    
+    try {
+        $anggotaTimModel->insert($anggota);
+        error_log('Team member inserted: ' . json_encode($anggota));
+    } catch (Exception $e) {
+        error_log('Error inserting team member: ' . $e->getMessage());
+    }
+
+    return redirect()->to('/kompetisi/payment/' . $data['tim_id']);
+}
 
     public function joinTim()
     {

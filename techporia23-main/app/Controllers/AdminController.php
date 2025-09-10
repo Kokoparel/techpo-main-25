@@ -19,7 +19,7 @@ class AdminController extends BaseController
 {
     public function index()
     {
-
+        $db = \Config\Database::connect();
         $dataSeminarModel = new DataSeminarModel();
         $dataSeminar = $dataSeminarModel
             ->select('username, name, phone, email, instansi, domisili, kategori, transaction_time')
@@ -57,6 +57,33 @@ class AdminController extends BaseController
             ->orwhere('transaction_status', 'capture')
             ->countAllResults();
 
+        // Map bukti pembayaran per order_id
+        $proofRows = $db->table('payment_proofs')
+            ->select('order_id, MAX(created_at) as latest_created_at')
+            ->groupBy('order_id')
+            ->get()->getResultArray();
+        $orderIdToProofAt = [];
+        foreach ($proofRows as $pr) {
+            $orderIdToProofAt[$pr['order_id']] = $pr['latest_created_at'];
+        }
+
+        // Tambahkan flag bukti ke dataset
+        foreach ($dataSeminar as $i => $row) {
+            $orderId = $db->table('data_seminar')->select('order_id')->where('username', $row['username'])->get()->getRowArray();
+            $dataSeminar[$i]['proof_at'] = $orderId && isset($orderIdToProofAt[$orderId['order_id']]) ? $orderIdToProofAt[$orderId['order_id']] : null;
+        }
+        foreach ($dataWorkshop as $i => $row) {
+            $orderId = $db->table('data_workshop')->select('order_id')->where('username', $row['username'])->get()->getRowArray();
+            $dataWorkshop[$i]['proof_at'] = $orderId && isset($orderIdToProofAt[$orderId['order_id']]) ? $orderIdToProofAt[$orderId['order_id']] : null;
+        }
+        foreach ($dataTim as $i => $row) {
+            $orderId = $db->table('data_tim')->select('order_id')->where('tim_id', $row['tim_id'])->get()->getRowArray();
+            $dataTim[$i]['proof_at'] = $orderId && isset($orderIdToProofAt[$orderId['order_id']]) ? $orderIdToProofAt[$orderId['order_id']] : null;
+        }
+
+        // Hitung pending manual untuk kartu dashboard
+        $jumlahPendingManual = $db->table('transactions')->where('transaction_status', 'pending_manual')->countAllResults();
+
         return view('admin/dashboard_v2', [
             'dataSeminar' => $dataSeminar,
             'dataWorkshop' => $dataWorkshop,
@@ -64,6 +91,7 @@ class AdminController extends BaseController
             'jumlahSeminarSettlement' => $jumlahSeminarSettlement,
             'jumlahWorkshopSettlement' => $jumlahWorkshopSettlement,
             'jumlahTimSettlement' => $jumlahTimSettlement,
+            'jumlahPendingManual' => $jumlahPendingManual,
         ]);
     }
 
@@ -173,7 +201,7 @@ class AdminController extends BaseController
     {
         $dataTimModel = new DataTimModel();
         $dataTim = $dataTimModel
-            ->select('data_tim.tim_id, nama_tim, nama_kompetisi, kompetisi.id_kompetisi, status, transactions.order_id, transaction_status, transaction_time, payment_type')
+            ->select('data_tim.tim_id, nama_tim, nama_kompetisi, kompetisi.id_kompetisi, status, data_tim.ml_follow_proof, transactions.order_id, transaction_status, transaction_time, payment_type')
             ->join('kompetisi', 'kompetisi.id_kompetisi=data_tim.id_kompetisi', 'left')
             ->join('transactions', 'transactions.order_id=data_tim.order_id', 'left')
             ->find($id);
@@ -221,10 +249,18 @@ class AdminController extends BaseController
             $berkasProposal = $berkasModel->where('tim_id', $id)->where('jenis', 'proposal')->first();
             $berkasSourceCode = $berkasModel->where('tim_id', $id)->where('jenis', 'source_code')->first();
 
+            // Payment proofs for this team/order
+            $db = \Config\Database::connect();
+            $paymentProofs = $db->table('payment_proofs')
+                ->where('order_id', $dataTim['order_id'])
+                ->orderBy('created_at', 'DESC')
+                ->get()->getResultArray();
+
             return view('admin/detail_tim', [
                 'data' => $dataTim,
                 'berkasProposal' => $berkasProposal,
                 'berkasSourceCode' => $berkasSourceCode,
+                'paymentProofs' => $paymentProofs,
             ]);
     }
 
@@ -825,6 +861,28 @@ class AdminController extends BaseController
             'grossAmountOnline' => $grossAmountOnline,
             'pendapatanOnline' => $pendapatanOnline,
         ]);
+    }
+
+
+    public function approvePayment($orderId)
+    {
+        $transactionsModel = new TransactionsModel();
+        $transactionsModel->set('transaction_status', 'settlement')
+            ->set('payment_type', 'offline')
+            ->where('order_id', $orderId)
+            ->update();
+
+        return redirect()->back();
+    }
+
+    public function rejectPayment($orderId)
+    {
+        $transactionsModel = new TransactionsModel();
+        $transactionsModel->set('transaction_status', 'cancel')
+            ->where('order_id', $orderId)
+            ->update();
+
+        return redirect()->back();
     }
 }
 

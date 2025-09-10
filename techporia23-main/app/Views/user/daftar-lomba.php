@@ -16,7 +16,7 @@
             <button class="tab-link btn btn-info btn-lg" onclick="openform(event, 'gabung')">Gabung Tim</button>
         </div>
         <div id="daftar" class="tab-content" style="display: block;">
-            <?= form_open('profile/daftar-lomba'); ?>
+            <?= form_open_multipart('profile/daftar-lomba'); ?>
             <div class="input-wrapper">
                 <label for="nama_tim">Nama Tim</label>
                 <input type="text" name="nama_tim" id="nama_tim" placeholder="Nama Tim" required>
@@ -37,7 +37,17 @@
                     </select>
                 </div>
             </div>
+            
+            <!-- Mobile Legends Fields -->
            <div id="ml-fields" style="display:none;">
+                <!-- Upload Bukti Follow Instagram -->
+                <!-- Pastikan file input ada dan benar -->
+<div class="input-wrapper">
+    <label for="ml_follow_proof">Bukti Follow Instagram</label>
+    <input type="file" name="ml_follow_proof" id="ml_follow_proof" accept="image/*">
+    <small>Format: JPG, PNG. Max: 2MB</small>
+</div>
+
                 <div class="input-wrapper">
                     <label>Ketua Tim - Nickname</label>
                     <input type="text" name="ml_member[1][nickname]" placeholder="Nickname Ketua Tim" required>
@@ -101,73 +111,210 @@
             <div id="ml-join-fields" style="display:none;">
                 <div class="input-wrapper">
                     <label for="ml_nickname_join">Nickname Mobile Legends</label>
-                    <input type="text" name="ml_nickname_join" id="ml_nickname_join" placeholder="Nickname Mobile Legends">
+                    <input type="text" name="ml_nickname_join" id="ml_nickname_join" placeholder="Nickname Mobile Legends" required>
                 </div>
                 <div class="input-wrapper">
                     <label for="ml_id_join">ID Mobile Legends</label>
-                    <input type="text" name="ml_id_join" id="ml_id_join" placeholder="ID Mobile Legends">
+                    <input type="text" name="ml_id_join" id="ml_id_join" placeholder="ID Mobile Legends" required>
                 </div>
             </div>
             <input type="submit" value="Daftar" class="btn btn-submit" />
             <?= form_close(); ?>
         </div>
+    </div>
+</div>
 
 <script>
+// Fungsi helper untuk set/remove required attribute
 function setRequired(el, yes) {
-  if (yes) {
-    el.setAttribute('required', 'required');
-    el.removeAttribute('disabled');
-  } else {
-    el.removeAttribute('required');
-    el.setAttribute('disabled', 'disabled');
-  }
+    if (!el) return; // Safety check
+    
+    if (yes) {
+        el.setAttribute('required', 'required');
+        el.removeAttribute('disabled');
+    } else {
+        el.removeAttribute('required');
+        el.setAttribute('disabled', 'disabled');
+    }
 }
 
 function toggleMLFields() {
-  const kompetisi = document.getElementById('kompetisi').value;
-  const mlFields = document.getElementById('ml-fields');
-  const inputs = mlFields.querySelectorAll('input');
+    console.log('toggleMLFields called'); // Debug
+    const kompetisiSelect = document.getElementById('kompetisi');
+    if (!kompetisiSelect) {
+        console.error('Kompetisi select not found!');
+        return;
+    }
+    
+    const kompetisi = kompetisiSelect.value;
+    const mlFields = document.getElementById('ml-fields');
+    if (!mlFields) {
+        console.error('ML fields container not found!');
+        return;
+    }
+    
+    const inputs = mlFields.querySelectorAll('input');
+    const followProof = document.getElementById('ml_follow_proof');
+    
+    console.log('Kompetisi value:', kompetisi); // Debug
 
-  if (kompetisi === '9') { // Mobile Legends
-    mlFields.style.display = 'block';
-    inputs.forEach((inp) => {
-      // cadangan boleh kosong: cek name mengandung 'ml_cadangan'
-      if (inp.name.startsWith('ml_cadangan')) {
-        inp.removeAttribute('required');
-        inp.removeAttribute('disabled');
-      } else {
-        setRequired(inp, true);
-      }
-    });
-  } else {
-    mlFields.style.display = 'none';
-    inputs.forEach((inp) => setRequired(inp, false));
-  }
+    if (kompetisi === '9') { // Mobile Legends
+        console.log('Showing ML fields'); // Debug
+        mlFields.style.display = 'block';
+        
+        // Set required untuk bukti follow Instagram
+        if (followProof) {
+            followProof.setAttribute('required', 'required');
+            followProof.removeAttribute('disabled');
+            console.log('File input found and set to required'); // Debug
+        } else {
+            console.error('File input not found!'); // Debug
+        }
+        
+        inputs.forEach((inp) => {
+            // Skip file input karena sudah dihandle di atas
+            if (inp.type === 'file') return;
+            
+            // cadangan boleh kosong: cek name mengandung 'ml_cadangan'
+            if (inp.name && inp.name.includes('ml_cadangan')) {
+                inp.removeAttribute('required');
+                inp.removeAttribute('disabled');
+            } else {
+                setRequired(inp, true);
+            }
+        });
+    } else {
+        console.log('Hiding ML fields'); // Debug
+        mlFields.style.display = 'none';
+        
+        // Remove required untuk file upload
+        if (followProof) {
+            followProof.removeAttribute('required');
+            followProof.setAttribute('disabled', 'disabled');
+        }
+        
+        inputs.forEach((inp) => setRequired(inp, false));
+    }
 }
 
 function toggleMLJoinFields() {
-  const kompetisiGabung = document.getElementById('kompetisi_gabung').value;
-  const mlJoinFields = document.getElementById('ml-join-fields');
-  const nick = document.getElementById('ml_nickname_join');
-  const mlid = document.getElementById('ml_id_join');
+    const kompetisiGabungSelect = document.getElementById('kompetisi_gabung');
+    if (!kompetisiGabungSelect) {
+        console.error('Kompetisi gabung select not found!');
+        return;
+    }
+    
+    const kompetisiGabung = kompetisiGabungSelect.value;
+    const mlJoinFields = document.getElementById('ml-join-fields');
+    if (!mlJoinFields) {
+        console.error('ML join fields container not found!');
+        return;
+    }
+    
+    const nick = document.getElementById('ml_nickname_join');
+    const mlid = document.getElementById('ml_id_join');
 
-  if (kompetisiGabung === '9') {
-    mlJoinFields.style.display = 'block';
-    setRequired(nick, true);
-    setRequired(mlid, true);
-  } else {
-    mlJoinFields.style.display = 'none';
-    setRequired(nick, false);
-    setRequired(mlid, false);
-  }
+    if (kompetisiGabung === '9') {
+        mlJoinFields.style.display = 'block';
+        setRequired(nick, true);
+        setRequired(mlid, true);
+    } else {
+        mlJoinFields.style.display = 'none';
+        setRequired(nick, false);
+        setRequired(mlid, false);
+    }
 }
 
+// Validasi file upload
+function setupFileValidation() {
+    const fileInput = document.getElementById('ml_follow_proof');
+    if (fileInput) {
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Cek ukuran file (2MB = 2097152 bytes)
+                if (file.size > 2097152) {
+                    alert('Ukuran file terlalu besar! Maksimal 2MB.');
+                    this.value = '';
+                    return;
+                }
+                
+                // Cek tipe file
+                const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+                if (!allowedTypes.includes(file.type)) {
+                    alert('Format file tidak didukung! Gunakan JPG, JPEG, atau PNG.');
+                    this.value = '';
+                    return;
+                }
+            }
+        });
+    }
+}
+
+// Setup event listeners
 document.addEventListener('DOMContentLoaded', function() {
-  toggleMLFields();
-  toggleMLJoinFields();
-  document.getElementById('kompetisi').addEventListener('change', toggleMLFields);
-  document.getElementById('kompetisi_gabung').addEventListener('change', toggleMLJoinFields);
+    console.log('DOM Content Loaded'); // Debug
+    
+    // Setup initial state
+    toggleMLFields();
+    toggleMLJoinFields();
+    setupFileValidation();
+    
+    // Add event listeners
+    const kompetisiSelect = document.getElementById('kompetisi');
+    const kompetisiGabungSelect = document.getElementById('kompetisi_gabung');
+    
+    if (kompetisiSelect) {
+        // Remove any existing event listeners
+        kompetisiSelect.removeEventListener('change', toggleMLFields);
+        // Add new event listener
+        kompetisiSelect.addEventListener('change', toggleMLFields);
+        console.log('Event listener added to kompetisi select');
+    } else {
+        console.error('Kompetisi select not found during setup!');
+    }
+    
+    if (kompetisiGabungSelect) {
+        // Remove any existing event listeners
+        kompetisiGabungSelect.removeEventListener('change', toggleMLJoinFields);
+        // Add new event listener
+        kompetisiGabungSelect.addEventListener('change', toggleMLJoinFields);
+        console.log('Event listener added to kompetisi gabung select');
+    } else {
+        console.error('Kompetisi gabung select not found during setup!');
+    }
 });
+
+// Tab functionality (existing code - cleaned up)
+function openform(event, formName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for(i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName('tab-link');
+    for(i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' active', '');
+    }
+    
+    const targetTab = document.getElementById(formName);
+    if (targetTab) {
+        targetTab.style.display = "block";
+    }
+    
+    if (event && event.currentTarget) {
+        event.currentTarget.className += " active";
+    }
+    
+    // Re-trigger ML fields toggle after tab change
+    setTimeout(() => {
+        if (formName === 'daftar') {
+            toggleMLFields();
+        } else if (formName === 'gabung') {
+            toggleMLJoinFields();
+        }
+    }, 100);
+}
 </script>
 
 <?= $this->endSection(); ?>

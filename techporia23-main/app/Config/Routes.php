@@ -57,6 +57,9 @@ $routes->get('kompetisi/payment/(:segment)', 'PaymentController::lomba/$1');
 $routes->get('payment/cancel/lomba/(:segment)', 'PaymentController::cancelLomba/$1');
 $routes->get('/payment/finish', 'PaymentController::finishPayment');
 $routes->get('/payment/error', 'PaymentController::errorPayment');
+$routes->post('payment/upload-proof', 'PaymentController::uploadProof');
+// di Routes.php, tambahkan:
+$routes->get('test/notification', 'ApiController::notificationHandler');
 
 $routes->group('profile', static function($routes) {
     $routes->get('/', 'UserController::index');
@@ -99,6 +102,8 @@ $routes->group('admin', ['filter' => 'group:admin'], static function($routes) {
     $routes->post('workshop/add', 'AdminController::addWorkshop');
     $routes->get('workshop/create-tiket/(:segment)', 'AdminController::createTiketWorkshop/$1');
     $routes->get('workshop/download-tiket/(:segment)', 'AdminController::downloadTiketWorkshop/$1');
+    $routes->get('payment/approve/(:segment)', 'AdminController::approvePayment/$1');
+    $routes->get('payment/reject/(:segment)', 'AdminController::rejectPayment/$1');
 });
 
 $routes->get('download/(:segment)', 'MainController::downloadTemplate/$1');
@@ -106,6 +111,7 @@ $routes->get('download/(:segment)', 'MainController::downloadTemplate/$1');
 $routes->group('api/v1', static function($routes) {
     $routes->post('notification-handler', 'ApiController::notificationHandler');
 });
+
 
 service('auth')->routes($routes);
 
