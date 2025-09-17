@@ -144,9 +144,17 @@ class AdminController extends BaseController
             $tiket = $tiket['ticket'];
         }
 
+        // Payment proofs for this seminar/order
+        $db = \Config\Database::connect();
+        $paymentProofs = $db->table('payment_proofs')
+            ->where('order_id', $dataSeminar['order_id'])
+            ->orderBy('created_at', 'DESC')
+            ->get()->getResultArray();
+
         return view('admin/detail_seminar', [
             'data' => $dataSeminar,
             'tiket' => $tiket,
+            'paymentProofs' => $paymentProofs,
         ]);
     }
 
@@ -660,9 +668,17 @@ class AdminController extends BaseController
             $tiket = $tiket['ticket'];
         }
 
+        // Payment proofs for this workshop/order
+        $db = \Config\Database::connect();
+        $paymentProofs = $db->table('payment_proofs')
+            ->where('order_id', $dataWorkshop['order_id'])
+            ->orderBy('created_at', 'DESC')
+            ->get()->getResultArray();
+
         return view('admin/detail_workshop', [
             'data' => $dataWorkshop,
             'tiket' => $tiket,
+            'paymentProofs' => $paymentProofs,
         ]);
     }
 

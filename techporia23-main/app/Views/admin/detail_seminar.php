@@ -120,4 +120,47 @@
     </div>
 </div>
 
+<!-- Payment Proof Section -->
+<div class="col-xl-12 col-lg-7">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Bukti Pembayaran</h6>
+            <?php if ($data['transaction_status'] === 'pending_manual'): ?>
+                <div>
+                    <a class="btn btn-sm btn-success" href="<?= base_url('admin/payment/approve/' . $data['order_id']); ?>">Terima</a>
+                    <a class="btn btn-sm btn-danger" href="<?= base_url('admin/payment/reject/' . $data['order_id']); ?>" onclick="return confirm('Tolak pembayaran ini?');">Tolak</a>
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="card-body">
+            <?php if (!empty($paymentProofs)): ?>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Waktu</th>
+                                <th>File</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($paymentProofs as $pp): ?>
+                                <tr>
+                                    <td><?= date('d M Y H:i', strtotime($pp['created_at'])); ?></td>
+                                    <td>
+                                        <a class="btn btn-info btn-sm" href="<?= base_url($pp['path']); ?>" target="_blank">Lihat</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php else: ?>
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i> Belum ada bukti pembayaran yang diupload.
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
 <?= $this->endSection() ?>
