@@ -79,9 +79,15 @@ footer {
                     </ol>
                 </div>
                 <?php if ($isOrdered) : ?>
-                    <a href="<?= base_url('workshop/tiket'); ?>" class="btn btn-secondary">Lihat Invoice</a>
-                    <a href="https://chat.whatsapp.com/ABC123WorkshopGroup" target="_blank"
-                        class="btn btn-secondary" style="margin-left: 2rem;">Join Grup WhatsApp</a>
+                    <?php if ($transactionStatus === 'pending_manual') : ?>
+                        <div class="badge badge-warning" style="margin-top: 2rem; display: block;">Menunggu Konfirmasi</div>
+                    <?php else : ?>
+                        <a href="<?= base_url('workshop/tiket'); ?>" class="btn btn-secondary">Lihat Invoice</a>
+                        <a href="https://chat.whatsapp.com/ABC123WorkshopGroup" target="_blank"
+                            class="btn btn-secondary" style="margin-left: 2rem;">Join Grup WhatsApp</a>
+                    <?php endif; ?>
+                <?php elseif ($workshopQuota >= 30) : ?>
+                    <div class="badge badge-danger" style="margin-top: 2rem; display: block;">Kuota Penuh</div>
                 <?php else : ?>
                     <a href="<?= base_url('payment/workshop'); ?>" class="btn btn-secondary">Daftar Workshop</a>
                 <?php endif; ?>

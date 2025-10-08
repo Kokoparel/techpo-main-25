@@ -20,4 +20,11 @@ class DataWorkshopModel extends Model
     protected $dateFormat = 'datetime';
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
+
+    public function countConfirmedRegistrations()
+    {
+        return $this->join('transactions', 'transactions.order_id = data_workshop.order_id')
+                    ->whereIn('transaction_status', ['pending_manual', 'settlement'])
+                    ->countAllResults();
+    }
 }

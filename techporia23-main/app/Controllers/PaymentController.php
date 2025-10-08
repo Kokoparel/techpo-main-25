@@ -289,14 +289,13 @@ class PaymentController extends BaseController
             ['nama' => 'Total', 'harga' => '', 'jumlah' => 2, 'total' => 'Rp. ' . number_format($transaction['gross_amount'], 0, ',', '.')]
         ];
 
-        return view('confirm-payment', [
+        return view('confirm-payment-workshop', [
             'data' => $dataWorkshop,
             'type' => 'workshop',
             'item' => $item,
             'snap_token' => $transaction['snap_token'],
         ]);
     }
-
 
     public function cancelWorkshop($id)
     {
